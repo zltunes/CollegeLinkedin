@@ -1,0 +1,2 @@
+/Users/Leon/Library/Developer/Xcode/DerivedData/CollegeLinkedin-cefnnlxgwmseubfgoaxbfcsrxwmu/Build/Products/Debug-iphonesimulator/CollegeLinkedin.app
+iPhone Developer
