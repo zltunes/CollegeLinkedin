@@ -73,23 +73,25 @@ static const CGFloat sectionHeaderHeight = 11.0f;
     
     if (indexPath.section == 0) {
         MeCellWithPhoto *cell      = (MeCellWithPhoto*)[tableView dequeueReusableCellWithIdentifier:MeCellID0];
-        cell.photo.backgroundColor = [UIColor redColor];
+        cell.photo.image = [UIImage imageNamed:@"账号"];
         cell.nameLabel.text        = @"童小星";
         return cell;
     } else {
         MeCellWithIcon *cell = (MeCellWithIcon*)[tableView dequeueReusableCellWithIdentifier:MeCellID1];
-        cell.icon.backgroundColor = [UIColor redColor];
         switch (indexPath.section) {
             case 1:
                 cell.label.text = self.cellItemArray[indexPath.row];
+                cell.icon.image = [UIImage imageNamed:self.cellItemArray[indexPath.row]];
                 break;
                 
             case 2:
                 cell.label.text = self.cellItemArray[indexPath.row+2];
+                cell.icon.image = [UIImage imageNamed:self.cellItemArray[indexPath.row+2]];
                 break;
                 
             case 3:
                 cell.label.text = self.cellItemArray[indexPath.row+5];
+                cell.icon.image = [UIImage imageNamed:self.cellItemArray[indexPath.row+5]];
                 break;
                 
             default:

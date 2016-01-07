@@ -224,9 +224,8 @@
 -(BOOL)validate{
     if(isMandatory){
         if([self.text length]==0){
-//            [self showErrorIconForMsg:strLengthValidationMsg];
-//            return NO;
-            return YES;
+            [self showErrorIconForMsg:strLengthValidationMsg];
+            return NO;
         }
     }
     for (int i=0; i<[arrRegx count]; i++) {

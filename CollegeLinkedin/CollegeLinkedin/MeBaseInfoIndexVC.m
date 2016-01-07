@@ -161,6 +161,14 @@ static const CGFloat MeBaseInfoCell1Height = 45.0f;
     [picker dismissViewControllerAnimated:true completion:nil];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    EditNameVC *nameVC = segue.destinationViewController;
+    nameVC.getNameBK = ^(NSString *str){
+        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        cell.operationLabel.text = str;
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    };
+}
 
 /*
 // Override to support conditional editing of the table view.

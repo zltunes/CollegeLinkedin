@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^GetNameBKT) (NSString *str);
+
 @interface EditNameVC : UIViewController
+
+@property(nonatomic,strong) GetNameBKT getNameBK;
 
 @end

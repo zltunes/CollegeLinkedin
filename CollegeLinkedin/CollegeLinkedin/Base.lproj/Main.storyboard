@@ -15,6 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.058823529411764705" green="0.47058823529411764" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.058823529411764705" green="0.47058823529411764" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hbd-0g-Wi3" kind="relationship" relationship="viewControllers" id="Zz9-q6-g03"/>
@@ -346,7 +348,7 @@
         <scene sceneID="gWh-9L-iXK">
             <objects>
                 <navigationController id="yg7-ni-uS6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" id="iwD-eA-Y4o"/>
+                    <tabBarItem key="tabBarItem" title="我" image="我默认" selectedImage="我选中" id="iwD-eA-Y4o"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2kJ-3T-hdF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -370,7 +372,7 @@
         <scene sceneID="zwM-Yl-dBf">
             <objects>
                 <navigationController id="m9X-G6-zzm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="人脉" id="SAj-FH-vN8"/>
+                    <tabBarItem key="tabBarItem" title="人脉" image="人脉默认" selectedImage="人脉选中" id="SAj-FH-vN8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="auS-AM-D1N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -387,7 +389,7 @@
         <scene sceneID="Ibq-h3-K4L">
             <objects>
                 <navigationController id="Hbd-0g-Wi3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="圈子" id="hwb-my-gEl"/>
+                    <tabBarItem key="tabBarItem" title="圈子" image="圈子默认" selectedImage="圈子选中" id="hwb-my-gEl"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xyh-E3-iHu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -402,4 +404,13 @@
             <point key="canvasLocation" x="1316" y="43"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="人脉选中" width="27" height="27"/>
+        <image name="人脉默认" width="27" height="27"/>
+        <image name="圈子选中" width="27" height="27"/>
+        <image name="圈子默认" width="27" height="27"/>
+        <image name="我选中" width="27" height="27"/>
+        <image name="我默认" width="27" height="27"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.53786587715148926" blue="0.80492877960205078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

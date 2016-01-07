@@ -32,8 +32,8 @@
 }
 
 - (IBAction)goBack:(UIBarButtonItem *)sender {
-    if ([nameTextField validate]) {
-        
+    if ([nameTextField validate]){
+        self.getNameBK(nameTextField.text);
         [self.navigationController popViewControllerAnimated:YES];
     } else {
         [Config showErrorHUDwithStatus:@"用户名输入有误!"];
@@ -48,6 +48,8 @@
     [textField resignFirstResponder];
     return YES;
 }
+
+
 
 /*
 #pragma mark - Navigation

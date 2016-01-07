@@ -17,6 +17,7 @@
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
+		359EBEDE1C3D474C00550856 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 359EBEDD1C3D474C00550856 /* ArrayDataSource.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
 		35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B4B1C2C32BF00B2E66E /* Config.m */; };
@@ -64,6 +65,8 @@
 		358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithPhoto.m; sourceTree = "<group>"; };
 		358077F61C2C147600D0A4A9 /* MeCellWithIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithIcon.h; sourceTree = "<group>"; };
 		358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithIcon.m; sourceTree = "<group>"; };
+		359EBEDC1C3D474C00550856 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		359EBEDD1C3D474C00550856 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
 		35CD61A11C2E8B9100B315AA /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 			children = (
 				35FA5B4A1C2C32BF00B2E66E /* Config.h */,
 				35FA5B4B1C2C32BF00B2E66E /* Config.m */,
+				359EBEDC1C3D474C00550856 /* ArrayDataSource.h */,
+				359EBEDD1C3D474C00550856 /* ArrayDataSource.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
+				359EBEDE1C3D474C00550856 /* ArrayDataSource.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
@@ -601,6 +607,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -611,8 +618,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-			GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				};
+			};
 			name = Debug;
 		};
 		351968D81C2BD8280033AE2B /* Release */ = {
@@ -659,13 +665,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CollegeLinkedin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				};
+			};
 			name = Debug;
 		};
 		351968DB1C2BD8280033AE2B /* Release */ = {
@@ -687,13 +693,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CollegeLinkedinTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedinTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollegeLinkedin.app/CollegeLinkedin";
-			GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				};
+			};
 			name = Debug;
 		};
 		351968DE1C2BD8280033AE2B /* Release */ = {
@@ -711,14 +717,14 @@
 		351968E01C2BD8280033AE2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CollegeLinkedinUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedinUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = CollegeLinkedin;
 				USES_XCTRUNNER = YES;
-			GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				};
+			};
 			name = Debug;
 		};
 		351968E11C2BD8280033AE2B /* Release */ = {
