@@ -47,16 +47,46 @@
 	</array>
 	<key>MeBaseInfoCellItems</key>
 	<array>
-		<string>姓名：</string>
-		<string>性别：</string>
-		<string>出生年月：</string>
-		<string>工作城市：</string>
-		<string>行业职能：</string>
-		<string>公司：</string>
-		<string>职位：</string>
-		<string>个人简介：</string>
-		<string>职业经历：</string>
-		<string>教育经历：</string>
+		<array>
+			<string>姓名：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>性别：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>出生年月：</string>
+			<string>请选择</string>
+		</array>
+		<array>
+			<string>工作城市：</string>
+			<string>请选择</string>
+		</array>
+		<array>
+			<string>行业职能：</string>
+			<string>请选择</string>
+		</array>
+		<array>
+			<string>公司：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>职位：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>个人简介：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>职业经历：</string>
+			<string>请填写</string>
+		</array>
+		<array>
+			<string>教育经历：</string>
+			<string>请填写</string>
+		</array>
 	</array>
 	<key>RegularExpressions</key>
 	<dict>

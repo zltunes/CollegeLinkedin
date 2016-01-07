@@ -11,28 +11,37 @@
 #import "MeBaseInfoCellWithPhoto.h"
 #import "MeBaseInfoCellWithTwoLabels.h"
 #import "EditNameVC.h"
-
+#import "TableViewDataSourceDelegate.h"
+#import "UITableViewCell+Extension.h"
 
 static NSString* const MeBaseInfoCellID0   = @"MeBaseInfoCellWithPhoto";
-static const CGFloat MeBaseInfoCell0Height = 74.0f;
+//static const CGFloat MeBaseInfoCell0Height = 74.0f;
 static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
-static const CGFloat MeBaseInfoCell1Height = 45.0f;
+//static const CGFloat MeBaseInfoCell1Height = 45.0f;
 
 @interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>
 
 @property(strong,nonatomic) NSArray *cellItemsArray;
+@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler0;
+@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler1;
 
 @end
 
 @implementation MeBaseInfoIndexVC
 
+-(NSArray*)cellItemsArray{
+    if(!_cellItemsArray){
+        _cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
+    }
+    return _cellItemsArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
+//    self.cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
     
-    self.tableView.tableFooterView = [Config getTableViewFooter];
-    
+    [self setupTableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,15 +49,47 @@ static const CGFloat MeBaseInfoCell1Height = 45.0f;
     // Dispose of any resources that can be recreated.
 }
 
+-(void)setupTableView{
+    self.tableView.tableFooterView = [Config getTableViewFooter];
+    
+    TableViewCellConfigureCellBlock configureCell = ^(NSIndexPath* indexPath,id obj,UITableViewCell* cell){
+        [cell configure:cell customObj:obj indexPath:indexPath];
+    };
+
+    CellHeightBlock heightBlock0                  = ^CGFloat(NSIndexPath* indexPath,id item){
+        return [MeBaseInfoCellWithPhoto getCellHeightWithCustomObj:item indexPath:indexPath];
+    };
+
+    CellHeightBlock heightBlock1                  = ^CGFloat(NSIndexPath* indexPath,id item){
+        return [MeBaseInfoCellWithTwoLabels getCellHeightWithCustomObj:item indexPath:indexPath];
+    };
+
+    DidSelectCellBlock selectBlock                = ^(NSIndexPath* indexPath, id item){
+        NSLog(@"%ld",(long)indexPath.row);
+    };
+    
+    self.tableHandler0 = [[TableViewDataSourceDelegate alloc]initWithItems:self.cellItemsArray
+                                                            cellIdentifier:MeBaseInfoCellID0
+                                                        configureCellBlock:configureCell cellHeightBlock:heightBlock0 didSelectBlock:selectBlock];
+    
+    self.tableHandler1 = [[TableViewDataSourceDelegate alloc]initWithItems:self.cellItemsArray
+                                                            cellIdentifier:MeBaseInfoCellID1
+                                                        configureCellBlock:configureCell cellHeightBlock:heightBlock1 didSelectBlock:selectBlock];
+    
+    [self.tableHandler0 HandleTableViewDataSourceAndDelegate:self.tableView];
+    [self.tableHandler1 HandleTableViewDataSourceAndDelegate:self.tableView];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return [Config getSectionHeaderHeight];
 }
 
+/*
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 11;
 }
@@ -96,6 +137,7 @@ static const CGFloat MeBaseInfoCell1Height = 45.0f;
             break;
     }
 }
+*/
 
 -(void)uploadImage{
     
@@ -169,49 +211,5 @@ static const CGFloat MeBaseInfoCell1Height = 45.0f;
         cell.operationLabel.textColor = [UIColor darkGrayColor];
     };
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
