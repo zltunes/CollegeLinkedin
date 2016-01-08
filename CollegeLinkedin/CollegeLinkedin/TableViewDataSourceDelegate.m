@@ -11,8 +11,7 @@
 
 @interface TableViewDataSourceDelegate()
 
-@property (nonatomic,strong) NSArray                         * items;
-@property (nonatomic,copy  ) NSString                        * cellIdentifier;
+@property (nonatomic,strong) NSDictionary                         * tableItems;
 @property (nonatomic,strong) TableViewCellConfigureCellBlock configureCellBlock;
 @property (nonatomic,strong) CellHeightBlock                 heightConfigureBlock;
 @property (nonatomic,strong) DidSelectCellBlock              didSelectCellBlock;
@@ -26,16 +25,14 @@
     return nil;
 }
 
--(id)initWithItems:(NSArray *)anItems
-    cellIdentifier:(NSString *)aCellIdentifier
+-(id)initWithItems:(NSDictionary *)anItems
 configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
    cellHeightBlock:(CellHeightBlock)aHeightBlock
     didSelectBlock:(DidSelectCellBlock)aDidSelectBlock
 {
     self = [super init];
     if (self) {
-        self.items                = anItems;
-        self.cellIdentifier       = aCellIdentifier;
+        self.tableItems           = anItems;
         self.configureCellBlock   = aConfigureCellBlock;
         self.heightConfigureBlock = aHeightBlock;
         self.didSelectCellBlock   = aDidSelectBlock;
@@ -43,9 +40,20 @@ configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
     return self;
 }
 
+-(NSArray*)rowItems:(NSInteger)section
+{
+    return self.tableItems[@"items"][section];
+}
+
+-(NSString*)cellIdentifier:(NSIndexPath*)indexPath
+{
+    return self.tableItems[@"identifier"][indexPath.section];
+}
+
 -(id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.items[(NSUInteger)indexPath.row];
+    NSArray* rowItems = [self rowItems:indexPath.section];
+    return rowItems[(NSUInteger)indexPath.row];
 }
 
 -(void)HandleTableViewDataSourceAndDelegate:(UITableView *)table
@@ -56,20 +64,29 @@ configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
 
 #pragma --
 #pragma mark - UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return ((NSArray*)self.tableItems[@"items"]).count;
+}
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.items.count;
+    NSArray* rowItems = [self rowItems:section];
+    return rowItems.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier forIndexPath:indexPath];
+    NSString* cellIdentifier = [self cellIdentifier:indexPath];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     id item = [self itemAtIndexPath:indexPath];
     if(!cell){
         //如果tableview没有执行regisgter nib,cell无法复用的时候:
-        [UITableViewCell registerTable:tableView nibIdentifier:self.cellIdentifier];
-        cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
+        [UITableViewCell registerTable:tableView nibIdentifier:cellIdentifier];
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     }
     
     //执行block进行初始化,回调在vc
@@ -79,6 +96,14 @@ configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
 
 #pragma --
 #pragma mark - UITableViewDelegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    NSArray* headerHeights = self.tableItems[@"sectionHeaderHeight"];
+    CGFloat height =  (CGFloat)([headerHeights[section] floatValue]);
+    return  height;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     id item = [self itemAtIndexPath:indexPath];

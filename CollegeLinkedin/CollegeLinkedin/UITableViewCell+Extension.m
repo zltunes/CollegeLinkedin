@@ -32,8 +32,9 @@
     //灵活提供多个configure方法，针对不同类型的Model进行数据展示，同时也增强Cell的移植性。
 }
 
-+(CGFloat)getCellHeightWithCustomObj:(id)obj indexPath:(NSIndexPath *)indexPath
-{ 
++(CGFloat)getCellHeightWithCustomObj:(id)obj
+                           indexPath:(NSIndexPath*)indexPath
+{
     //Rewrite in SubClass if necessary!
     if(!obj){
         return 0.0f;

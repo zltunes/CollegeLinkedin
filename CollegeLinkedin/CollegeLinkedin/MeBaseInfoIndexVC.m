@@ -15,15 +15,12 @@
 #import "UITableViewCell+Extension.h"
 
 static NSString* const MeBaseInfoCellID0   = @"MeBaseInfoCellWithPhoto";
-//static const CGFloat MeBaseInfoCell0Height = 74.0f;
 static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
-//static const CGFloat MeBaseInfoCell1Height = 45.0f;
 
 @interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>
 
 @property(strong,nonatomic) NSArray *cellItemsArray;
-@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler0;
-@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler1;
+@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
 
 @end
 
@@ -39,14 +36,12 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
-    
     [self setupTableView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 -(void)setupTableView{
@@ -56,88 +51,57 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
         [cell configure:cell customObj:obj indexPath:indexPath];
     };
 
-    CellHeightBlock heightBlock0                  = ^CGFloat(NSIndexPath* indexPath,id item){
-        return [MeBaseInfoCellWithPhoto getCellHeightWithCustomObj:item indexPath:indexPath];
-    };
-
-    CellHeightBlock heightBlock1                  = ^CGFloat(NSIndexPath* indexPath,id item){
-        return [MeBaseInfoCellWithTwoLabels getCellHeightWithCustomObj:item indexPath:indexPath];
+    CellHeightBlock heightBlock                  = ^CGFloat(NSIndexPath* indexPath,id item){
+        switch (indexPath.section) {
+            case 0:
+                return [MeBaseInfoCellWithPhoto getCellHeightWithCustomObj:item indexPath:indexPath];
+                break;
+                
+            case 1:
+                return [MeBaseInfoCellWithTwoLabels getCellHeightWithCustomObj:item indexPath:indexPath];
+                break;
+                
+            default:
+                return [UITableViewCell getCellHeightWithCustomObj:item indexPath:indexPath];
+                break;
+        }
     };
 
     DidSelectCellBlock selectBlock                = ^(NSIndexPath* indexPath, id item){
-        NSLog(@"%ld",(long)indexPath.row);
+        
+        [self.tableView deselectRowAtIndexPath:indexPath animated:true];
+        switch (indexPath.section) {
+            case 0:
+                [self uploadImage];
+                break;
+            
+            case 1:
+                switch (indexPath.row) {
+                    case 0:
+                        [self performSegueWithIdentifier:@"toEditName" sender:nil];
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+            default:
+                break;
+        }
     };
     
-    self.tableHandler0 = [[TableViewDataSourceDelegate alloc]initWithItems:self.cellItemsArray
-                                                            cellIdentifier:MeBaseInfoCellID0
-                                                        configureCellBlock:configureCell cellHeightBlock:heightBlock0 didSelectBlock:selectBlock];
+    NSArray* cellItemArray0 = @[@"头像"];
+    NSArray* identifierArray = @[MeBaseInfoCellID0,MeBaseInfoCellID1];
+    NSArray* itemsArray = @[cellItemArray0,self.cellItemsArray];
+    NSArray* sectionHeaderHeightsArray = @[[NSNumber numberWithFloat:[Config getSectionHeaderHeight]],[NSNumber numberWithFloat:0.0f]];
     
-    self.tableHandler1 = [[TableViewDataSourceDelegate alloc]initWithItems:self.cellItemsArray
-                                                            cellIdentifier:MeBaseInfoCellID1
-                                                        configureCellBlock:configureCell cellHeightBlock:heightBlock1 didSelectBlock:selectBlock];
+    NSDictionary* tableDataDict = @{@"identifier":identifierArray,@"items":itemsArray,@"sectionHeaderHeight":sectionHeaderHeightsArray};
     
-    [self.tableHandler0 HandleTableViewDataSourceAndDelegate:self.tableView];
-    [self.tableHandler1 HandleTableViewDataSourceAndDelegate:self.tableView];
+    self.tableHandler = [[TableViewDataSourceDelegate alloc]initWithItems:tableDataDict
+                                                       configureCellBlock:configureCell cellHeightBlock:heightBlock didSelectBlock:selectBlock];
+    [self.tableHandler HandleTableViewDataSourceAndDelegate:self.tableView];
+    
 }
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return [Config getSectionHeaderHeight];
-}
-
-/*
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 11;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    if (indexPath.row == 0) {
-        MeBaseInfoCellWithPhoto *cell     = (MeBaseInfoCellWithPhoto*)[tableView dequeueReusableCellWithIdentifier:MeBaseInfoCellID0];
-        cell.photo.backgroundColor        = [UIColor redColor];
-
-        return cell;
-    } else {
-        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[tableView dequeueReusableCellWithIdentifier:MeBaseInfoCellID1];
-        cell.itemLabel.text               = self.cellItemsArray[indexPath.row-1];
-        if (indexPath.row > 1 && indexPath.row < 6) {
-        cell.operationLabel.text          = @"请选择";
-        } else {
-        cell.operationLabel.text          = @"请填写";
-        }
-        return cell;
-    }
-
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        return MeBaseInfoCell0Height;
-    } else {
-        return MeBaseInfoCell1Height;
-    }
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:true];
-    switch (indexPath.row) {
-        case 0:
-            [self uploadImage];
-            break;
-            
-        case 1:
-            [self performSegueWithIdentifier:@"toEditName" sender:nil];
-            break;
-            
-        default:
-            break;
-    }
-}
-*/
 
 -(void)uploadImage{
     
@@ -206,7 +170,7 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     EditNameVC *nameVC = segue.destinationViewController;
     nameVC.getNameBK = ^(NSString *str){
-        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
         cell.operationLabel.text = str;
         cell.operationLabel.textColor = [UIColor darkGrayColor];
     };

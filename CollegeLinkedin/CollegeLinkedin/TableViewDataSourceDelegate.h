@@ -21,11 +21,10 @@ typedef void (^DidSelectCellBlock)(NSIndexPath* indexPath,id item);
 @interface TableViewDataSourceDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
 
 //tableView初始化
--(id)initWithItems:(NSArray* )anItems
-    cellIdentifier:(NSString* )aCellIdentifier
-configureCellBlock:(TableViewCellConfigureCellBlock )aConfigureCellBlock
-   cellHeightBlock:(CellHeightBlock )aHeightBlock
-    didSelectBlock:(DidSelectCellBlock )aDidSelectBlock;
+-(id)initWithItems:(NSDictionary *)anItems
+configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
+   cellHeightBlock:(CellHeightBlock)aHeightBlock
+    didSelectBlock:(DidSelectCellBlock)aDidSelectBlock;
 
 //设置vc中的tableview delegate/dataSource 均为本类
 -(void) HandleTableViewDataSourceAndDelegate:(UITableView* )table;
