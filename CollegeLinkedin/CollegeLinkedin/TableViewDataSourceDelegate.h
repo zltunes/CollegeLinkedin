@@ -15,16 +15,20 @@ typedef void (^TableViewCellConfigureCellBlock)(NSIndexPath* indexPath,id item,U
 //cell行高,height可以存在item中
 typedef CGFloat (^CellHeightBlock)(NSIndexPath* indexPath,id item);
 
+//cellIdentifier
+typedef NSString* (^CellIdentifierBlock)(NSIndexPath* indexPath,id item);
+
 //点击事件
 typedef void (^DidSelectCellBlock)(NSIndexPath* indexPath,id item);
 
 @interface TableViewDataSourceDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
 
 //tableView初始化
--(id)initWithItems:(NSDictionary *)anItems
-configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
-   cellHeightBlock:(CellHeightBlock)aHeightBlock
-    didSelectBlock:(DidSelectCellBlock)aDidSelectBlock;
+-(id)initWithSections:(NSArray *)sections
+   configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
+  cellIdentifierBlock:(CellIdentifierBlock)identifierBlock
+      cellHeightBlock:(CellHeightBlock)aHeightBlock
+       didSelectBlock:(DidSelectCellBlock)aDidSelectBlock;
 
 //设置vc中的tableview delegate/dataSource 均为本类
 -(void) HandleTableViewDataSourceAndDelegate:(UITableView* )table;

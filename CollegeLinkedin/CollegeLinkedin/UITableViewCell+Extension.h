@@ -24,4 +24,7 @@
 +(CGFloat)getCellHeightWithCustomObj:(id)obj
                         indexPath:(NSIndexPath*)indexPath;
 
++(NSString*)getCellIdentifierWithCustomObj:(id)obj
+                                 indexPath:(NSIndexPath*)indexPath;
+
 @end

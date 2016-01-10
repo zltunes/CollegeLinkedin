@@ -44,4 +44,11 @@
     
 }
 
++(NSString*)getCellIdentifierWithCustomObj:(id)obj
+                                 indexPath:(NSIndexPath*)indexPath
+{
+    //rewrite in SubClass!
+    return @"";
+}
+
 @end

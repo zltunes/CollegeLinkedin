@@ -7,7 +7,9 @@
 //
 
 #import "MeBaseInfoCellWithPhoto.h"
+#import "MeBaseInfoPhotoItem.h"
 
+static NSString* const MeBaseInfoCellID0   = @"MeBaseInfoCellWithPhoto";
 static const CGFloat MeBaseInfoCell0Height = 74.0f;
 
 @implementation MeBaseInfoCellWithPhoto
@@ -18,13 +20,21 @@ static const CGFloat MeBaseInfoCell0Height = 74.0f;
        indexPath:(NSIndexPath *)indexPath
 {
     MeBaseInfoCellWithPhoto* photoCell = (MeBaseInfoCellWithPhoto*) cell;
-    photoCell.photo.backgroundColor = [UIColor redColor];
+    MeBaseInfoPhotoItem* item = (MeBaseInfoPhotoItem*) obj;
+    
+    photoCell.photo.image = item.photo;
 }
 
 +(CGFloat)getCellHeightWithCustomObj:(id)obj
                            indexPath:(NSIndexPath *)indexPath
 {
     return MeBaseInfoCell0Height;
+}
+
++(NSString*)getCellIdentifierWithCustomObj:(id)obj
+                                 indexPath:(NSIndexPath*)indexPath
+{
+    return MeBaseInfoCellID0;
 }
 
 

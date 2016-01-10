@@ -7,7 +7,9 @@
 //
 
 #import "MeBaseInfoCellWithTwoLabels.h"
+#import "MeBaseInfoItem.h"
 
+static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
 static const CGFloat MeBaseInfoCell1Height = 45.0f;
 
 @implementation MeBaseInfoCellWithTwoLabels
@@ -18,15 +20,21 @@ static const CGFloat MeBaseInfoCell1Height = 45.0f;
        indexPath:(NSIndexPath *)indexPath
 {
     MeBaseInfoCellWithTwoLabels* infoCell = (MeBaseInfoCellWithTwoLabels*)cell;
-    NSArray* infoObj = (NSArray*)obj;
-    infoCell.itemLabel.text = (NSString*)infoObj[0];
-    infoCell.operationLabel.text = (NSString*)infoObj[1];
+    MeBaseInfoItem* item                  = (MeBaseInfoItem*)obj;
+    infoCell.itemLabel.text               = item.title;
+    infoCell.operationLabel.text          = item.content;
 }
 
 +(CGFloat)getCellHeightWithCustomObj:(id)obj
                            indexPath:(NSIndexPath *)indexPath
 {
     return MeBaseInfoCell1Height;
+}
+
++(NSString*)getCellIdentifierWithCustomObj:(id)obj
+                                 indexPath:(NSIndexPath*)indexPath
+{
+    return MeBaseInfoCellID1;
 }
 
 @end

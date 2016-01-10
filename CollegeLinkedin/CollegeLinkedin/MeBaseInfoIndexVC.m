@@ -13,24 +13,41 @@
 #import "EditNameVC.h"
 #import "TableViewDataSourceDelegate.h"
 #import "UITableViewCell+Extension.h"
-
-static NSString* const MeBaseInfoCellID0   = @"MeBaseInfoCellWithPhoto";
-static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
+#import "MeBaseInfoItem.h"
+#import "MeBaseInfoPhotoItem.h"
+#import "TableViewSection.h"
 
 @interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>
 
-@property(strong,nonatomic) NSArray *cellItemsArray;
+@property(strong,nonatomic) NSArray* sectionItemsArray;
 @property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
 
 @end
 
 @implementation MeBaseInfoIndexVC
 
--(NSArray*)cellItemsArray{
-    if(!_cellItemsArray){
-        _cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
+-(NSArray*) sectionItemsArray
+{
+    if(!_sectionItemsArray){
+        _sectionItemsArray = [NSArray array];
+        
+        NSArray* cellArray = [NSArray array];
+
+        MeBaseInfoPhotoItem* item0 = [[MeBaseInfoPhotoItem alloc]initWithTitle:@"头像" andPhoto:[UIImage imageNamed:@"账号"]];
+        cellArray = [cellArray arrayByAddingObject:item0];
+
+        NSArray* cellItemsArray = [[Config getInfoPlistDict] objectForKey:@"MeBaseInfoCellItems"];
+        for (NSArray* array in cellItemsArray) {
+            MeBaseInfoItem* item = [[MeBaseInfoItem alloc]initWithTitle:array[0] andContent:array[1]];
+            cellArray = [cellArray arrayByAddingObject:item];
+        }
+        
+        TableViewSection *section = [[TableViewSection alloc]initWithHeaderTitle:@"" headerHeight:11.0f items:cellArray];
+        
+        _sectionItemsArray = [_sectionItemsArray arrayByAddingObject:section];
     }
-    return _cellItemsArray;
+    
+    return _sectionItemsArray;
 }
 
 - (void)viewDidLoad {
@@ -45,6 +62,7 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
 }
 
 -(void)setupTableView{
+    
     self.tableView.tableFooterView = [Config getTableViewFooter];
     
     TableViewCellConfigureCellBlock configureCell = ^(NSIndexPath* indexPath,id obj,UITableViewCell* cell){
@@ -52,53 +70,44 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
     };
 
     CellHeightBlock heightBlock                  = ^CGFloat(NSIndexPath* indexPath,id item){
-        switch (indexPath.section) {
-            case 0:
-                return [MeBaseInfoCellWithPhoto getCellHeightWithCustomObj:item indexPath:indexPath];
-                break;
-                
-            case 1:
-                return [MeBaseInfoCellWithTwoLabels getCellHeightWithCustomObj:item indexPath:indexPath];
-                break;
-                
-            default:
-                return [UITableViewCell getCellHeightWithCustomObj:item indexPath:indexPath];
-                break;
+        if (indexPath.row == 0) {
+            return [MeBaseInfoCellWithPhoto getCellHeightWithCustomObj:item indexPath:indexPath];
+        } else {
+            return [MeBaseInfoCellWithTwoLabels getCellHeightWithCustomObj:item indexPath:indexPath];
+        }
+    };
+    
+    CellIdentifierBlock cellIdentifier = ^NSString* (NSIndexPath* indexPath, id item){
+        if (indexPath.row == 0) {
+            return [MeBaseInfoCellWithPhoto getCellIdentifierWithCustomObj:item indexPath:indexPath];
+        } else {
+            return [MeBaseInfoCellWithTwoLabels getCellIdentifierWithCustomObj:item indexPath:indexPath];
         }
     };
 
     DidSelectCellBlock selectBlock                = ^(NSIndexPath* indexPath, id item){
         
         [self.tableView deselectRowAtIndexPath:indexPath animated:true];
-        switch (indexPath.section) {
+        switch (indexPath.row) {
             case 0:
                 [self uploadImage];
                 break;
             
             case 1:
-                switch (indexPath.row) {
-                    case 0:
-                        [self performSegueWithIdentifier:@"toEditName" sender:nil];
-                        break;
-                        
-                    default:
-                        break;
-                }
+                [self performSegueWithIdentifier:@"toEditName" sender:nil];
+                break;
                 
             default:
                 break;
         }
     };
     
-    NSArray* cellItemArray0 = @[@"头像"];
-    NSArray* identifierArray = @[MeBaseInfoCellID0,MeBaseInfoCellID1];
-    NSArray* itemsArray = @[cellItemArray0,self.cellItemsArray];
-    NSArray* sectionHeaderHeightsArray = @[[NSNumber numberWithFloat:[Config getSectionHeaderHeight]],[NSNumber numberWithFloat:0.0f]];
+    self.tableHandler = [[TableViewDataSourceDelegate alloc]initWithSections:self.sectionItemsArray
+                                                          configureCellBlock:configureCell
+                                                         cellIdentifierBlock:cellIdentifier
+                                                             cellHeightBlock:heightBlock
+                                                              didSelectBlock:selectBlock];
     
-    NSDictionary* tableDataDict = @{@"identifier":identifierArray,@"items":itemsArray,@"sectionHeaderHeight":sectionHeaderHeightsArray};
-    
-    self.tableHandler = [[TableViewDataSourceDelegate alloc]initWithItems:tableDataDict
-                                                       configureCellBlock:configureCell cellHeightBlock:heightBlock didSelectBlock:selectBlock];
     [self.tableHandler HandleTableViewDataSourceAndDelegate:self.tableView];
     
 }
@@ -170,7 +179,7 @@ static NSString* const MeBaseInfoCellID1   = @"MeBaseInfoCellWithTwoLabels";
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     EditNameVC *nameVC = segue.destinationViewController;
     nameVC.getNameBK = ^(NSString *str){
-        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
         cell.operationLabel.text = str;
         cell.operationLabel.textColor = [UIColor darkGrayColor];
     };

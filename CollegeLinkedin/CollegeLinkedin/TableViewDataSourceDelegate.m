@@ -8,13 +8,15 @@
 
 #import "TableViewDataSourceDelegate.h"
 #import "UITableViewCell+Extension.h"
+#import "TableViewSection.h"
 
 @interface TableViewDataSourceDelegate()
 
-@property (nonatomic,strong) NSDictionary                         * tableItems;
+@property (nonatomic,strong) NSArray                         * sections;
 @property (nonatomic,strong) TableViewCellConfigureCellBlock configureCellBlock;
 @property (nonatomic,strong) CellHeightBlock                 heightConfigureBlock;
 @property (nonatomic,strong) DidSelectCellBlock              didSelectCellBlock;
+@property (nonatomic,strong) CellIdentifierBlock               identifierBlock;
 
 @end
 
@@ -25,35 +27,45 @@
     return nil;
 }
 
--(id)initWithItems:(NSDictionary *)anItems
-configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
-   cellHeightBlock:(CellHeightBlock)aHeightBlock
-    didSelectBlock:(DidSelectCellBlock)aDidSelectBlock
+-(id)initWithSections:(NSArray *)sections
+   configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
+  cellIdentifierBlock:(CellIdentifierBlock)identifierBlock
+      cellHeightBlock:(CellHeightBlock)aHeightBlock
+       didSelectBlock:(DidSelectCellBlock)aDidSelectBlock
 {
     self = [super init];
     if (self) {
-        self.tableItems           = anItems;
+        self.sections             = sections;
         self.configureCellBlock   = aConfigureCellBlock;
+        self.identifierBlock      = identifierBlock;
         self.heightConfigureBlock = aHeightBlock;
         self.didSelectCellBlock   = aDidSelectBlock;
     }
     return self;
 }
 
--(NSArray*)rowItems:(NSInteger)section
+-(TableViewSection*)sectionItemAtSection:(NSInteger)section
 {
-    return self.tableItems[@"items"][section];
+    return (TableViewSection*)self.sections[section];
 }
 
--(NSString*)cellIdentifier:(NSIndexPath*)indexPath
+
+-(NSArray*)rowItems:(NSInteger)section
 {
-    return self.tableItems[@"identifier"][indexPath.section];
+    TableViewSection* sectionItem = [self sectionItemAtSection:section];
+    return sectionItem.items;
 }
 
 -(id)itemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray* rowItems = [self rowItems:indexPath.section];
     return rowItems[(NSUInteger)indexPath.row];
+}
+
+-(NSString*)cellIdentifier:(NSIndexPath*)indexPath
+{
+    id item = [self itemAtIndexPath:indexPath];
+    return self.identifierBlock(indexPath,item);
 }
 
 -(void)HandleTableViewDataSourceAndDelegate:(UITableView *)table
@@ -67,7 +79,7 @@ configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return ((NSArray*)self.tableItems[@"items"]).count;
+    return self.sections.count;
 }
 
 
@@ -99,10 +111,16 @@ configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    NSArray* headerHeights = self.tableItems[@"sectionHeaderHeight"];
-    CGFloat height =  (CGFloat)([headerHeights[section] floatValue]);
-    return  height;
+    TableViewSection* sectionItem = [self sectionItemAtSection:section];
+    return sectionItem.headerHeight;
 }
+
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    TableViewSection* sectionItem = [self sectionItemAtSection:section];
+    return sectionItem.headerTitle;
+}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
