@@ -16,11 +16,13 @@
 #import "MeBaseInfoItem.h"
 #import "MeBaseInfoPhotoItem.h"
 #import "TableViewSection.h"
+#import "ZHPickView.h"
 
-@interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate>
+@interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,ZHPickViewDelegate>
 
 @property(strong,nonatomic) NSArray* sectionItemsArray;
 @property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
+@property(nonatomic,strong)ZHPickView *pickview;
 
 @end
 
@@ -89,12 +91,35 @@
         
         [self.tableView deselectRowAtIndexPath:indexPath animated:true];
         switch (indexPath.row) {
+            //头像
             case 0:
                 [self uploadImage];
                 break;
-            
+                
+            //姓名
             case 1:
                 [self performSegueWithIdentifier:@"toEditName" sender:nil];
+                break;
+                
+            //性别
+            case 2:
+                [self pickSex];
+                break;
+                
+            //出生年月
+            case 3:
+                _pickview = [[ZHPickView alloc]initDatePickviewWithHaveNavControler:NO];
+                _pickview.delegate = self;
+                _pickview.tag = 3;
+                [_pickview show];
+                break;
+                
+            //工作城市
+            case 4:
+                _pickview=[[ZHPickView alloc]initPickviewWithPlistName:@"city" isHaveNavControler:NO];
+                _pickview.delegate = self;
+                _pickview.tag = 4;
+                [_pickview show];
                 break;
                 
             default:
@@ -183,6 +208,53 @@
         cell.operationLabel.text = str;
         cell.operationLabel.textColor = [UIColor darkGrayColor];
     };
+}
+
+//选择性别
+-(void)pickSex
+{
+    MeBaseInfoCellWithTwoLabels* cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+    
+    UIAlertController* pickSexActionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction* action_male = [UIAlertAction actionWithTitle:@"男" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        cell.operationLabel.text = @"男";
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    }];
+    
+    UIAlertAction* action_female = [UIAlertAction actionWithTitle:@"女" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        cell.operationLabel.text = @"女";
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    }];
+    
+    UIAlertAction* action_secret = [UIAlertAction actionWithTitle:@"保密" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        cell.operationLabel.text = @"保密";
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    }];
+    
+    UIAlertAction* action_cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    [pickSexActionSheet addAction:action_male];
+    [pickSexActionSheet addAction:action_female];
+    [pickSexActionSheet addAction:action_secret];
+    [pickSexActionSheet addAction:action_cancel];
+    
+    [self presentViewController:pickSexActionSheet animated:YES completion:nil];
+}
+
+
+#pragma mark ZHPickviewDelegate
+-(void)toobarDonBtnHaveClick:(ZHPickView *)pickView resultString:(NSString *)resultString
+{
+    if (pickView.tag == 3) {
+        MeBaseInfoCellWithTwoLabels *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+        cell.operationLabel.text = resultString;
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    } else {
+        MeBaseInfoCellWithTwoLabels *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
+        cell.operationLabel.text = resultString;
+        cell.operationLabel.textColor = [UIColor darkGrayColor];
+    }
 }
 
 @end

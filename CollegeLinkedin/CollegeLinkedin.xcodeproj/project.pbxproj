@@ -19,6 +19,8 @@
 		351968D51C2BD8280033AE2B /* CollegeLinkedinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968D41C2BD8280033AE2B /* CollegeLinkedinUITests.m */; };
 		351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */; };
 		351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */; };
+		353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F1A801C5DCD17005E8F4D /* ZHPickView.m */; };
+		353F1A831C5DCD40005E8F4D /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353F1A821C5DCD40005E8F4D /* city.plist */; };
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
@@ -73,6 +75,9 @@
 		351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		351C4AB41C3E956B0027A69A /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
+		353F1A801C5DCD17005E8F4D /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
+		353F1A821C5DCD40005E8F4D /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		357DB61A1C2C20620087090B /* MeIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeIndexVC.h; sourceTree = "<group>"; };
 		357DB61B1C2C20620087090B /* MeIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeIndexVC.m; sourceTree = "<group>"; };
 		358077F31C2C145F00D0A4A9 /* MeCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithPhoto.h; sourceTree = "<group>"; };
@@ -191,6 +196,15 @@
 			path = CollegeLinkedinUITests;
 			sourceTree = "<group>";
 		};
+		353F1A7E1C5DCD05005E8F4D /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */,
+				353F1A801C5DCD17005E8F4D /* ZHPickView.m */,
+			);
+			name = PickerView;
+			sourceTree = "<group>";
+		};
 		357DB6191C2C20320087090B /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +238,7 @@
 		358077E91C2C096F00D0A4A9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				353F1A821C5DCD40005E8F4D /* city.plist */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -231,6 +246,7 @@
 		358077EA1C2C097100D0A4A9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				353F1A7E1C5DCD05005E8F4D /* PickerView */,
 				35CD61A01C2E8B8800B315AA /* TextFieldValidator */,
 			);
 			name = Vender;
@@ -457,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				351968BF1C2BD8280033AE2B /* LaunchScreen.storyboard in Resources */,
+				353F1A831C5DCD40005E8F4D /* city.plist in Resources */,
 				351968BC1C2BD8280033AE2B /* Assets.xcassets in Resources */,
 				351968BA1C2BD8280033AE2B /* Main.storyboard in Resources */,
 			);
@@ -531,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */,
 				35009EDF1C425A8D004BF94B /* MeBaseInfoItem.m in Sources */,
 				35FA5B511C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m in Sources */,
 				35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */,
