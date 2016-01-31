@@ -11,12 +11,15 @@
 #import "MeBaseInfoCellWithPhoto.h"
 #import "MeBaseInfoCellWithTwoLabels.h"
 #import "EditNameVC.h"
+#import "EditCompanyNameVC.h"
+#import "EditSelfIntroVC.h"
 #import "TableViewDataSourceDelegate.h"
 #import "UITableViewCell+Extension.h"
 #import "MeBaseInfoItem.h"
 #import "MeBaseInfoPhotoItem.h"
 #import "TableViewSection.h"
 #import "ZHPickView.h"
+#import "EditPositionVC.h"
 
 @interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,ZHPickViewDelegate>
 
@@ -122,6 +125,26 @@
                 [_pickview show];
                 break;
                 
+            //行业职能
+            case 5:
+                
+                break;
+                
+            //公司
+            case 6:
+                [self performSegueWithIdentifier:@"toEditCompanyName" sender:nil];
+                break;
+                
+            //职位
+            case 7:
+                [self performSegueWithIdentifier:@"toEditPosition" sender:nil];
+                break;
+                
+            //个人简介
+            case 8:
+                [self performSegueWithIdentifier:@"toEditSelfIntro" sender:nil];
+                break;
+                
             default:
                 break;
         }
@@ -202,12 +225,36 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    EditNameVC *nameVC = segue.destinationViewController;
-    nameVC.getNameBK = ^(NSString *str){
-        MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-        cell.operationLabel.text = str;
-        cell.operationLabel.textColor = [UIColor darkGrayColor];
-    };
+    NSString* identifier = segue.identifier;
+    if ([identifier isEqualToString:@"toEditName"]) {
+        EditNameVC *nameVC = segue.destinationViewController;
+        nameVC.getNameBK = ^(NSString *str){
+            MeBaseInfoCellWithTwoLabels *cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+            cell.operationLabel.text = str;
+            cell.operationLabel.textColor = [UIColor darkGrayColor];
+        };
+    }else if([identifier isEqualToString:@"toEditCompanyName"]){
+        EditCompanyNameVC *companyNameVC = segue.destinationViewController;
+        companyNameVC.getCompanyNameBK = ^(NSString* str){
+            MeBaseInfoCellWithTwoLabels* cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0]];
+            cell.operationLabel.text = str;
+            cell.operationLabel.textColor = [UIColor darkGrayColor];
+        };
+    }else if([identifier isEqualToString:@"toEditPosition"]){
+        EditPositionVC *positionVC = segue.destinationViewController;
+        positionVC.getPositionBK = ^(NSString* str){
+            MeBaseInfoCellWithTwoLabels* cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:7 inSection:0]];
+            cell.operationLabel.text = str;
+            cell.operationLabel.textColor = [UIColor darkGrayColor];
+        };
+    }else if([identifier isEqualToString:@"toEditSelfIntro"]){
+        EditSelfIntroVC *selfIntroVC = segue.destinationViewController;
+        selfIntroVC.getSelfInfoBK = ^(NSString* str){
+            MeBaseInfoCellWithTwoLabels* cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:8 inSection:0]];
+            cell.operationLabel.text = str;
+            cell.operationLabel.textColor = [UIColor darkGrayColor];
+        };
+    }
 }
 
 //选择性别

@@ -290,13 +290,130 @@
                     <navigationItem key="navigationItem" title="基本资料" id="YxC-RC-MIU"/>
                     <connections>
                         <segue destination="BFW-pP-yBO" kind="push" identifier="toEditName" id="5Pv-qL-1NJ"/>
+                        <segue destination="8ft-cw-PkP" kind="push" identifier="toEditCompanyName" id="8zE-lj-nbJ"/>
+                        <segue destination="n0m-io-Da1" kind="push" identifier="toEditPosition" id="Pyt-DX-lrf"/>
+                        <segue destination="pzb-PK-YSo" kind="push" identifier="toEditSelfIntro" id="CdH-X6-LlN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gm4-PR-y4a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1665.5" y="4200.5"/>
         </scene>
-        <!--编辑资料-->
+        <!--个人简介-->
+        <scene sceneID="mEk-xn-CZH">
+            <objects>
+                <viewController id="pzb-PK-YSo" customClass="EditSelfIntroVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EsA-s3-FYp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uhD-8w-wAe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9SA-wH-uKH" userLabel="Present In View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="个人简介应不超过三十字" translatesAutoresizingMaskIntoConstraints="NO" id="fms-tB-DMl">
+                                <rect key="frame" x="8" y="75" width="359" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="vL0-pC-ZCW"/>
+                                </constraints>
+                                <color key="textColor" red="0.73333333333333328" green="0.72941176470588232" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="pzb-PK-YSo" id="uqa-dX-QZx"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fms-tB-DMl" firstAttribute="leading" secondItem="9SA-wH-uKH" secondAttribute="leading" constant="8" id="LVw-fD-MWv"/>
+                            <constraint firstItem="fms-tB-DMl" firstAttribute="top" secondItem="EsA-s3-FYp" secondAttribute="bottom" constant="11" id="Ucg-lS-yNq"/>
+                            <constraint firstAttribute="trailing" secondItem="fms-tB-DMl" secondAttribute="trailing" constant="8" id="xkw-Eg-mnM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人简介" id="asa-H6-gN2">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="k4c-P5-moV">
+                            <connections>
+                                <action selector="goBack:" destination="pzb-PK-YSo" id="SZB-RF-Ei4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="aVq-c6-eij">
+                            <connections>
+                                <action selector="save:" destination="pzb-PK-YSo" id="R6M-dw-Vpb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="automaticallyAdjustsScrollViewInsets" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="textView" destination="fms-tB-DMl" id="Xh1-Im-06a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOA-fE-R5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134.5" y="4288.5"/>
+        </scene>
+        <!--职位-->
+        <scene sceneID="P58-nK-nvM">
+            <objects>
+                <viewController id="n0m-io-Da1" customClass="EditPositionVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GsI-Pl-n2p"/>
+                        <viewControllerLayoutGuide type="bottom" id="euU-jD-ueG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SBa-GG-XS8" userLabel="Present In View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="职位名称应不超过二十字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kY-Fh-JZi" customClass="TextFieldValidator">
+                                <rect key="frame" x="8" y="75" width="359" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="fIg-hZ-t3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="presentInView" destination="SBa-GG-XS8" id="4kb-r8-SMK"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.82745098039999998" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0kY-Fh-JZi" firstAttribute="top" secondItem="GsI-Pl-n2p" secondAttribute="bottom" constant="11" id="6E7-GB-ydr"/>
+                            <constraint firstAttribute="trailing" secondItem="0kY-Fh-JZi" secondAttribute="trailing" constant="8" id="ChB-S4-Bwk"/>
+                            <constraint firstItem="0kY-Fh-JZi" firstAttribute="leading" secondItem="SBa-GG-XS8" secondAttribute="leading" constant="8" id="Lcs-nn-yah"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="职位" id="Y0w-Jg-ZMw">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="jfH-Sk-1Bc">
+                            <connections>
+                                <action selector="goBack:" destination="n0m-io-Da1" id="vgE-5Y-bKI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Yi2-xw-AWY">
+                            <connections>
+                                <action selector="save:" destination="n0m-io-Da1" id="7Fv-Hp-YLe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="positionTextField" destination="0kY-Fh-JZi" id="3n6-Re-C3z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cqm-RL-Xsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134.5" y="3573.5"/>
+        </scene>
+        <!--姓名-->
         <scene sceneID="0y9-4G-VVY">
             <objects>
                 <viewController storyboardIdentifier="EditNameVC" id="BFW-pP-yBO" customClass="EditNameVC" sceneMemberID="viewController">
@@ -329,11 +446,16 @@
                             <constraint firstItem="wJO-WB-qE9" firstAttribute="leading" secondItem="Hbc-9N-Qd2" secondAttribute="leading" constant="8" id="sB4-KR-enR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="编辑资料" id="AXb-ld-ERR">
+                    <navigationItem key="navigationItem" title="姓名" id="AXb-ld-ERR">
                         <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="ZJx-3e-oLC">
                             <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="goBack:" destination="BFW-pP-yBO" id="l6j-cM-MfV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="IHd-Ck-7SG">
+                            <connections>
+                                <action selector="save:" destination="BFW-pP-yBO" id="KNR-MV-uuD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -344,6 +466,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csn-Sk-uUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2134.5" y="2147.5"/>
+        </scene>
+        <!--公司-->
+        <scene sceneID="Dk6-xt-QVl">
+            <objects>
+                <viewController id="8ft-cw-PkP" customClass="EditCompanyNameVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dPZ-Lc-Jj5"/>
+                        <viewControllerLayoutGuide type="bottom" id="f1w-ej-pRL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uGO-Fe-DGG" userLabel="Present In View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="公司名称应不超过二十字" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuZ-q9-NGE" customClass="TextFieldValidator">
+                                <rect key="frame" x="8" y="75" width="359" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Vln-k9-VSm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didEndOnExit:" destination="8ft-cw-PkP" eventType="editingDidEndOnExit" id="kHE-VD-fVF"/>
+                                    <outlet property="presentInView" destination="uGO-Fe-DGG" id="dRc-Ru-2dS"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KuZ-q9-NGE" firstAttribute="top" secondItem="dPZ-Lc-Jj5" secondAttribute="bottom" constant="11" id="3W2-pt-mdH"/>
+                            <constraint firstItem="KuZ-q9-NGE" firstAttribute="trailing" secondItem="uGO-Fe-DGG" secondAttribute="trailingMargin" constant="8" id="E7c-8f-jWY"/>
+                            <constraint firstItem="KuZ-q9-NGE" firstAttribute="leading" secondItem="uGO-Fe-DGG" secondAttribute="leading" constant="8" id="ySj-Ic-Afd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="公司" id="aV3-jP-ueI">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="AHl-2i-HmG">
+                            <connections>
+                                <action selector="goBack:" destination="8ft-cw-PkP" id="bBP-RS-CEI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="8mF-F2-a3z">
+                            <connections>
+                                <action selector="save:" destination="8ft-cw-PkP" id="o24-tG-TjJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="companyNameTextField" destination="KuZ-q9-NGE" id="HAb-ok-RFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rK4-L5-fDi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2134.5" y="2860.5"/>
         </scene>
         <!--我-->
         <scene sceneID="gWh-9L-iXK">

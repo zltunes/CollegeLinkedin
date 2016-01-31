@@ -58,6 +58,7 @@ static NSDictionary *infoPlistDict = nil;
     return infoPlistDict;
 }
 
+///indicator
 +(void)showProgressHUDwithStatus:(NSString*) status{
     [SVProgressHUD showWithStatus:status];
 }
@@ -73,6 +74,20 @@ static NSDictionary *infoPlistDict = nil;
 +(void)showErrorHUDwithStatus:(NSString*) status{
     [SVProgressHUD showErrorWithStatus:status maskType:SVProgressHUDMaskTypeBlack];
 }
+
+///goback_alert
++(void)popAlertControllerWhenGobackWithRootVC:(UIViewController*)superVC{
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"放弃编辑？" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* action_goback = [UIAlertAction actionWithTitle:@"放弃" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [superVC.navigationController popViewControllerAnimated:YES];
+    }];
+    UIAlertAction* action_cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:action_goback];
+    [alert addAction:action_cancel];
+    
+    [superVC presentViewController:alert animated:YES completion:nil];
+}
+
 
 ///压缩图片
 +(UIImage*) handlePicture:(UIImage*) originPic toAimSise:(CGSize)aimSize isZipped:(BOOL)zipped{

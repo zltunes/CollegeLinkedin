@@ -26,6 +26,9 @@
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
+		35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */; };
+		35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */; };
+		35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */; };
 		35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B4B1C2C32BF00B2E66E /* Config.m */; };
 		35FA5B511C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B501C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m */; };
 		35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B531C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m */; };
@@ -88,6 +91,12 @@
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
 		35CD61A51C2E910000B315AA /* EditNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNameVC.m; sourceTree = "<group>"; };
+		35F1D3C81C5E519700D918FE /* EditCompanyNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCompanyNameVC.h; sourceTree = "<group>"; };
+		35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCompanyNameVC.m; sourceTree = "<group>"; };
+		35F1D3CB1C5E51B800D918FE /* EditPositionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPositionVC.h; sourceTree = "<group>"; };
+		35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPositionVC.m; sourceTree = "<group>"; };
+		35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSelfIntroVC.h; sourceTree = "<group>"; };
+		35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSelfIntroVC.m; sourceTree = "<group>"; };
 		35FA5B4A1C2C32BF00B2E66E /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		35FA5B4B1C2C32BF00B2E66E /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		35FA5B4F1C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBaseInfoCellWithPhoto.h; sourceTree = "<group>"; };
@@ -205,6 +214,13 @@
 			name = PickerView;
 			sourceTree = "<group>";
 		};
+		353F1A841C5E0A75005E8F4D /* TwoSelector */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TwoSelector;
+			sourceTree = "<group>";
+		};
 		357DB6191C2C20320087090B /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +316,7 @@
 		358077F21C2C143800D0A4A9 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				353F1A841C5E0A75005E8F4D /* TwoSelector */,
 				35FA5B4D1C2D0BED00B2E66E /* MeIndexCell */,
 				35FA5B4E1C2D0C0700B2E66E /* MeBaseInfoCell */,
 			);
@@ -344,6 +361,12 @@
 				35FA5B5A1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m */,
 				35CD61A41C2E910000B315AA /* EditNameVC.h */,
 				35CD61A51C2E910000B315AA /* EditNameVC.m */,
+				35F1D3C81C5E519700D918FE /* EditCompanyNameVC.h */,
+				35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */,
+				35F1D3CB1C5E51B800D918FE /* EditPositionVC.h */,
+				35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */,
+				35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */,
+				35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */,
 			);
 			name = MeBaseInfo;
 			sourceTree = "<group>";
@@ -435,7 +458,7 @@
 				TargetAttributes = {
 					351968AB1C2BD8280033AE2B = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = TV6QKK88A3;
+						DevelopmentTeam = K6S552898A;
 					};
 					351968C41C2BD8280033AE2B = {
 						CreatedOnToolsVersion = 7.2;
@@ -557,11 +580,14 @@
 				35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */,
 				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
+				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
+				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
+				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,

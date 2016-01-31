@@ -32,19 +32,24 @@
 }
 
 - (IBAction)goBack:(UIBarButtonItem *)sender {
+    [Config popAlertControllerWhenGobackWithRootVC:self];
+}
+
+- (IBAction)save:(id)sender {
     if ([nameTextField validate]){
         self.getNameBK(nameTextField.text);
         [self.navigationController popViewControllerAnimated:YES];
     } else {
-        [Config showErrorHUDwithStatus:@"用户名输入有误!"];
+        [Config showErrorHUDwithStatus:@"用户名不符合规则!"];
     }
 }
+
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [nameTextField resignFirstResponder];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
 }
