@@ -145,6 +145,11 @@
                 [self performSegueWithIdentifier:@"toEditSelfIntro" sender:nil];
                 break;
                 
+            //职业经历
+            case 9:
+                [self performSegueWithIdentifier:@"toToAddJobExpVC" sender:nil];
+                break;
+                
             default:
                 break;
         }
@@ -288,6 +293,8 @@
     
     [self presentViewController:pickSexActionSheet animated:YES completion:nil];
 }
+
+
 
 
 #pragma mark ZHPickviewDelegate

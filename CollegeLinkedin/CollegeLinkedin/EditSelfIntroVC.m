@@ -55,10 +55,6 @@
     return YES;
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [textView resignFirstResponder];
-}
 
 
 

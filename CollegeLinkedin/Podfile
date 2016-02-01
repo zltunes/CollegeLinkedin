@@ -12,3 +12,5 @@ pod 'Reachability'
 pod 'MJRefresh'
 
 pod 'SVProgressHUD'
+
+pod 'IQKeyboardManager'

@@ -121,7 +121,13 @@ static const CGFloat sectionHeaderHeight = 11.0f;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     switch (indexPath.section) {
+//        头像
         case 0:
+            
+            break;
+            
+//        编辑资料
+        case 1:
             [self performSegueWithIdentifier:@"toMeBaseInfo" sender:nil];
             break;
             

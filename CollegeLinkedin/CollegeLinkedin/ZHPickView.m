@@ -15,6 +15,8 @@
 @property(nonatomic,assign)BOOL isLevelString;
 @property(nonatomic,assign)BOOL isLevelDic;
 @property(nonatomic,assign)BOOL isDatePicker;
+@property(nonatomic,assign)BOOL isYearMonthPicker;
+@property(nonatomic,assign)BOOL isYearMonthPickerWithNow;
 @property(nonatomic,strong)NSDictionary *levelTwoDic;
 @property(nonatomic,strong)UIToolbar *toolbar;
 @property(nonatomic,strong)UIPickerView *pickerView;
@@ -100,7 +102,8 @@
     return self;
 }
 
--(instancetype)initDatePickviewWithHaveNavControler:(BOOL)isHaveNavControler{
+-(instancetype)initDatePickviewWithHaveNavControler:(BOOL)isHaveNavControler
+{
     self = [super init];
     if (self) {
         
@@ -180,6 +183,96 @@
     return self;
 }
 
+-(instancetype)initDatePickviewWithHaveNavControler:(BOOL)isHaveNavControler
+                                    isYearMonthType:(BOOL)isYearMonth
+                             isYearMonthTypeWithNow:(BOOL)isYearMonthWithNow
+{
+    self = [super init];
+    if (self) {
+        
+        _isYearMonthPicker = isYearMonth;
+        _isYearMonthPickerWithNow = isYearMonthWithNow;
+        _isDatePicker = NO;
+        _isLevelDic=NO;
+        _isLevelString=NO;
+        _isLevelArray=NO;
+        
+        m=0;
+        firstTimeLoad = YES;
+        NSDate *date = [NSDate date];
+        
+        // Get Current Year
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy"];
+        
+        NSString *currentyearString = [NSString stringWithFormat:@"%@",
+                                       [formatter stringFromDate:date]];
+        year =[currentyearString intValue];
+        
+        
+        // Get Current  Month
+        
+        [formatter setDateFormat:@"MM"];
+        
+        currentMonthString = [NSString stringWithFormat:@"%ld",(long)[[formatter stringFromDate:date]integerValue]];
+        month=[currentMonthString intValue];
+        
+//        // Get Current  Date
+//        
+//        [formatter setDateFormat:@"dd"];
+//        NSString *currentDateString = [NSString stringWithFormat:@"%@",[formatter stringFromDate:date]];
+//        
+//        day =[currentDateString intValue];
+        
+        yearArray = [[NSMutableArray alloc]init];
+        monthMutableArray = [[NSMutableArray alloc]init];
+//        DaysMutableArray= [[NSMutableArray alloc]init];
+        for (int i = 1970; i <= year ; i++)
+        {
+            [yearArray addObject:[NSString stringWithFormat:@"%d",i]];
+            
+        }
+        
+        if (isYearMonthWithNow) {
+            [yearArray addObject:@"至今"];
+        }
+        
+        
+        // PickerView -  Months data
+        
+        
+        monthArray = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"];
+        
+        for (int i=1; i<month+1; i++) {
+            [monthMutableArray addObject:[NSString stringWithFormat:@"%d",i]];
+        }
+//        DaysArray = [[NSMutableArray alloc]init];
+        
+//        for (int i = 1; i <= 31; i++)
+//        {
+//            [DaysArray addObject:[NSString stringWithFormat:@"%d",i]];
+//            
+//        }
+//        for (int i = 1; i <day+1; i++)
+//        {
+//            [DaysMutableArray addObject:[NSString stringWithFormat:@"%d",i]];
+//            
+//        }
+        
+        [self setUpPickView];
+        [self setFrameWith:isHaveNavControler];
+        
+        // 设置初始默认值
+        [self.pickerView selectRow:20 inComponent:0 animated:YES];
+        [self.pickerView selectRow:0 inComponent:1 animated:YES];
+//        [self.pickerView selectRow:0 inComponent:2 animated:YES];
+        
+    }
+    return self;
+}
+
+
 /*
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler{
     
@@ -212,11 +305,15 @@
             _isLevelString=NO;
             _isLevelDic=NO;
             _isDatePicker = NO;
+            _isYearMonthPickerWithNow = NO;
+            _isYearMonthPicker = NO;
         }else if ([levelTwo isKindOfClass:[NSString class]]){
             _isLevelString=YES;
             _isLevelArray=NO;
             _isLevelDic=NO;
             _isDatePicker = NO;
+            _isYearMonthPicker = NO;
+            _isYearMonthPickerWithNow = NO;
         }else if ([levelTwo isKindOfClass:[NSDictionary class]])
         {
             _isLevelDic=YES;
@@ -224,6 +321,8 @@
             _isLevelArray=NO;
             _levelTwoDic=levelTwo;
             _isDatePicker = NO;
+            _isYearMonthPicker = NO;
+            _isYearMonthPickerWithNow = NO;
             [_dicKeyArray addObject:[_levelTwoDic allKeys] ];
         }
     }
@@ -318,6 +417,8 @@
         component=[_levelTwoDic allKeys].count*2;
     }else if(_isDatePicker){
         component = 3;
+    }else if(_isYearMonthPicker || _isYearMonthPickerWithNow){
+        component = 2;
     }
     return component;
 }
@@ -399,6 +500,28 @@
             
         }
 
+    }else if(_isYearMonthPicker || _isYearMonthPickerWithNow){
+        if (component == 0)
+        {
+            return [yearArray count];
+            
+        }
+        else if (component == 1)
+        {
+            NSInteger selectRow =  [pickerView selectedRowInComponent:0];
+            int n;
+            n= year-1970;
+            if (selectRow==n) {
+                return [monthMutableArray count];
+            }else if(selectRow == n+1){
+                return 0;//选中“至今”
+            }else
+            {
+                return [monthArray count];
+                
+            }
+        }
+
     }
     return rowArray.count;
 }
@@ -441,6 +564,15 @@
             
         }
 
+    }else if(_isYearMonthPicker || _isYearMonthPickerWithNow){
+        if (component == 0)
+        {
+            rowTitle =  [yearArray objectAtIndex:row]; // Year
+        }
+        else if (component == 1)
+        {
+            rowTitle =  [monthArray objectAtIndex:row];  // Month
+        }
     }
     return rowTitle;
 }
@@ -500,6 +632,18 @@
             
         }
 
+    }else if(_isYearMonthPicker || _isYearMonthPickerWithNow){
+        if (component == 0)
+        {
+            selectedYearRow = row;
+            [self.pickerView reloadAllComponents];
+        }
+        else if (component == 1)
+        {
+            selectedMonthRow = row;
+            [self.pickerView reloadAllComponents];
+        }
+
     }
 }
 
@@ -548,6 +692,12 @@
                 //        _resultString=[NSString stringWithFormat:@"%@",_datePicker.date];
                 
                 _resultString = [NSString stringWithFormat:@"%@/%@/%@ ",[yearArray objectAtIndex:[self.pickerView selectedRowInComponent:0]],[monthArray objectAtIndex:[self.pickerView selectedRowInComponent:1]],[DaysArray objectAtIndex:[self.pickerView selectedRowInComponent:2]]];
+            }else if(_isYearMonthPicker || _isYearMonthPickerWithNow){
+                if([[yearArray objectAtIndex:[self.pickerView selectedRowInComponent:0]]isEqualToString:@"至今"]){
+                    _resultString = @"至今";
+                }else{
+                _resultString = [NSString stringWithFormat:@"%@/%@ ",[yearArray objectAtIndex:[self.pickerView selectedRowInComponent:0]],[monthArray objectAtIndex:[self.pickerView selectedRowInComponent:1]]];
+                }
             }
         }
     }

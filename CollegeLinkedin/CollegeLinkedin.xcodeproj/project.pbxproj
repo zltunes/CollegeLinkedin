@@ -19,6 +19,9 @@
 		351968D51C2BD8280033AE2B /* CollegeLinkedinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968D41C2BD8280033AE2B /* CollegeLinkedinUITests.m */; };
 		351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */; };
 		351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */; };
+		3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */; };
+		352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697F1C5F1CFA0009130E /* AddJobExpVC.m */; };
+		352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 352269831C5F1EFF0009130E /* CellWithOneLabel.m */; };
 		353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F1A801C5DCD17005E8F4D /* ZHPickView.m */; };
 		353F1A831C5DCD40005E8F4D /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353F1A821C5DCD40005E8F4D /* city.plist */; };
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
@@ -26,6 +29,9 @@
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
+		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
+		35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */; };
+		35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696291C5F4F0E000D4274 /* CellWithTextView.m */; };
 		35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */; };
 		35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */; };
 		35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */; };
@@ -78,6 +84,12 @@
 		351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		351C4AB41C3E956B0027A69A /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		3522697B1C5F1CDF0009130E /* ToAddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToAddJobExpVC.h; sourceTree = "<group>"; };
+		3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToAddJobExpVC.m; sourceTree = "<group>"; };
+		3522697E1C5F1CFA0009130E /* AddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddJobExpVC.h; sourceTree = "<group>"; };
+		3522697F1C5F1CFA0009130E /* AddJobExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddJobExpVC.m; sourceTree = "<group>"; };
+		352269821C5F1EFF0009130E /* CellWithOneLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithOneLabel.h; sourceTree = "<group>"; };
+		352269831C5F1EFF0009130E /* CellWithOneLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithOneLabel.m; sourceTree = "<group>"; };
 		353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
 		353F1A801C5DCD17005E8F4D /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
 		353F1A821C5DCD40005E8F4D /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
@@ -91,6 +103,12 @@
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
 		35CD61A51C2E910000B315AA /* EditNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNameVC.m; sourceTree = "<group>"; };
+		35E696221C5F4ED2000D4274 /* CellWithLabelAndTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithLabelAndTextField.h; sourceTree = "<group>"; };
+		35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithLabelAndTextField.m; sourceTree = "<group>"; };
+		35E696251C5F4EFA000D4274 /* ChooseTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTimeCell.h; sourceTree = "<group>"; };
+		35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTimeCell.m; sourceTree = "<group>"; };
+		35E696281C5F4F0E000D4274 /* CellWithTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithTextView.h; sourceTree = "<group>"; };
+		35E696291C5F4F0E000D4274 /* CellWithTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithTextView.m; sourceTree = "<group>"; };
 		35F1D3C81C5E519700D918FE /* EditCompanyNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCompanyNameVC.h; sourceTree = "<group>"; };
 		35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCompanyNameVC.m; sourceTree = "<group>"; };
 		35F1D3CB1C5E51B800D918FE /* EditPositionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPositionVC.h; sourceTree = "<group>"; };
@@ -205,6 +223,32 @@
 			path = CollegeLinkedinUITests;
 			sourceTree = "<group>";
 		};
+		3522697A1C5F1C410009130E /* JobExperience */ = {
+			isa = PBXGroup;
+			children = (
+				3522697B1C5F1CDF0009130E /* ToAddJobExpVC.h */,
+				3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */,
+				3522697E1C5F1CFA0009130E /* AddJobExpVC.h */,
+				3522697F1C5F1CFA0009130E /* AddJobExpVC.m */,
+			);
+			name = JobExperience;
+			sourceTree = "<group>";
+		};
+		352269811C5F1E890009130E /* JobExperienceCell */ = {
+			isa = PBXGroup;
+			children = (
+				352269821C5F1EFF0009130E /* CellWithOneLabel.h */,
+				352269831C5F1EFF0009130E /* CellWithOneLabel.m */,
+				35E696221C5F4ED2000D4274 /* CellWithLabelAndTextField.h */,
+				35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */,
+				35E696251C5F4EFA000D4274 /* ChooseTimeCell.h */,
+				35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */,
+				35E696281C5F4F0E000D4274 /* CellWithTextView.h */,
+				35E696291C5F4F0E000D4274 /* CellWithTextView.m */,
+			);
+			name = JobExperienceCell;
+			sourceTree = "<group>";
+		};
 		353F1A7E1C5DCD05005E8F4D /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +360,7 @@
 		358077F21C2C143800D0A4A9 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				352269811C5F1E890009130E /* JobExperienceCell */,
 				353F1A841C5E0A75005E8F4D /* TwoSelector */,
 				35FA5B4D1C2D0BED00B2E66E /* MeIndexCell */,
 				35FA5B4E1C2D0C0700B2E66E /* MeBaseInfoCell */,
@@ -367,6 +412,7 @@
 				35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */,
 				35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */,
 				35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */,
+				3522697A1C5F1C410009130E /* JobExperience */,
 			);
 			name = MeBaseInfo;
 			sourceTree = "<group>";
@@ -577,12 +623,16 @@
 				35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */,
 				35009EDC1C42492D004BF94B /* TableViewSection.m in Sources */,
 				351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */,
+				352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */,
+				35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */,
 				35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */,
 				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
+				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
+				35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
@@ -590,6 +640,8 @@
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
+				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
+				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +791,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -754,6 +807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

@@ -22,8 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDictionary *dic = [[Config getInfoPlistDict] objectForKey:@"RegularExpressions"];
-    [nameTextField addRegx:[dic objectForKey:@"userNameRex"] withMsg:@"用户名必须为2-10个汉字"];
-    nameTextField.validateOnResign = NO;
+    [nameTextField addRegx:[dic objectForKey:@"userNameRex"] withMsg:@"用户名必须为2-4个汉字"];
+    nameTextField.validateOnResign = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +42,6 @@
     } else {
         [Config showErrorHUDwithStatus:@"用户名不符合规则!"];
     }
-}
-
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [nameTextField resignFirstResponder];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{

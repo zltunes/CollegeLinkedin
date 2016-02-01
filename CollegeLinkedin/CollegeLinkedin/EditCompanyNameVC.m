@@ -44,18 +44,6 @@
     }
 }
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    [companyNameTextField resignFirstResponder];
-}
-
-- (IBAction)didEndOnExit:(id)sender {
-    [sender resignFirstResponder];
-}
-
-
-
-
 
 /*
 #pragma mark - Navigation

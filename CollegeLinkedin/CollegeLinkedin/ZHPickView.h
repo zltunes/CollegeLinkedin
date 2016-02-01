@@ -51,6 +51,10 @@
 //-(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler;
 -(instancetype)initDatePickviewWithHaveNavControler:(BOOL)isHaveNavControler;
 
+-(instancetype)initDatePickviewWithHaveNavControler:(BOOL)isHaveNavControler
+                                    isYearMonthType:(BOOL)isYearMonth
+                             isYearMonthTypeWithNow:(BOOL)isYearMonthWithNow;
+
 /**
  *   移除本控件
  */

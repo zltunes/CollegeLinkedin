@@ -91,7 +91,7 @@
 	<key>RegularExpressions</key>
 	<dict>
 		<key>userNameRex</key>
-		<string>^[\u4e00-\u9fa5]{2,10}$</string>
+		<string>^[\u4e00-\u9fa5]{2,4}$</string>
 		<key>phoneNumRex</key>
 		<string>^1[3|4|5|7|8][0-9]\\d{8}$</string>
 		<key>selfIntroductionRex</key>
