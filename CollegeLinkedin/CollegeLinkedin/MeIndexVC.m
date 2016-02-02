@@ -126,9 +126,14 @@ static const CGFloat sectionHeaderHeight = 11.0f;
             
             break;
             
-//        编辑资料
         case 1:
-            [self performSegueWithIdentifier:@"toMeBaseInfo" sender:nil];
+            if (indexPath.row == 0) {
+//                编辑资料
+                [self performSegueWithIdentifier:@"toMeBaseInfo" sender:nil];
+            } else {
+//                我的二维码
+                
+            }
             break;
             
         default:

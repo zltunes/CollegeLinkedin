@@ -34,7 +34,7 @@ extern
 
 + (void)load {
     Class bundleInjection = NSClassFromString(@"BundleInjection");
-    [bundleInjection autoLoadedNotify:0 hook:(void *)injectionHook];
+    [bundleInjection autoLoadedNotify:1 hook:(void *)injectionHook];
 }
 
 @end

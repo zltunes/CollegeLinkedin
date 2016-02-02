@@ -32,6 +32,11 @@
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
 		35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */; };
 		35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696291C5F4F0E000D4274 /* CellWithTextView.m */; };
+		35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696301C5FCC5A000D4274 /* toAddEduExpVC.m */; };
+		35E696341C5FCC72000D4274 /* AddEduExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696331C5FCC72000D4274 /* AddEduExpVC.m */; };
+		35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696371C60C20F000D4274 /* TwoSelectorsVC.m */; };
+		35E6963E1C611AF3000D4274 /* leftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E6963D1C611AF3000D4274 /* leftCell.m */; };
+		35E696411C611AFF000D4274 /* rightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696401C611AFF000D4274 /* rightCell.m */; };
 		35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */; };
 		35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */; };
 		35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */; };
@@ -109,6 +114,17 @@
 		35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTimeCell.m; sourceTree = "<group>"; };
 		35E696281C5F4F0E000D4274 /* CellWithTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithTextView.h; sourceTree = "<group>"; };
 		35E696291C5F4F0E000D4274 /* CellWithTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithTextView.m; sourceTree = "<group>"; };
+		35E6962F1C5FCC5A000D4274 /* toAddEduExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toAddEduExpVC.h; sourceTree = "<group>"; };
+		35E696301C5FCC5A000D4274 /* toAddEduExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toAddEduExpVC.m; sourceTree = "<group>"; };
+		35E696321C5FCC72000D4274 /* AddEduExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEduExpVC.h; sourceTree = "<group>"; };
+		35E696331C5FCC72000D4274 /* AddEduExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEduExpVC.m; sourceTree = "<group>"; };
+		35E696361C60C20F000D4274 /* TwoSelectorsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoSelectorsVC.h; sourceTree = "<group>"; };
+		35E696371C60C20F000D4274 /* TwoSelectorsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoSelectorsVC.m; sourceTree = "<group>"; };
+		35E6963B1C60C7CC000D4274 /* CALayer_extensionCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayer_extensionCALayer.h; sourceTree = "<group>"; };
+		35E6963C1C611AF3000D4274 /* leftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftCell.h; sourceTree = "<group>"; };
+		35E6963D1C611AF3000D4274 /* leftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftCell.m; sourceTree = "<group>"; };
+		35E6963F1C611AFF000D4274 /* rightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightCell.h; sourceTree = "<group>"; };
+		35E696401C611AFF000D4274 /* rightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightCell.m; sourceTree = "<group>"; };
 		35F1D3C81C5E519700D918FE /* EditCompanyNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCompanyNameVC.h; sourceTree = "<group>"; };
 		35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCompanyNameVC.m; sourceTree = "<group>"; };
 		35F1D3CB1C5E51B800D918FE /* EditPositionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPositionVC.h; sourceTree = "<group>"; };
@@ -258,11 +274,15 @@
 			name = PickerView;
 			sourceTree = "<group>";
 		};
-		353F1A841C5E0A75005E8F4D /* TwoSelector */ = {
+		353F1A841C5E0A75005E8F4D /* TwoSelectorCell */ = {
 			isa = PBXGroup;
 			children = (
+				35E6963C1C611AF3000D4274 /* leftCell.h */,
+				35E6963D1C611AF3000D4274 /* leftCell.m */,
+				35E6963F1C611AFF000D4274 /* rightCell.h */,
+				35E696401C611AFF000D4274 /* rightCell.m */,
 			);
-			name = TwoSelector;
+			name = TwoSelectorCell;
 			sourceTree = "<group>";
 		};
 		357DB6191C2C20320087090B /* Me */ = {
@@ -291,6 +311,7 @@
 			children = (
 				35FA5B4A1C2C32BF00B2E66E /* Config.h */,
 				35FA5B4B1C2C32BF00B2E66E /* Config.m */,
+				35E6963B1C60C7CC000D4274 /* CALayer_extensionCALayer.h */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -361,7 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				352269811C5F1E890009130E /* JobExperienceCell */,
-				353F1A841C5E0A75005E8F4D /* TwoSelector */,
+				353F1A841C5E0A75005E8F4D /* TwoSelectorCell */,
 				35FA5B4D1C2D0BED00B2E66E /* MeIndexCell */,
 				35FA5B4E1C2D0C0700B2E66E /* MeBaseInfoCell */,
 			);
@@ -375,6 +396,17 @@
 				35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */,
 			);
 			name = TextFieldValidator;
+			sourceTree = "<group>";
+		};
+		35E6962E1C5FCC27000D4274 /* educationExperience */ = {
+			isa = PBXGroup;
+			children = (
+				35E6962F1C5FCC5A000D4274 /* toAddEduExpVC.h */,
+				35E696301C5FCC5A000D4274 /* toAddEduExpVC.m */,
+				35E696321C5FCC72000D4274 /* AddEduExpVC.h */,
+				35E696331C5FCC72000D4274 /* AddEduExpVC.m */,
+			);
+			name = educationExperience;
 			sourceTree = "<group>";
 		};
 		35FA5B4D1C2D0BED00B2E66E /* MeIndexCell */ = {
@@ -412,7 +444,10 @@
 				35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */,
 				35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */,
 				35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */,
+				35E696361C60C20F000D4274 /* TwoSelectorsVC.h */,
+				35E696371C60C20F000D4274 /* TwoSelectorsVC.m */,
 				3522697A1C5F1C410009130E /* JobExperience */,
+				35E6962E1C5FCC27000D4274 /* educationExperience */,
 			);
 			name = MeBaseInfo;
 			sourceTree = "<group>";
@@ -618,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */,
+				35E696341C5FCC72000D4274 /* AddEduExpVC.m in Sources */,
 				35009EDF1C425A8D004BF94B /* MeBaseInfoItem.m in Sources */,
 				35FA5B511C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m in Sources */,
 				35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */,
@@ -632,15 +668,19 @@
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
+				35E6963E1C611AF3000D4274 /* leftCell.m in Sources */,
 				35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
+				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
 				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
+				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
+				35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);

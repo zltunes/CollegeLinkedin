@@ -150,6 +150,11 @@
                 [self performSegueWithIdentifier:@"toToAddJobExpVC" sender:nil];
                 break;
                 
+            //教育经历
+                case 10:
+                [self performSegueWithIdentifier:@"toToAddEduExpVC" sender:nil];
+                break;
+                
             default:
                 break;
         }

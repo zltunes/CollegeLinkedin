@@ -1,32 +1,26 @@
 //
-//  ToAddJobExpVC.m
+//  toAddEduExpVC.m
 //  CollegeLinkedin
 //
-//  Created by 赵磊 on 16/2/1.
+//  Created by 赵磊 on 16/2/2.
 //  Copyright © 2016年 赵磊. All rights reserved.
 //
 
-#import "ToAddJobExpVC.h"
+#import "toAddEduExpVC.h"
 #import "CellWithOneLabel.h"
 #import "Config.h"
 
-static NSString* const toAddJobExpCellID = @"CellWithOneLabel";
+static NSString* const toAddEduExpCellID = @"CellWithOneLabel";
 
-@interface ToAddJobExpVC ()
+@interface toAddEduExpVC ()
 
 @end
 
-@implementation ToAddJobExpVC
+@implementation toAddEduExpVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+
     self.tableView.tableFooterView = [Config getTableViewFooter];
 }
 
@@ -38,6 +32,7 @@ static NSString* const toAddJobExpCellID = @"CellWithOneLabel";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
 }
 
@@ -46,8 +41,8 @@ static NSString* const toAddJobExpCellID = @"CellWithOneLabel";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CellWithOneLabel *cell = [tableView dequeueReusableCellWithIdentifier:toAddJobExpCellID  forIndexPath:indexPath];
-    cell.label.text = @" ＋ 添加职业经历";
+    CellWithOneLabel *cell = [tableView dequeueReusableCellWithIdentifier:toAddEduExpCellID  forIndexPath:indexPath];
+    cell.label.text = @" ＋ 添加教育经历";
     return cell;
 }
 
@@ -57,15 +52,17 @@ static NSString* const toAddJobExpCellID = @"CellWithOneLabel";
 }
 
 - (IBAction)goBack:(id)sender {
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"toAddJobExpVC" sender:nil];
-}
 
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+////    [self performSegueWithIdentifier:@"toAddJobExpVC" sender:nil];
+//}
 
 
 /*

@@ -12,11 +12,13 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
     if (self.textView.text.length == 0) {
         self.promptLabel.hidden = NO;
     } else {
         self.promptLabel.hidden = YES;
     }
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
