@@ -8,6 +8,23 @@
 
 #import "rightCell.h"
 
+static NSString* const rightCellID = @"rightCell";
+
 @implementation rightCell
+
+-(void)configure:(UITableViewCell *)cell
+       customObj:(id)obj
+       indexPath:(NSIndexPath *)indexPath
+{
+    rightCell* careerCell = (rightCell*)cell;
+    Career* career = (Career*)obj;
+    careerCell.label.text = career.name;
+}
+
++(NSString*)getCellIdentifierWithCustomObj:(id)obj
+                                 indexPath:(NSIndexPath*)indexPath
+{
+    return rightCellID;
+}
 
 @end

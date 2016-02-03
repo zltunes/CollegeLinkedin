@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Career.h"
 
 @interface rightCell : UITableViewCell
 

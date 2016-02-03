@@ -10,9 +10,34 @@
 
 @interface TwoSelectorsVC ()
 
+@property(strong,nonatomic) NSArray* leftSectionItemsArray;
+@property(strong,nonatomic) NSArray* rightSectionItemsArray;
+@property(strong,nonatomic) TableViewDataSourceDelegate* leftTableHandler;
+@property(strong,nonatomic) TableViewDataSourceDelegate* rightTableHandler;
+
 @end
 
 @implementation TwoSelectorsVC
+
+-(NSArray*) leftSectionItemsArray
+{
+    if (!_leftSectionItemsArray) {
+        
+        _leftSectionItemsArray = [NSArray array];
+        NSArray *cellArray = [NSArray array];
+        cellArray = [Industry mj_objectArrayWithKeyValuesArray:[Config getIndustryArray]];
+        TableViewSection* section = [[TableViewSection alloc]initWithHeaderTitle:nil headerHeight:0 items:cellArray];
+        _leftSectionItemsArray = [_leftSectionItemsArray arrayByAddingObject:section];
+    
+    };
+    
+    return _leftSectionItemsArray;
+}
+
+-(NSArray*) rightSectionItemsArray
+{
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,14 +49,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

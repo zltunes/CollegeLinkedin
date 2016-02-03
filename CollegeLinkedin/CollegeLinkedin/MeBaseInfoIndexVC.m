@@ -25,7 +25,7 @@
 
 @property(strong,nonatomic) NSArray* sectionItemsArray;
 @property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
-@property(nonatomic,strong)ZHPickView *pickview;
+@property(nonatomic,strong) ZHPickView *pickview;
 
 @end
 

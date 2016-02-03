@@ -10,6 +10,8 @@
 		35009EDC1C42492D004BF94B /* TableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 35009EDB1C42492D004BF94B /* TableViewSection.m */; };
 		35009EDF1C425A8D004BF94B /* MeBaseInfoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35009EDE1C425A8D004BF94B /* MeBaseInfoItem.m */; };
 		35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35009EE11C425AA7004BF94B /* MeBaseInfoPhotoItem.m */; };
+		35122D561C6129CA0093CD82 /* Career.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D551C6129CA0093CD82 /* Career.m */; };
+		35122D591C6129EA0093CD82 /* Industry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D581C6129EA0093CD82 /* Industry.m */; };
 		351968B11C2BD8280033AE2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968B01C2BD8280033AE2B /* main.m */; };
 		351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968B31C2BD8280033AE2B /* AppDelegate.m */; };
 		351968BA1C2BD8280033AE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351968B81C2BD8280033AE2B /* Main.storyboard */; };
@@ -37,6 +39,7 @@
 		35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696371C60C20F000D4274 /* TwoSelectorsVC.m */; };
 		35E6963E1C611AF3000D4274 /* leftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E6963D1C611AF3000D4274 /* leftCell.m */; };
 		35E696411C611AFF000D4274 /* rightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696401C611AFF000D4274 /* rightCell.m */; };
+		35E696431C6124CF000D4274 /* industry.json in Resources */ = {isa = PBXBuildFile; fileRef = 35E696421C6124CF000D4274 /* industry.json */; };
 		35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */; };
 		35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */; };
 		35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */; };
@@ -71,6 +74,10 @@
 		35009EDE1C425A8D004BF94B /* MeBaseInfoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBaseInfoItem.m; sourceTree = "<group>"; };
 		35009EE01C425AA7004BF94B /* MeBaseInfoPhotoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBaseInfoPhotoItem.h; sourceTree = "<group>"; };
 		35009EE11C425AA7004BF94B /* MeBaseInfoPhotoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBaseInfoPhotoItem.m; sourceTree = "<group>"; };
+		35122D541C6129CA0093CD82 /* Career.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Career.h; sourceTree = "<group>"; };
+		35122D551C6129CA0093CD82 /* Career.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Career.m; sourceTree = "<group>"; };
+		35122D571C6129EA0093CD82 /* Industry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Industry.h; sourceTree = "<group>"; };
+		35122D581C6129EA0093CD82 /* Industry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Industry.m; sourceTree = "<group>"; };
 		351968AC1C2BD8280033AE2B /* CollegeLinkedin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeLinkedin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		351968B01C2BD8280033AE2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		351968B21C2BD8280033AE2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +132,7 @@
 		35E6963D1C611AF3000D4274 /* leftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftCell.m; sourceTree = "<group>"; };
 		35E6963F1C611AFF000D4274 /* rightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rightCell.h; sourceTree = "<group>"; };
 		35E696401C611AFF000D4274 /* rightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rightCell.m; sourceTree = "<group>"; };
+		35E696421C6124CF000D4274 /* industry.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = industry.json; sourceTree = "<group>"; };
 		35F1D3C81C5E519700D918FE /* EditCompanyNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCompanyNameVC.h; sourceTree = "<group>"; };
 		35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCompanyNameVC.m; sourceTree = "<group>"; };
 		35F1D3CB1C5E51B800D918FE /* EditPositionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPositionVC.h; sourceTree = "<group>"; };
@@ -170,6 +178,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35122D501C6127060093CD82 /* MeBaseInfo */ = {
+			isa = PBXGroup;
+			children = (
+				35122D531C6129A80093CD82 /* industry */,
+				35122D511C61272C0093CD82 /* IndexTableViewItem */,
+			);
+			name = MeBaseInfo;
+			sourceTree = "<group>";
+		};
+		35122D511C61272C0093CD82 /* IndexTableViewItem */ = {
+			isa = PBXGroup;
+			children = (
+				35009EDD1C425A8D004BF94B /* MeBaseInfoItem.h */,
+				35009EDE1C425A8D004BF94B /* MeBaseInfoItem.m */,
+				35009EE01C425AA7004BF94B /* MeBaseInfoPhotoItem.h */,
+				35009EE11C425AA7004BF94B /* MeBaseInfoPhotoItem.m */,
+			);
+			name = IndexTableViewItem;
+			sourceTree = "<group>";
+		};
+		35122D531C6129A80093CD82 /* industry */ = {
+			isa = PBXGroup;
+			children = (
+				35122D541C6129CA0093CD82 /* Career.h */,
+				35122D551C6129CA0093CD82 /* Career.m */,
+				35122D571C6129EA0093CD82 /* Industry.h */,
+				35122D581C6129EA0093CD82 /* Industry.m */,
+			);
+			name = industry;
+			sourceTree = "<group>";
+		};
 		351968A31C2BD8280033AE2B = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +358,7 @@
 		358077E91C2C096F00D0A4A9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				35E696421C6124CF000D4274 /* industry.json */,
 				353F1A821C5DCD40005E8F4D /* city.plist */,
 			);
 			name = Resource;
@@ -370,10 +410,7 @@
 		358077F11C2C099800D0A4A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				35009EDD1C425A8D004BF94B /* MeBaseInfoItem.h */,
-				35009EDE1C425A8D004BF94B /* MeBaseInfoItem.m */,
-				35009EE01C425AA7004BF94B /* MeBaseInfoPhotoItem.h */,
-				35009EE11C425AA7004BF94B /* MeBaseInfoPhotoItem.m */,
+				35122D501C6127060093CD82 /* MeBaseInfo */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -576,6 +613,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E696431C6124CF000D4274 /* industry.json in Resources */,
 				351968BF1C2BD8280033AE2B /* LaunchScreen.storyboard in Resources */,
 				353F1A831C5DCD40005E8F4D /* city.plist in Resources */,
 				351968BC1C2BD8280033AE2B /* Assets.xcassets in Resources */,
@@ -665,6 +703,7 @@
 				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
+				35122D591C6129EA0093CD82 /* Industry.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
@@ -673,6 +712,7 @@
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
+				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,

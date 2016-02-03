@@ -15,6 +15,7 @@
 +(UIView *)getTableViewFooter;
 +(CGFloat)getSectionHeaderHeight;
 +(NSDictionary*)getInfoPlistDict;
++(NSArray*)getIndustryArray;
 +(UIImage*) handlePicture:(UIImage*) originPic toAimSise:(CGSize)aimSize isZipped:(BOOL)zipped;
 +(UIColor *)getTintColor;
 +(void)popAlertControllerWhenGobackWithRootVC:(UIViewController*)superVC;

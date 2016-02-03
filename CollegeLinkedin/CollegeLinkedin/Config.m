@@ -19,6 +19,7 @@ static const CGFloat sectionHeaderHeight = 11.0f;
 
 static NSDictionary *infoPlistDict = nil;
 
+static NSArray *industryArray = nil;
 
 @implementation Config
 
@@ -56,6 +57,14 @@ static NSDictionary *infoPlistDict = nil;
     infoPlistDict  = [NSDictionary dictionaryWithContentsOfFile:path];
     
     return infoPlistDict;
+}
+
+///industry.json
++(NSArray*)getIndustryArray{
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"industry" ofType:@"json"];
+    industryArray = [NSArray arrayWithContentsOfFile:path];
+    
+    return industryArray;
 }
 
 ///indicator

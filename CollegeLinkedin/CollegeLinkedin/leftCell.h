@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Industry.h"
 
 @interface leftCell : UITableViewCell
 
