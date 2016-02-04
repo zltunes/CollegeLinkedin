@@ -27,4 +27,12 @@
 +(NSString*)getCellIdentifierWithCustomObj:(id)obj
                                  indexPath:(NSIndexPath*)indexPath;
 
+-(void)didSelectCell:(UITableViewCell*)cell
+       WithCustomObj:(id)obj
+           indexPath:(NSIndexPath*)indexPath;
+
+-(void)didDeselectCell:(UITableViewCell*)cell
+         withCustomObj:(id)obj
+             indexPath:(NSIndexPath*)indexPath;
+
 @end

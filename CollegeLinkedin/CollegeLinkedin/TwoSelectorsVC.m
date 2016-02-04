@@ -34,10 +34,10 @@
     return _leftSectionItemsArray;
 }
 
--(NSArray*) rightSectionItemsArray
-{
+//-(NSArray*) rightSectionItemsArray
+//{
     
-}
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -20,8 +20,13 @@
 #import "TableViewSection.h"
 #import "ZHPickView.h"
 #import "EditPositionVC.h"
+#import "IndustryTable.h"
+#import "CareerTable.h"
 
 @interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,ZHPickViewDelegate>
+{
+    IndustryTable *industryTable;
+}
 
 @property(strong,nonatomic) NSArray* sectionItemsArray;
 @property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
@@ -70,6 +75,8 @@
     
     self.tableView.tableFooterView = [Config getTableViewFooter];
     
+    
+    
     TableViewCellConfigureCellBlock configureCell = ^(NSIndexPath* indexPath,id obj,UITableViewCell* cell){
         [cell configure:cell customObj:obj indexPath:indexPath];
     };
@@ -90,7 +97,7 @@
         }
     };
 
-    DidSelectCellBlock selectBlock                = ^(NSIndexPath* indexPath, id item){
+    DidSelectCellBlock selectBlock                = ^(NSIndexPath* indexPath, id item,UITableViewCell* cell){
         
         [self.tableView deselectRowAtIndexPath:indexPath animated:true];
         switch (indexPath.row) {
@@ -127,7 +134,7 @@
                 
             //行业职能
             case 5:
-                
+                [self addIndustryCareerTable];
                 break;
                 
             //公司
@@ -168,6 +175,25 @@
     
     [self.tableHandler HandleTableViewDataSourceAndDelegate:self.tableView];
     
+}
+
+-(void)addIndustryCareerTable
+{
+//    使用addChildViewController
+    
+    industryTable = (IndustryTable*)[Config getVCFromSb:@"IndustryTable"];
+//    industryTable = [[IndustryTable alloc]init];
+    [self addChildViewController:industryTable];
+    
+    CGRect frame = industryTable.view.bounds;
+    frame.origin.x = 20;
+    frame.origin.y = 100;
+    frame.size.width = 300;
+    frame.size.height = 300;
+    
+    industryTable.view.frame = frame;
+    [self.view addSubview:industryTable.view];
+    [industryTable didMoveToParentViewController:self];
 }
 
 -(void)uploadImage{
@@ -298,9 +324,6 @@
     
     [self presentViewController:pickSexActionSheet animated:YES completion:nil];
 }
-
-
-
 
 #pragma mark ZHPickviewDelegate
 -(void)toobarDonBtnHaveClick:(ZHPickView *)pickView resultString:(NSString *)resultString

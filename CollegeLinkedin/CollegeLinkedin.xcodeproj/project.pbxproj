@@ -12,6 +12,8 @@
 		35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 35009EE11C425AA7004BF94B /* MeBaseInfoPhotoItem.m */; };
 		35122D561C6129CA0093CD82 /* Career.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D551C6129CA0093CD82 /* Career.m */; };
 		35122D591C6129EA0093CD82 /* Industry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D581C6129EA0093CD82 /* Industry.m */; };
+		35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D601C61F16E0093CD82 /* IndustryTable.m */; };
+		35122D641C61F17A0093CD82 /* CareerTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 35122D631C61F17A0093CD82 /* CareerTable.m */; };
 		351968B11C2BD8280033AE2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968B01C2BD8280033AE2B /* main.m */; };
 		351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968B31C2BD8280033AE2B /* AppDelegate.m */; };
 		351968BA1C2BD8280033AE2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351968B81C2BD8280033AE2B /* Main.storyboard */; };
@@ -78,6 +80,10 @@
 		35122D551C6129CA0093CD82 /* Career.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Career.m; sourceTree = "<group>"; };
 		35122D571C6129EA0093CD82 /* Industry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Industry.h; sourceTree = "<group>"; };
 		35122D581C6129EA0093CD82 /* Industry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Industry.m; sourceTree = "<group>"; };
+		35122D5F1C61F16E0093CD82 /* IndustryTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndustryTable.h; sourceTree = "<group>"; };
+		35122D601C61F16E0093CD82 /* IndustryTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndustryTable.m; sourceTree = "<group>"; };
+		35122D621C61F17A0093CD82 /* CareerTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CareerTable.h; sourceTree = "<group>"; };
+		35122D631C61F17A0093CD82 /* CareerTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CareerTable.m; sourceTree = "<group>"; };
 		351968AC1C2BD8280033AE2B /* CollegeLinkedin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeLinkedin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		351968B01C2BD8280033AE2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		351968B21C2BD8280033AE2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -207,6 +213,17 @@
 				35122D581C6129EA0093CD82 /* Industry.m */,
 			);
 			name = industry;
+			sourceTree = "<group>";
+		};
+		35122D5B1C61F1240093CD82 /* TwoSelectors */ = {
+			isa = PBXGroup;
+			children = (
+				35122D5F1C61F16E0093CD82 /* IndustryTable.h */,
+				35122D601C61F16E0093CD82 /* IndustryTable.m */,
+				35122D621C61F17A0093CD82 /* CareerTable.h */,
+				35122D631C61F17A0093CD82 /* CareerTable.m */,
+			);
+			name = TwoSelectors;
 			sourceTree = "<group>";
 		};
 		351968A31C2BD8280033AE2B = {
@@ -471,6 +488,7 @@
 		35FA5B551C2D0D7900B2E66E /* MeBaseInfo */ = {
 			isa = PBXGroup;
 			children = (
+				35122D5B1C61F1240093CD82 /* TwoSelectors */,
 				35FA5B591C2D0DE300B2E66E /* MeBaseInfoIndexVC.h */,
 				35FA5B5A1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m */,
 				35CD61A41C2E910000B315AA /* EditNameVC.h */,
@@ -715,6 +733,7 @@
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
+				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
@@ -722,6 +741,7 @@
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
 				35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
+				35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

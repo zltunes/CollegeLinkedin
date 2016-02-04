@@ -27,4 +27,20 @@ static NSString* const rightCellID = @"rightCell";
     return rightCellID;
 }
 
+-(void)didSelectCell:(UITableViewCell*)cell
+       WithCustomObj:(id)obj
+           indexPath:(NSIndexPath*)indexPath
+{
+    rightCell *careerCell = (rightCell*)cell;
+    [careerCell.indicatorView setBackgroundColor:[Config getTintColor]];
+}
+
+-(void)didDeselectCell:(UITableViewCell*)cell
+         withCustomObj:(id)obj
+             indexPath:(NSIndexPath*)indexPath
+{
+    rightCell *careerCell = (rightCell*)cell;
+    [careerCell.indicatorView setBackgroundColor:[UIColor clearColor]];
+}
+
 @end

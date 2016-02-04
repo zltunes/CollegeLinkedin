@@ -21,6 +21,8 @@ static NSDictionary *infoPlistDict = nil;
 
 static NSArray *industryArray = nil;
 
+static UIViewController* VCFromSb = nil;
+
 @implementation Config
 
 ///背景色
@@ -61,10 +63,23 @@ static NSArray *industryArray = nil;
 
 ///industry.json
 +(NSArray*)getIndustryArray{
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"industry" ofType:@"json"];
-    industryArray = [NSArray arrayWithContentsOfFile:path];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"industry" ofType:@"json"];
+//    industryArray = [NSArray arrayWithContentsOfFile:path];
+    
+    NSString *jsonStr  = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSData *jaonData   = [[NSData alloc] initWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding]];
+    industryArray = [NSJSONSerialization JSONObjectWithData:jaonData options:(NSJSONReadingMutableContainers) error:nil];
     
     return industryArray;
+}
+
+///从sb中获取独立vc
++(UIViewController*)getVCFromSb:(NSString*)storyboardID
+{
+    UIStoryboard* story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    VCFromSb = [story instantiateViewControllerWithIdentifier:storyboardID];
+    
+    return VCFromSb;
 }
 
 ///indicator

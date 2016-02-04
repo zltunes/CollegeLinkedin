@@ -19,6 +19,7 @@
 +(UIImage*) handlePicture:(UIImage*) originPic toAimSise:(CGSize)aimSize isZipped:(BOOL)zipped;
 +(UIColor *)getTintColor;
 +(void)popAlertControllerWhenGobackWithRootVC:(UIViewController*)superVC;
++(UIViewController*)getVCFromSb:(NSString*)storyboardID;
 
 +(void)showProgressHUDwithStatus:(NSString*) status;
 +(void)dismissHUD;

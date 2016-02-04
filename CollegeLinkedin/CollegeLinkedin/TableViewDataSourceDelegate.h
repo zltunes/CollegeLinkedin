@@ -19,7 +19,10 @@ typedef CGFloat (^CellHeightBlock)(NSIndexPath* indexPath,id item);
 typedef NSString* (^CellIdentifierBlock)(NSIndexPath* indexPath,id item);
 
 //点击事件
-typedef void (^DidSelectCellBlock)(NSIndexPath* indexPath,id item);
+typedef void (^DidSelectCellBlock)(NSIndexPath* indexPath,id item,UITableViewCell* cell);
+
+//deselect事件
+typedef void (^DidDeselectCellBlock)(NSIndexPath* indexPath,id item,UITableViewCell* cell);
 
 @interface TableViewDataSourceDelegate : NSObject<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,6 +32,14 @@ typedef void (^DidSelectCellBlock)(NSIndexPath* indexPath,id item);
   cellIdentifierBlock:(CellIdentifierBlock)identifierBlock
       cellHeightBlock:(CellHeightBlock)aHeightBlock
        didSelectBlock:(DidSelectCellBlock)aDidSelectBlock;
+
+//tableview初始化（加入cell didDeselect 事件）
+-(id)initWithSections:(NSArray *)sections
+   configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
+  cellIdentifierBlock:(CellIdentifierBlock)identifierBlock
+      cellHeightBlock:(CellHeightBlock)aHeightBlock
+       didSelectBlock:(DidSelectCellBlock)aDidSelectBlock
+     didDeselectBlcok:(DidDeselectCellBlock)aDidDeselectBlock;
 
 //设置vc中的tableview delegate/dataSource 均为本类
 -(void) HandleTableViewDataSourceAndDelegate:(UITableView* )table;

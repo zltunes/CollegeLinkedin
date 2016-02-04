@@ -16,7 +16,8 @@
 @property (nonatomic,strong) TableViewCellConfigureCellBlock configureCellBlock;
 @property (nonatomic,strong) CellHeightBlock                 heightConfigureBlock;
 @property (nonatomic,strong) DidSelectCellBlock              didSelectCellBlock;
-@property (nonatomic,strong) CellIdentifierBlock               identifierBlock;
+@property (nonatomic,strong) CellIdentifierBlock             identifierBlock;
+@property (nonatomic,strong) DidDeselectCellBlock            didDeselectCellBlock;
 
 @end
 
@@ -41,6 +42,22 @@
         self.heightConfigureBlock = aHeightBlock;
         self.didSelectCellBlock   = aDidSelectBlock;
     }
+    return self;
+}
+
+-(id)initWithSections:(NSArray *)sections
+   configureCellBlock:(TableViewCellConfigureCellBlock)aConfigureCellBlock
+  cellIdentifierBlock:(CellIdentifierBlock)identifierBlock
+      cellHeightBlock:(CellHeightBlock)aHeightBlock
+       didSelectBlock:(DidSelectCellBlock)aDidSelectBlock
+     didDeselectBlcok:(DidDeselectCellBlock)aDidDeselectBlock
+{
+    self = [self initWithSections:sections
+               configureCellBlock:aConfigureCellBlock
+              cellIdentifierBlock:identifierBlock
+                  cellHeightBlock:aHeightBlock
+                   didSelectBlock:aDidSelectBlock];
+    self.didDeselectCellBlock = aDidDeselectBlock;
     return self;
 }
 
@@ -130,8 +147,16 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     id item = [self itemAtIndexPath:indexPath];
-    self.didSelectCellBlock(indexPath,item);
+    self.didSelectCellBlock(indexPath,item,cell);
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    id item = [self itemAtIndexPath:indexPath];
+    self.didDeselectCellBlock(indexPath,item,cell);
 }
 
 @end

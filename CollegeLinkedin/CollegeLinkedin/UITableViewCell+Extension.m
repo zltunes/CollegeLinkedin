@@ -51,4 +51,18 @@
     return @"";
 }
 
+-(void)didSelectCell:(UITableViewCell*)cell
+       WithCustomObj:(id)obj
+           indexPath:(NSIndexPath*)indexPath
+{
+    //rewrite in SubClass!
+}
+
+-(void)didDeselectCell:(UITableViewCell*)cell
+         withCustomObj:(id)obj
+             indexPath:(NSIndexPath*)indexPath
+{
+//    rewrite in Subclass!
+}
+
 @end

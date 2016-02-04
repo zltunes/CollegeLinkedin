@@ -13,7 +13,4 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *label;
 
-@property (strong, nonatomic) IBOutlet UIView *indicatorView;
-
-
 @end

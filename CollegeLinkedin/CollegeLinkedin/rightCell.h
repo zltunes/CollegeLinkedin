@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "Career.h"
+#import "Config.h"
 
 @interface rightCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *label;
-
 @property (strong, nonatomic) IBOutlet UIView *indicatorView;
 
+
+@property (strong, nonatomic) IBOutlet UILabel *label;
 
 
 @end
