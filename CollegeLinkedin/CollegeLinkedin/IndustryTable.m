@@ -12,7 +12,7 @@
 
 @property(strong,nonatomic) NSArray* sectionItemsArray;
 @property(strong,nonatomic) NSArray* industriesArray;
-@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
+
 @property(strong,nonatomic) NSArray* jsonArray;
 
 @end
@@ -23,6 +23,7 @@
     [super viewDidLoad];
 
     [self setUpTableView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +39,7 @@
         TableViewSection* section = [[TableViewSection alloc]initWithHeaderTitle:nil headerHeight:0 items:_industriesArray];
         _sectionItemsArray        = [_sectionItemsArray arrayByAddingObject:section];
 
-    };
+    }
     
     return _sectionItemsArray;
 }
@@ -74,8 +75,6 @@
     
     [self.tableHandler HandleTableViewDataSourceAndDelegate:self.tableView];
     
-//    初始默认选中第一行（应是默认选中用户当前所选）
-    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO  scrollPosition:UITableViewScrollPositionTop];
 }
 
 

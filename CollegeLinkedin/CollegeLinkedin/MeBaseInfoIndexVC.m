@@ -13,7 +13,6 @@
 #import "EditNameVC.h"
 #import "EditCompanyNameVC.h"
 #import "EditSelfIntroVC.h"
-#import "TableViewDataSourceDelegate.h"
 #import "UITableViewCell+Extension.h"
 #import "MeBaseInfoItem.h"
 #import "MeBaseInfoPhotoItem.h"
@@ -23,14 +22,16 @@
 #import "IndustryTable.h"
 #import "CareerTable.h"
 
-@interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,ZHPickViewDelegate>
+@interface MeBaseInfoIndexVC ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,ZHPickViewDelegate,CareerTableDelegate>
 {
     IndustryTable *industryTable;
+    CareerTable *careerTable;
+    UIView *backView;
 }
 
-@property(strong,nonatomic) NSArray* sectionItemsArray;
-@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
-@property(nonatomic,strong) ZHPickView *pickview;
+@property (strong,nonatomic) NSArray                     * sectionItemsArray;
+@property (nonatomic,strong) ZHPickView                  * pickview;
+@property (strong,nonatomic) TableViewDataSourceDelegate * tableHandler;
 
 @end
 
@@ -179,21 +180,58 @@
 
 -(void)addIndustryCareerTable
 {
-//    使用addChildViewController
+    backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    backView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
+ 
+    //    使用addChildViewController
     
     industryTable = (IndustryTable*)[Config getVCFromSb:@"IndustryTable"];
-//    industryTable = [[IndustryTable alloc]init];
     [self addChildViewController:industryTable];
+
+    careerTable = (CareerTable*)[Config getVCFromSb:@"CareerTable"];
+    [self addChildViewController:careerTable];
+
+    industryTable.delegate = careerTable;
+    careerTable.delegate   = self;
     
-    CGRect frame = industryTable.view.bounds;
-    frame.origin.x = 20;
-    frame.origin.y = 100;
-    frame.size.width = 300;
-    frame.size.height = 300;
+    [industryTable.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+    [industryTable.tableHandler tableView:industryTable.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
-    industryTable.view.frame = frame;
-    [self.view addSubview:industryTable.view];
+    CGRect leftFrame = industryTable.view.bounds;
+    leftFrame.origin.x = 8;
+    leftFrame.origin.y = self.tableView.frame.origin.y+20;
+    leftFrame.size.width = (self.view.frame.size.width - 16)/2;
+    leftFrame.size.height = 500;
+    
+    industryTable.view.frame = leftFrame;
+    [backView addSubview:industryTable.view];
+    industryTable.view.layer.masksToBounds = YES;
     [industryTable didMoveToParentViewController:self];
+    
+    CGRect rightFrame = industryTable.view.bounds;
+    rightFrame.origin.x = leftFrame.origin.x + leftFrame.size.width;
+    rightFrame.origin.y = leftFrame.origin.y;
+    rightFrame.size.width = leftFrame.size.width;
+    rightFrame.size.height = 500;
+    
+    careerTable.view.frame = rightFrame;
+    [backView addSubview:careerTable.view];
+    careerTable.view.layer.masksToBounds = YES;
+    [careerTable didMoveToParentViewController:self];
+    
+    [self.tableView setScrollEnabled:NO];
+    
+    [self.view addSubview:backView];
+    
+}
+
+-(void)removeIndustryCareerTable
+{
+    [self dismissViewControllerAnimated:industryTable completion:nil];
+    [self dismissViewControllerAnimated:careerTable completion:nil];
+    [backView removeFromSuperview];
+    
+    [self.tableView setScrollEnabled:YES];
 }
 
 -(void)uploadImage{
@@ -337,6 +375,15 @@
         cell.operationLabel.text = resultString;
         cell.operationLabel.textColor = [UIColor darkGrayColor];
     }
+}
+
+#pragma mark CareerTabelDelegate
+-(void)didSelectCellWithCareer:(Career *)career andSelectedIndustry:(Industry*)industry
+{
+    MeBaseInfoCellWithTwoLabels* cell = (MeBaseInfoCellWithTwoLabels*)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
+    cell.operationLabel.text = [NSString stringWithFormat:@"%@  %@",industry.name,career.name];
+    cell.operationLabel.textColor = [UIColor darkGrayColor];
+    [self removeIndustryCareerTable];
 }
 
 @end

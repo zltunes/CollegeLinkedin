@@ -26,5 +26,6 @@
 
 @property(strong,nonatomic) Industry* selectedIndustry;
 @property(weak,nonatomic) id<IndustryTableDelegate> delegate;
+@property(strong,nonatomic) TableViewDataSourceDelegate* tableHandler;
 
 @end

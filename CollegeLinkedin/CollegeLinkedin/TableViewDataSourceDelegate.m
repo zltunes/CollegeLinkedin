@@ -152,11 +152,11 @@
     self.didSelectCellBlock(indexPath,item,cell);
 }
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    id item = [self itemAtIndexPath:indexPath];
-    self.didDeselectCellBlock(indexPath,item,cell);
-}
+//-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+//    id item = [self itemAtIndexPath:indexPath];
+//    self.didDeselectCellBlock(indexPath,item,cell);
+//}
 
 @end

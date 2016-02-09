@@ -19,7 +19,7 @@
 
 @protocol CareerTableDelegate <NSObject>
 
--(void)didSelectCellWithCareer:(Career*)career;
+-(void)didSelectCellWithCareer:(Career*)career andSelectedIndustry:(Industry*)industry;
 
 @end
 
@@ -27,6 +27,7 @@
 @interface CareerTable : UITableViewController<IndustryTableDelegate>
 
 @property(nonatomic,strong) Career* selectedCareer;
+@property(nonatomic,strong) Industry* selectedIndustry;
 @property(nonatomic,strong) id<CareerTableDelegate> delegate;
 
 @end

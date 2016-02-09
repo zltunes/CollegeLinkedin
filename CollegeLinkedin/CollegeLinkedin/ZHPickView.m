@@ -349,17 +349,12 @@
     pickView.delegate=self;
     pickView.dataSource=self;
     pickView.frame=CGRectMake(0, ZHToobarHeight, [UIScreen mainScreen].bounds.size.width, pickView.frame.size.height);
-    
-//    pickView.frame=CGRectMake(0, ZHToobarHeight, pickView.frame.size.width, pickView.frame.size.height/1.5);
-    
+
     _pickeviewHeight=pickView.frame.size.height;
     
     _backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     _backView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
-//    [_backView addSubview:pickView];
     [self addSubview:pickView];
-    
-//    [self addSubview:_backView];
 }
 
 
@@ -653,10 +648,6 @@
     [_backView removeFromSuperview];
 }
 -(void)show{
-    
-//    [[UIApplication sharedApplication].keyWindow addSubview:self];
-//    UIView *backView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-//    backView.backgroundColor = [UIColor colorWithRed:0.599 green:0.599 blue:0.599 alpha:0.4];
     [_backView addSubview:self];
     [[UIApplication sharedApplication].keyWindow addSubview:_backView];
 

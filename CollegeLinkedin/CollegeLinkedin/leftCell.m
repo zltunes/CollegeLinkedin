@@ -24,11 +24,11 @@ static NSString* const leftCellID = @"leftCell";
     
     [self.selectedBackgroundView addSubview:indicatorView];
     [self.selectedBackgroundView addSubview:otherView];
-    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+
 }
 
 

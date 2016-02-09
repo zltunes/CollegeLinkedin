@@ -7,10 +7,22 @@
 //
 
 #import "rightCell.h"
+#import "Config.h"
 
 static NSString* const rightCellID = @"rightCell";
 
 @implementation rightCell
+
+- (void)awakeFromNib {
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    [super setSelected:selected animated:animated];
+    
+    // Configure the view for the selected state
+
+}
 
 -(void)configure:(UITableViewCell *)cell
        customObj:(id)obj
@@ -33,14 +45,6 @@ static NSString* const rightCellID = @"rightCell";
 {
     rightCell *careerCell = (rightCell*)cell;
     [careerCell.indicatorView setBackgroundColor:[Config getTintColor]];
-}
-
--(void)didDeselectCell:(UITableViewCell*)cell
-         withCustomObj:(id)obj
-             indexPath:(NSIndexPath*)indexPath
-{
-    rightCell *careerCell = (rightCell*)cell;
-    [careerCell.indicatorView setBackgroundColor:[UIColor clearColor]];
 }
 
 @end
