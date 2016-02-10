@@ -194,8 +194,13 @@
     industryTable.delegate = careerTable;
     careerTable.delegate   = self;
     
+//    初始选中位置
+    
     [industryTable.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
     [industryTable.tableHandler tableView:industryTable.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    
+//    [careerTable.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+//    [careerTable.tableHandler tableView:careerTable.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
     CGRect leftFrame = industryTable.view.bounds;
     leftFrame.origin.x = 8;

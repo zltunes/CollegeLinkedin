@@ -11,6 +11,9 @@
 #import "MeCellWithPhoto.h"
 #import "MeCellWithIcon.h"
 #import "Config.h"
+#import "CustomIOSAlertView.h"
+#import "QRCodeView.h"
+#import "FXBlurView.h"
 
 static NSString* const MeCellID0         = @"MeCellWithPhoto";
 static const CGFloat MeCell0Height       = 80.0f;
@@ -19,6 +22,13 @@ static const CGFloat MeCell1Height       = 44.0f;
 static const CGFloat sectionHeaderHeight = 11.0f;
 
 @interface MeIndexVC ()
+
+{
+    CustomIOSAlertView *QRCodeAlertView;
+    QRCodeView *qrcodeView;
+    FXBlurView *blurView;
+    
+}
 
 @property(strong,nonatomic) NSArray *cellItemArray;
 
@@ -32,14 +42,15 @@ static const CGFloat sectionHeaderHeight = 11.0f;
     self.cellItemArray          = [[Config getInfoPlistDict] objectForKey:@"MeVCCellItems"];
     
     self.tableView.tableFooterView = [Config getTableViewFooter];
+    
+    blurView = [[FXBlurView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [blurView setTintColor:[UIColor blackColor]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -132,8 +143,47 @@ static const CGFloat sectionHeaderHeight = 11.0f;
                 [self performSegueWithIdentifier:@"toMeBaseInfo" sender:nil];
             } else {
 //                我的二维码
+                QRCodeAlertView = [[CustomIOSAlertView alloc]init];
+                [QRCodeAlertView setButtonTitles:nil];
+                qrcodeView = [[QRCodeView alloc]initWithFrame:CGRectMake(0, 0, 328, 438)];
+                [qrcodeView setBackgroundColor:[UIColor whiteColor]];
+                [QRCodeAlertView setContainerView:qrcodeView];
+                [QRCodeAlertView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(alertClose)]];
+                [self.view addSubview:blurView];
+                [UIView animateWithDuration:0.5 animations:^{
+                        blurView.blurRadius = 25;
+                }];
+                
+                [QRCodeAlertView show];
                 
             }
+            break;
+        
+        case 2:
+            switch (indexPath.row) {
+                case 0:
+//                    我的动态
+                    
+                    break;
+                    
+                case 1:
+//                    我的信息
+                    
+                    break;
+                    
+                case 2:
+//                    我的收藏
+                    
+                    break;
+                    
+                default:
+                    break;
+            }
+            break;
+            
+        case 3:
+//            设置
+            [self performSegueWithIdentifier:@"toSettingVC" sender:nil];
             break;
             
         default:
@@ -141,50 +191,10 @@ static const CGFloat sectionHeaderHeight = 11.0f;
     }
 }
 
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)alertClose
+{
+    [QRCodeAlertView close];
+    [blurView removeFromSuperview];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

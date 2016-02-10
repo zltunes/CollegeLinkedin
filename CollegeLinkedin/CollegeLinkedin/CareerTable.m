@@ -12,7 +12,6 @@
 
 @property (nonatomic,strong) NSArray                     * sectionItemsArray;
 @property (nonatomic,strong) NSArray                     * careersArray;
-@property (nonatomic,strong) TableViewDataSourceDelegate * tableHandler;
 
 @end
 

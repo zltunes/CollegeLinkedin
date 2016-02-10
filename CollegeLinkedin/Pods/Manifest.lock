@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - CustomIOSAlertView (0.9.3)
+  - FXBlurView (1.6.4)
   - IQKeyboardManager (3.3.6)
   - MJExtension (3.0.7)
   - MJRefresh (3.0.7)
@@ -25,6 +27,8 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - CustomIOSAlertView
+  - FXBlurView
   - IQKeyboardManager
   - MJExtension
   - MJRefresh
@@ -34,6 +38,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  CustomIOSAlertView: 94d2401e34fcfb0ac0134679d6947f5e251b0446
+  FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   IQKeyboardManager: 037cf3aec1d0a045108859a47818714eb1bfc149
   MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495

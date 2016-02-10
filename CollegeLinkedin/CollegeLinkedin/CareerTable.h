@@ -29,5 +29,6 @@
 @property(nonatomic,strong) Career* selectedCareer;
 @property(nonatomic,strong) Industry* selectedIndustry;
 @property(nonatomic,strong) id<CareerTableDelegate> delegate;
+@property (nonatomic,strong) TableViewDataSourceDelegate * tableHandler;
 
 @end

@@ -14,3 +14,7 @@ pod 'MJRefresh'
 pod 'SVProgressHUD'
 
 pod 'IQKeyboardManager'
+
+pod 'FXBlurView'
+
+pod 'CustomIOSAlertView'

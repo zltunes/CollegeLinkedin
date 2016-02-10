@@ -26,11 +26,10 @@ static NSString* const leftCellID = @"leftCell";
     [self.selectedBackgroundView addSubview:otherView];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
 }
-
 
 -(void)configure:(UITableViewCell *)cell
        customObj:(id)obj

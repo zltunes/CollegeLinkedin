@@ -23,6 +23,9 @@
 		351968D51C2BD8280033AE2B /* CollegeLinkedinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 351968D41C2BD8280033AE2B /* CollegeLinkedinUITests.m */; };
 		351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */; };
 		351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */; };
+		351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF7141C6A278E00AAED4D /* PSCustomViewFromXib.m */; };
+		351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF71B1C6A290200AAED4D /* QRCodeView.m */; };
+		351DF7221C6A29C300AAED4D /* QRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351DF7211C6A29C300AAED4D /* QRCodeView.xib */; };
 		3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */; };
 		352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697F1C5F1CFA0009130E /* AddJobExpVC.m */; };
 		352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 352269831C5F1EFF0009130E /* CellWithOneLabel.m */; };
@@ -31,6 +34,7 @@
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
+		35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A19AC91C69FAB1004E75D7 /* SettingVC.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
@@ -102,6 +106,11 @@
 		351C4AA91C3E890E0027A69A /* TableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		351C4AB41C3E956B0027A69A /* UITableViewCell+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extension.h"; sourceTree = "<group>"; };
 		351C4AB51C3E956B0027A69A /* UITableViewCell+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extension.m"; sourceTree = "<group>"; };
+		351DF7131C6A278E00AAED4D /* PSCustomViewFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSCustomViewFromXib.h; sourceTree = "<group>"; };
+		351DF7141C6A278E00AAED4D /* PSCustomViewFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSCustomViewFromXib.m; sourceTree = "<group>"; };
+		351DF71A1C6A290200AAED4D /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
+		351DF71B1C6A290200AAED4D /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
+		351DF7211C6A29C300AAED4D /* QRCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeView.xib; sourceTree = "<group>"; };
 		3522697B1C5F1CDF0009130E /* ToAddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToAddJobExpVC.h; sourceTree = "<group>"; };
 		3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToAddJobExpVC.m; sourceTree = "<group>"; };
 		3522697E1C5F1CFA0009130E /* AddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddJobExpVC.h; sourceTree = "<group>"; };
@@ -117,6 +126,8 @@
 		358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithPhoto.m; sourceTree = "<group>"; };
 		358077F61C2C147600D0A4A9 /* MeCellWithIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithIcon.h; sourceTree = "<group>"; };
 		358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithIcon.m; sourceTree = "<group>"; };
+		35A19AC81C69FAB1004E75D7 /* SettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
+		35A19AC91C69FAB1004E75D7 /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
 		35CD61A11C2E8B9100B315AA /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
@@ -295,6 +306,25 @@
 			path = CollegeLinkedinUITests;
 			sourceTree = "<group>";
 		};
+		351DF7121C6A276B00AAED4D /* CustomViewFromXib */ = {
+			isa = PBXGroup;
+			children = (
+				351DF7131C6A278E00AAED4D /* PSCustomViewFromXib.h */,
+				351DF7141C6A278E00AAED4D /* PSCustomViewFromXib.m */,
+			);
+			name = CustomViewFromXib;
+			sourceTree = "<group>";
+		};
+		351DF7161C6A284400AAED4D /* QR Code */ = {
+			isa = PBXGroup;
+			children = (
+				351DF71A1C6A290200AAED4D /* QRCodeView.h */,
+				351DF71B1C6A290200AAED4D /* QRCodeView.m */,
+				351DF7211C6A29C300AAED4D /* QRCodeView.xib */,
+			);
+			name = "QR Code";
+			sourceTree = "<group>";
+		};
 		3522697A1C5F1C410009130E /* JobExperience */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +374,7 @@
 		357DB6191C2C20320087090B /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				35A19AC71C69FA9B004E75D7 /* Setting */,
 				35FA5B551C2D0D7900B2E66E /* MeBaseInfo */,
 				357DB61A1C2C20620087090B /* MeIndexVC.h */,
 				357DB61B1C2C20620087090B /* MeIndexVC.m */,
@@ -384,6 +415,7 @@
 		358077EA1C2C097100D0A4A9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				351DF7121C6A276B00AAED4D /* CustomViewFromXib */,
 				353F1A7E1C5DCD05005E8F4D /* PickerView */,
 				35CD61A01C2E8B8800B315AA /* TextFieldValidator */,
 			);
@@ -435,12 +467,22 @@
 		358077F21C2C143800D0A4A9 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				351DF7161C6A284400AAED4D /* QR Code */,
 				352269811C5F1E890009130E /* JobExperienceCell */,
 				353F1A841C5E0A75005E8F4D /* TwoSelectorCell */,
 				35FA5B4D1C2D0BED00B2E66E /* MeIndexCell */,
 				35FA5B4E1C2D0C0700B2E66E /* MeBaseInfoCell */,
 			);
 			name = Me;
+			sourceTree = "<group>";
+		};
+		35A19AC71C69FA9B004E75D7 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				35A19AC81C69FAB1004E75D7 /* SettingVC.h */,
+				35A19AC91C69FAB1004E75D7 /* SettingVC.m */,
+			);
+			name = Setting;
 			sourceTree = "<group>";
 		};
 		35CD61A01C2E8B8800B315AA /* TextFieldValidator */ = {
@@ -635,6 +677,7 @@
 				351968BF1C2BD8280033AE2B /* LaunchScreen.storyboard in Resources */,
 				353F1A831C5DCD40005E8F4D /* city.plist in Resources */,
 				351968BC1C2BD8280033AE2B /* Assets.xcassets in Resources */,
+				351DF7221C6A29C300AAED4D /* QRCodeView.xib in Resources */,
 				351968BA1C2BD8280033AE2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,12 +776,15 @@
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
+				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
+				351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */,
 				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
+				351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */,
 				35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
 				35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */,
