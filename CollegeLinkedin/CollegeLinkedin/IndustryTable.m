@@ -35,7 +35,7 @@
     
     if (!_sectionItemsArray) {
          _sectionItemsArray = [NSArray array];//此句是必需的
-        _industriesArray          = [Industry mj_objectArrayWithKeyValuesArray:[Config getIndustryArray]];
+        _industriesArray          = [Industry mj_objectArrayWithKeyValuesArray:[Config getJsonArray:@"industry"]];
         TableViewSection* section = [[TableViewSection alloc]initWithHeaderTitle:nil headerHeight:0 items:_industriesArray];
         _sectionItemsArray        = [_sectionItemsArray arrayByAddingObject:section];
 

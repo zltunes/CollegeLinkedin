@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="757.5" y="838.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--校友圈-->
         <scene sceneID="lvS-6v-64n">
             <objects>
                 <tableViewController id="Lcs-v0-Qru" sceneMemberID="viewController">
@@ -51,28 +51,67 @@
                             <outlet property="delegate" destination="Lcs-v0-Qru" id="CgH-HC-Pca"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="xGv-B0-J0z"/>
+                    <navigationItem key="navigationItem" title="校友圈" id="xGv-B0-J0z"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHt-nb-c9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773.5" y="42.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--人脉-->
         <scene sceneID="GiN-S9-CiH">
             <objects>
-                <tableViewController id="Y0N-sT-gDd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XcJ-GY-Fsd">
+                <tableViewController title="人脉" id="Y0N-sT-gDd" customClass="ContactsIndex" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="XcJ-GY-Fsd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="搜索好友" id="2uJ-sT-l70">
+                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Y0N-sT-gDd" id="yC4-jF-1ma"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SuH-Tq-fHa">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellWithImgAndLabel" rowHeight="55" id="SuH-Tq-fHa" customClass="CellWithImgAndLabel">
+                                <rect key="frame" x="0.0" y="136" width="375" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SuH-Tq-fHa" id="xs3-R9-idz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="手机联系人" translatesAutoresizingMaskIntoConstraints="NO" id="ypf-F6-3jA">
+                                            <rect key="frame" x="18" y="8" width="38" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="Kw2-es-5Oa"/>
+                                                <constraint firstAttribute="height" constant="38" id="Stl-35-IcI"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="19"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lW-lL-LUe">
+                                            <rect key="frame" x="68" y="17" width="299" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ypf-F6-3jA" firstAttribute="centerY" secondItem="xs3-R9-idz" secondAttribute="centerY" id="5gC-WL-VA9"/>
+                                        <constraint firstItem="4lW-lL-LUe" firstAttribute="centerY" secondItem="xs3-R9-idz" secondAttribute="centerY" id="7NG-fH-EWQ"/>
+                                        <constraint firstItem="4lW-lL-LUe" firstAttribute="leading" secondItem="ypf-F6-3jA" secondAttribute="trailing" constant="12" id="IPG-YK-i0t"/>
+                                        <constraint firstAttribute="trailing" secondItem="4lW-lL-LUe" secondAttribute="trailing" constant="8" id="aWE-5Z-nae"/>
+                                        <constraint firstItem="ypf-F6-3jA" firstAttribute="leading" secondItem="xs3-R9-idz" secondAttribute="leading" constant="18" id="vOd-BX-XI4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="image" destination="ypf-F6-3jA" id="YcP-AI-El9"/>
+                                    <outlet property="label" destination="4lW-lL-LUe" id="nTm-J1-yeh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -80,13 +119,34 @@
                             <outlet property="delegate" destination="Y0N-sT-gDd" id="o81-Jf-7qK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="HER-SO-vVA"/>
+                    <navigationItem key="navigationItem" title="人脉" id="5CM-H3-JEH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rjm-fc-avh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addNew:" destination="Y0N-sT-gDd" id="ZcJ-Xz-af0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="contactsSearchBar" destination="2uJ-sT-l70" id="VQm-bm-yeO"/>
+                        <outlet property="searchDisplayController" destination="bzC-Ps-a2T" id="Tgr-cq-cj5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l73-ga-qri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bzC-Ps-a2T">
+                    <connections>
+                        <outlet property="delegate" destination="Y0N-sT-gDd" id="2aM-wd-3Gx"/>
+                        <outlet property="searchBar" destination="2uJ-sT-l70" id="BdV-nT-n2M"/>
+                        <outlet property="searchContentsController" destination="Y0N-sT-gDd" id="lfj-kh-3u4"/>
+                        <outlet property="searchResultsDataSource" destination="Y0N-sT-gDd" id="pra-mr-b4T"/>
+                        <outlet property="searchResultsDelegate" destination="Y0N-sT-gDd" id="ifC-GV-vYS"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1773.5" y="838.5"/>
         </scene>
-        <!--校友圈-->
+        <!--我-->
         <scene sceneID="kED-PJ-vOL">
             <objects>
                 <tableViewController id="LrK-nH-jte" customClass="MeIndexVC" sceneMemberID="viewController">
@@ -180,7 +240,7 @@
                             <outlet property="delegate" destination="LrK-nH-jte" id="P7Y-18-fbf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="校友圈" id="qTR-bY-5ld"/>
+                    <navigationItem key="navigationItem" title="我" id="qTR-bY-5ld"/>
                     <connections>
                         <segue destination="3PA-Fw-CmK" kind="push" identifier="toMeBaseInfo" id="853-c1-d7a"/>
                         <segue destination="jh7-81-ZHi" kind="push" identifier="toSettingVC" id="dV0-F2-t1r"/>
@@ -1162,9 +1222,16 @@
             <objects>
                 <navigationController id="m9X-G6-zzm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="人脉" image="人脉默认" selectedImage="人脉选中" id="SAj-FH-vN8"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="auS-AM-D1N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.53786587720000001" blue="0.80492877959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.53786587720000001" blue="0.80492877959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Y0N-sT-gDd" kind="relationship" relationship="rootViewController" id="oAt-O5-6E7"/>
@@ -1183,6 +1250,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xyh-E3-iHu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.53786587720000001" blue="0.80492877959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.53786587720000001" blue="0.80492877959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Lcs-v0-Qru" kind="relationship" relationship="rootViewController" id="l21-fN-VqP"/>
@@ -1200,6 +1274,7 @@
         <image name="圈子默认" width="27" height="27"/>
         <image name="我选中" width="27" height="27"/>
         <image name="我默认" width="27" height="27"/>
+        <image name="手机联系人" width="36" height="36"/>
     </resources>
-    <color key="tintColor" red="0.0" green="0.53786587715148926" blue="0.80492877960205078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.0" green="0.53786587720000001" blue="0.80492877959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

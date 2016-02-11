@@ -21,6 +21,8 @@ static NSDictionary *infoPlistDict = nil;
 
 static NSArray *industryArray = nil;
 
+static NSArray *jsonArray = nil;
+
 static UIViewController* VCFromSb = nil;
 
 @implementation Config
@@ -61,16 +63,14 @@ static UIViewController* VCFromSb = nil;
     return infoPlistDict;
 }
 
-///industry.json
-+(NSArray*)getIndustryArray{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"industry" ofType:@"json"];
-//    industryArray = [NSArray arrayWithContentsOfFile:path];
-    
+///jsonFileName.json
++(NSArray*)getJsonArray:(NSString*)JsonFileName{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:JsonFileName ofType:@"json"];
     NSString *jsonStr  = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     NSData *jaonData   = [[NSData alloc] initWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding]];
-    industryArray = [NSJSONSerialization JSONObjectWithData:jaonData options:(NSJSONReadingMutableContainers) error:nil];
+    jsonArray = [NSJSONSerialization JSONObjectWithData:jaonData options:(NSJSONReadingMutableContainers) error:nil];
     
-    return industryArray;
+    return jsonArray;
 }
 
 ///从sb中获取独立vc

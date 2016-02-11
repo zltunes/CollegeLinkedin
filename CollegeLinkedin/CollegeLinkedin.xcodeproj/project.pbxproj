@@ -26,11 +26,23 @@
 		351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF7141C6A278E00AAED4D /* PSCustomViewFromXib.m */; };
 		351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF71B1C6A290200AAED4D /* QRCodeView.m */; };
 		351DF7221C6A29C300AAED4D /* QRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351DF7211C6A29C300AAED4D /* QRCodeView.xib */; };
+		351DF7261C6B499400AAED4D /* ContactsIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF7251C6B499400AAED4D /* ContactsIndex.m */; };
+		351DF72A1C6B4AC400AAED4D /* CellWithImgAndLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 351DF7291C6B4AC400AAED4D /* CellWithImgAndLabel.m */; };
 		3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */; };
 		352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697F1C5F1CFA0009130E /* AddJobExpVC.m */; };
 		352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 352269831C5F1EFF0009130E /* CellWithOneLabel.m */; };
 		353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F1A801C5DCD17005E8F4D /* ZHPickView.m */; };
 		353F1A831C5DCD40005E8F4D /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353F1A821C5DCD40005E8F4D /* city.plist */; };
+		3547B6071C6C7A6000DF4055 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3547B6061C6C7A6000DF4055 /* contacts.json */; };
+		3547B6181C6C7A9900DF4055 /* ChineseInclude.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B60A1C6C7A9800DF4055 /* ChineseInclude.m */; };
+		3547B6191C6C7A9900DF4055 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B60C1C6C7A9800DF4055 /* ChineseToPinyinResource.m */; };
+		3547B61A1C6C7A9900DF4055 /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B60E1C6C7A9800DF4055 /* HanyuPinyinOutputFormat.m */; };
+		3547B61B1C6C7A9900DF4055 /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6101C6C7A9800DF4055 /* NSString+PinYin4Cocoa.m */; };
+		3547B61C1C6C7A9900DF4055 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6121C6C7A9900DF4055 /* PinyinFormatter.m */; };
+		3547B61D1C6C7A9900DF4055 /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6141C6C7A9900DF4055 /* PinYinForObjc.m */; };
+		3547B61E1C6C7A9900DF4055 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6161C6C7A9900DF4055 /* PinyinHelper.m */; };
+		3547B61F1C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3547B6171C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt */; };
+		3547B6221C6C82E900DF4055 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6211C6C82E900DF4055 /* Contact.m */; };
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
@@ -42,7 +54,6 @@
 		35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696291C5F4F0E000D4274 /* CellWithTextView.m */; };
 		35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696301C5FCC5A000D4274 /* toAddEduExpVC.m */; };
 		35E696341C5FCC72000D4274 /* AddEduExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696331C5FCC72000D4274 /* AddEduExpVC.m */; };
-		35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696371C60C20F000D4274 /* TwoSelectorsVC.m */; };
 		35E6963E1C611AF3000D4274 /* leftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E6963D1C611AF3000D4274 /* leftCell.m */; };
 		35E696411C611AFF000D4274 /* rightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696401C611AFF000D4274 /* rightCell.m */; };
 		35E696431C6124CF000D4274 /* industry.json in Resources */ = {isa = PBXBuildFile; fileRef = 35E696421C6124CF000D4274 /* industry.json */; };
@@ -111,6 +122,10 @@
 		351DF71A1C6A290200AAED4D /* QRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeView.h; sourceTree = "<group>"; };
 		351DF71B1C6A290200AAED4D /* QRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeView.m; sourceTree = "<group>"; };
 		351DF7211C6A29C300AAED4D /* QRCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeView.xib; sourceTree = "<group>"; };
+		351DF7241C6B499400AAED4D /* ContactsIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsIndex.h; sourceTree = "<group>"; };
+		351DF7251C6B499400AAED4D /* ContactsIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsIndex.m; sourceTree = "<group>"; };
+		351DF7281C6B4AC400AAED4D /* CellWithImgAndLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithImgAndLabel.h; sourceTree = "<group>"; };
+		351DF7291C6B4AC400AAED4D /* CellWithImgAndLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithImgAndLabel.m; sourceTree = "<group>"; };
 		3522697B1C5F1CDF0009130E /* ToAddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToAddJobExpVC.h; sourceTree = "<group>"; };
 		3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToAddJobExpVC.m; sourceTree = "<group>"; };
 		3522697E1C5F1CFA0009130E /* AddJobExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddJobExpVC.h; sourceTree = "<group>"; };
@@ -120,6 +135,24 @@
 		353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
 		353F1A801C5DCD17005E8F4D /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
 		353F1A821C5DCD40005E8F4D /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		3547B6061C6C7A6000DF4055 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		3547B6091C6C7A9800DF4055 /* ChineseInclude.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseInclude.h; sourceTree = "<group>"; };
+		3547B60A1C6C7A9800DF4055 /* ChineseInclude.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseInclude.m; sourceTree = "<group>"; };
+		3547B60B1C6C7A9800DF4055 /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		3547B60C1C6C7A9800DF4055 /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		3547B60D1C6C7A9800DF4055 /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		3547B60E1C6C7A9800DF4055 /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		3547B60F1C6C7A9800DF4055 /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		3547B6101C6C7A9800DF4055 /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		3547B6111C6C7A9900DF4055 /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		3547B6121C6C7A9900DF4055 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		3547B6131C6C7A9900DF4055 /* PinYinForObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYinForObjc.h; sourceTree = "<group>"; };
+		3547B6141C6C7A9900DF4055 /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
+		3547B6151C6C7A9900DF4055 /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		3547B6161C6C7A9900DF4055 /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		3547B6171C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		3547B6201C6C82E900DF4055 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		3547B6211C6C82E900DF4055 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		357DB61A1C2C20620087090B /* MeIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeIndexVC.h; sourceTree = "<group>"; };
 		357DB61B1C2C20620087090B /* MeIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeIndexVC.m; sourceTree = "<group>"; };
 		358077F31C2C145F00D0A4A9 /* MeCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithPhoto.h; sourceTree = "<group>"; };
@@ -142,8 +175,6 @@
 		35E696301C5FCC5A000D4274 /* toAddEduExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toAddEduExpVC.m; sourceTree = "<group>"; };
 		35E696321C5FCC72000D4274 /* AddEduExpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEduExpVC.h; sourceTree = "<group>"; };
 		35E696331C5FCC72000D4274 /* AddEduExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEduExpVC.m; sourceTree = "<group>"; };
-		35E696361C60C20F000D4274 /* TwoSelectorsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoSelectorsVC.h; sourceTree = "<group>"; };
-		35E696371C60C20F000D4274 /* TwoSelectorsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoSelectorsVC.m; sourceTree = "<group>"; };
 		35E6963B1C60C7CC000D4274 /* CALayer_extensionCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALayer_extensionCALayer.h; sourceTree = "<group>"; };
 		35E6963C1C611AF3000D4274 /* leftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = leftCell.h; sourceTree = "<group>"; };
 		35E6963D1C611AF3000D4274 /* leftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = leftCell.m; sourceTree = "<group>"; };
@@ -325,6 +356,24 @@
 			name = "QR Code";
 			sourceTree = "<group>";
 		};
+		351DF7231C6B495200AAED4D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				351DF7241C6B499400AAED4D /* ContactsIndex.h */,
+				351DF7251C6B499400AAED4D /* ContactsIndex.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		351DF7271C6B4A5300AAED4D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				351DF7281C6B4AC400AAED4D /* CellWithImgAndLabel.h */,
+				351DF7291C6B4AC400AAED4D /* CellWithImgAndLabel.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
 		3522697A1C5F1C410009130E /* JobExperience */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +420,37 @@
 			name = TwoSelectorCell;
 			sourceTree = "<group>";
 		};
+		3547B6021C6C7A0F00DF4055 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				3547B6201C6C82E900DF4055 /* Contact.h */,
+				3547B6211C6C82E900DF4055 /* Contact.m */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		3547B6081C6C7A8700DF4055 /* PinYin */ = {
+			isa = PBXGroup;
+			children = (
+				3547B6091C6C7A9800DF4055 /* ChineseInclude.h */,
+				3547B60A1C6C7A9800DF4055 /* ChineseInclude.m */,
+				3547B60B1C6C7A9800DF4055 /* ChineseToPinyinResource.h */,
+				3547B60C1C6C7A9800DF4055 /* ChineseToPinyinResource.m */,
+				3547B60D1C6C7A9800DF4055 /* HanyuPinyinOutputFormat.h */,
+				3547B60E1C6C7A9800DF4055 /* HanyuPinyinOutputFormat.m */,
+				3547B60F1C6C7A9800DF4055 /* NSString+PinYin4Cocoa.h */,
+				3547B6101C6C7A9800DF4055 /* NSString+PinYin4Cocoa.m */,
+				3547B6111C6C7A9900DF4055 /* PinyinFormatter.h */,
+				3547B6121C6C7A9900DF4055 /* PinyinFormatter.m */,
+				3547B6131C6C7A9900DF4055 /* PinYinForObjc.h */,
+				3547B6141C6C7A9900DF4055 /* PinYinForObjc.m */,
+				3547B6151C6C7A9900DF4055 /* PinyinHelper.h */,
+				3547B6161C6C7A9900DF4055 /* PinyinHelper.m */,
+				3547B6171C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt */,
+			);
+			name = PinYin;
+			sourceTree = "<group>";
+		};
 		357DB6191C2C20320087090B /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +476,9 @@
 		358077E81C2C096C00D0A4A9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				3547B6081C6C7A8700DF4055 /* PinYin */,
+				35009EDA1C42492D004BF94B /* TableViewSection.h */,
+				35009EDB1C42492D004BF94B /* TableViewSection.m */,
 				35FA5B4A1C2C32BF00B2E66E /* Config.h */,
 				35FA5B4B1C2C32BF00B2E66E /* Config.m */,
 				35E6963B1C60C7CC000D4274 /* CALayer_extensionCALayer.h */,
@@ -406,6 +489,7 @@
 		358077E91C2C096F00D0A4A9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3547B6061C6C7A6000DF4055 /* contacts.json */,
 				35E696421C6124CF000D4274 /* industry.json */,
 				353F1A821C5DCD40005E8F4D /* city.plist */,
 			);
@@ -441,6 +525,7 @@
 		358077EF1C2C099400D0A4A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				351DF7231C6B495200AAED4D /* Contacts */,
 				357DB6191C2C20320087090B /* Me */,
 			);
 			name = Controller;
@@ -449,8 +534,7 @@
 		358077F01C2C099600D0A4A9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				35009EDA1C42492D004BF94B /* TableViewSection.h */,
-				35009EDB1C42492D004BF94B /* TableViewSection.m */,
+				351DF7271C6B4A5300AAED4D /* Contacts */,
 				358077F21C2C143800D0A4A9 /* Me */,
 			);
 			name = View;
@@ -459,6 +543,7 @@
 		358077F11C2C099800D0A4A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3547B6021C6C7A0F00DF4055 /* Contacts */,
 				35122D501C6127060093CD82 /* MeBaseInfo */,
 			);
 			name = Model;
@@ -541,8 +626,6 @@
 				35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */,
 				35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */,
 				35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */,
-				35E696361C60C20F000D4274 /* TwoSelectorsVC.h */,
-				35E696371C60C20F000D4274 /* TwoSelectorsVC.m */,
 				3522697A1C5F1C410009130E /* JobExperience */,
 				35E6962E1C5FCC27000D4274 /* educationExperience */,
 			);
@@ -677,6 +760,8 @@
 				351968BF1C2BD8280033AE2B /* LaunchScreen.storyboard in Resources */,
 				353F1A831C5DCD40005E8F4D /* city.plist in Resources */,
 				351968BC1C2BD8280033AE2B /* Assets.xcassets in Resources */,
+				3547B61F1C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt in Resources */,
+				3547B6071C6C7A6000DF4055 /* contacts.json in Resources */,
 				351DF7221C6A29C300AAED4D /* QRCodeView.xib in Resources */,
 				351968BA1C2BD8280033AE2B /* Main.storyboard in Resources */,
 			);
@@ -751,12 +836,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3547B61E1C6C7A9900DF4055 /* PinyinHelper.m in Sources */,
 				353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */,
 				35E696341C5FCC72000D4274 /* AddEduExpVC.m in Sources */,
 				35009EDF1C425A8D004BF94B /* MeBaseInfoItem.m in Sources */,
 				35FA5B511C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m in Sources */,
 				35009EE21C425AA7004BF94B /* MeBaseInfoPhotoItem.m in Sources */,
 				35009EDC1C42492D004BF94B /* TableViewSection.m in Sources */,
+				3547B61A1C6C7A9900DF4055 /* HanyuPinyinOutputFormat.m in Sources */,
+				3547B6181C6C7A9900DF4055 /* ChineseInclude.m in Sources */,
 				351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */,
 				352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */,
 				35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */,
@@ -765,15 +853,19 @@
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
 				35122D591C6129EA0093CD82 /* Industry.m in Sources */,
+				3547B6191C6C7A9900DF4055 /* ChineseToPinyinResource.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
+				3547B61B1C6C7A9900DF4055 /* NSString+PinYin4Cocoa.m in Sources */,
 				35E6963E1C611AF3000D4274 /* leftCell.m in Sources */,
 				35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */,
+				351DF7261C6B499400AAED4D /* ContactsIndex.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
+				3547B6221C6C82E900DF4055 /* Contact.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
@@ -783,10 +875,12 @@
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
 				351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */,
 				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
+				3547B61D1C6C7A9900DF4055 /* PinYinForObjc.m in Sources */,
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
 				351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */,
-				35E696381C60C20F000D4274 /* TwoSelectorsVC.m in Sources */,
+				351DF72A1C6B4AC400AAED4D /* CellWithImgAndLabel.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
+				3547B61C1C6C7A9900DF4055 /* PinyinFormatter.m in Sources */,
 				35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);
