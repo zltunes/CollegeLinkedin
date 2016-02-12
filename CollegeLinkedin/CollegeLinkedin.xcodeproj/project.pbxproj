@@ -43,10 +43,19 @@
 		3547B61E1C6C7A9900DF4055 /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6161C6C7A9900DF4055 /* PinyinHelper.m */; };
 		3547B61F1C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3547B6171C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt */; };
 		3547B6221C6C82E900DF4055 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6211C6C82E900DF4055 /* Contact.m */; };
+		3547B6251C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6241C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m */; };
+		3547B6281C6CEFA000DF4055 /* AddContactsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3547B6271C6CEFA000DF4055 /* AddContactsVC.m */; };
 		357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 357DB61B1C2C20620087090B /* MeIndexVC.m */; };
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
 		35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A19AC91C69FAB1004E75D7 /* SettingVC.m */; };
+		35C5A5601C6DD5C8003FFE89 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */; };
+		35C5A5611C6DD5C8003FFE89 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */; };
+		35C5A5651C6DD8AE003FFE89 /* AddressBookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5641C6DD8AE003FFE89 /* AddressBookVC.m */; };
+		35C5A5681C6DE4A0003FFE89 /* NewFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5671C6DE4A0003FFE89 /* NewFriendCell.m */; };
+		35C5A56B1C6DE4E9003FFE89 /* CelebrityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A56A1C6DE4E9003FFE89 /* CelebrityCell.m */; };
+		35C5A56F1C6DE542003FFE89 /* NewFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A56E1C6DE542003FFE89 /* NewFriendVC.m */; };
+		35C5A5721C6DE54D003FFE89 /* CelebrityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5711C6DE54D003FFE89 /* CelebrityVC.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
@@ -153,6 +162,10 @@
 		3547B6171C6C7A9900DF4055 /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
 		3547B6201C6C82E900DF4055 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		3547B6211C6C82E900DF4055 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		3547B6231C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithImgAndTwoLabels.h; sourceTree = "<group>"; };
+		3547B6241C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithImgAndTwoLabels.m; sourceTree = "<group>"; };
+		3547B6261C6CEFA000DF4055 /* AddContactsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsVC.h; sourceTree = "<group>"; };
+		3547B6271C6CEFA000DF4055 /* AddContactsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsVC.m; sourceTree = "<group>"; };
 		357DB61A1C2C20620087090B /* MeIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeIndexVC.h; sourceTree = "<group>"; };
 		357DB61B1C2C20620087090B /* MeIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeIndexVC.m; sourceTree = "<group>"; };
 		358077F31C2C145F00D0A4A9 /* MeCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithPhoto.h; sourceTree = "<group>"; };
@@ -161,6 +174,18 @@
 		358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithIcon.m; sourceTree = "<group>"; };
 		35A19AC81C69FAB1004E75D7 /* SettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		35A19AC91C69FAB1004E75D7 /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
+		35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		35C5A5631C6DD8AE003FFE89 /* AddressBookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookVC.h; sourceTree = "<group>"; };
+		35C5A5641C6DD8AE003FFE89 /* AddressBookVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookVC.m; sourceTree = "<group>"; };
+		35C5A5661C6DE4A0003FFE89 /* NewFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendCell.h; sourceTree = "<group>"; };
+		35C5A5671C6DE4A0003FFE89 /* NewFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendCell.m; sourceTree = "<group>"; };
+		35C5A5691C6DE4E9003FFE89 /* CelebrityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelebrityCell.h; sourceTree = "<group>"; };
+		35C5A56A1C6DE4E9003FFE89 /* CelebrityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelebrityCell.m; sourceTree = "<group>"; };
+		35C5A56D1C6DE542003FFE89 /* NewFriendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFriendVC.h; sourceTree = "<group>"; };
+		35C5A56E1C6DE542003FFE89 /* NewFriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendVC.m; sourceTree = "<group>"; };
+		35C5A5701C6DE54D003FFE89 /* CelebrityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelebrityVC.h; sourceTree = "<group>"; };
+		35C5A5711C6DE54D003FFE89 /* CelebrityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelebrityVC.m; sourceTree = "<group>"; };
 		35CD61A11C2E8B9100B315AA /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
@@ -205,6 +230,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C5A5601C6DD5C8003FFE89 /* AddressBook.framework in Frameworks */,
+				35C5A5611C6DD5C8003FFE89 /* AddressBookUI.framework in Frameworks */,
 				C2F95A8994D3C22226B2BF97 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +386,8 @@
 		351DF7231C6B495200AAED4D /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				35C5A56C1C6DE528003FFE89 /* NewFriendAndCelebrity */,
+				35C5A5621C6DD88E003FFE89 /* AddContact */,
 				351DF7241C6B499400AAED4D /* ContactsIndex.h */,
 				351DF7251C6B499400AAED4D /* ContactsIndex.m */,
 			);
@@ -370,6 +399,12 @@
 			children = (
 				351DF7281C6B4AC400AAED4D /* CellWithImgAndLabel.h */,
 				351DF7291C6B4AC400AAED4D /* CellWithImgAndLabel.m */,
+				3547B6231C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.h */,
+				3547B6241C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m */,
+				35C5A5661C6DE4A0003FFE89 /* NewFriendCell.h */,
+				35C5A5671C6DE4A0003FFE89 /* NewFriendCell.m */,
+				35C5A5691C6DE4E9003FFE89 /* CelebrityCell.h */,
+				35C5A56A1C6DE4E9003FFE89 /* CelebrityCell.m */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -570,6 +605,28 @@
 			name = Setting;
 			sourceTree = "<group>";
 		};
+		35C5A5621C6DD88E003FFE89 /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				3547B6261C6CEFA000DF4055 /* AddContactsVC.h */,
+				3547B6271C6CEFA000DF4055 /* AddContactsVC.m */,
+				35C5A5631C6DD8AE003FFE89 /* AddressBookVC.h */,
+				35C5A5641C6DD8AE003FFE89 /* AddressBookVC.m */,
+			);
+			name = AddContact;
+			sourceTree = "<group>";
+		};
+		35C5A56C1C6DE528003FFE89 /* NewFriendAndCelebrity */ = {
+			isa = PBXGroup;
+			children = (
+				35C5A56D1C6DE542003FFE89 /* NewFriendVC.h */,
+				35C5A56E1C6DE542003FFE89 /* NewFriendVC.m */,
+				35C5A5701C6DE54D003FFE89 /* CelebrityVC.h */,
+				35C5A5711C6DE54D003FFE89 /* CelebrityVC.m */,
+			);
+			name = NewFriendAndCelebrity;
+			sourceTree = "<group>";
+		};
 		35CD61A01C2E8B8800B315AA /* TextFieldValidator */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,6 +692,8 @@
 		C91AC58926BE40B60DD1843B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */,
+				35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */,
 				D92D9644510F402B5131EA93 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -848,8 +907,10 @@
 				351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */,
 				352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */,
 				35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */,
+				3547B6281C6CEFA000DF4055 /* AddContactsVC.m in Sources */,
 				35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */,
 				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
+				35C5A5681C6DE4A0003FFE89 /* NewFriendCell.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
 				35122D591C6129EA0093CD82 /* Industry.m in Sources */,
@@ -857,6 +918,7 @@
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
+				35C5A5651C6DD8AE003FFE89 /* AddressBookVC.m in Sources */,
 				3547B61B1C6C7A9900DF4055 /* NSString+PinYin4Cocoa.m in Sources */,
 				35E6963E1C611AF3000D4274 /* leftCell.m in Sources */,
 				35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */,
@@ -866,6 +928,7 @@
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				3547B6221C6C82E900DF4055 /* Contact.m in Sources */,
+				35C5A56B1C6DE4E9003FFE89 /* CelebrityCell.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
@@ -876,11 +939,14 @@
 				351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */,
 				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
 				3547B61D1C6C7A9900DF4055 /* PinYinForObjc.m in Sources */,
+				35C5A56F1C6DE542003FFE89 /* NewFriendVC.m in Sources */,
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
 				351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */,
 				351DF72A1C6B4AC400AAED4D /* CellWithImgAndLabel.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
 				3547B61C1C6C7A9900DF4055 /* PinyinFormatter.m in Sources */,
+				35C5A5721C6DE54D003FFE89 /* CelebrityVC.m in Sources */,
+				3547B6251C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m in Sources */,
 				35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);

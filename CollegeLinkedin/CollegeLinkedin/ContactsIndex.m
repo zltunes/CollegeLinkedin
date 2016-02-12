@@ -19,14 +19,15 @@ static NSString* const cellId = @"CellWithImgAndLabel";
 }
 
 //从数据库读取的 contacts 原始数据
-@property(nonatomic,strong) NSMutableArray *contactArrayTemp;
+@property (nonatomic,strong ) NSMutableArray *contactArrayTemp;
 
 //分组排序后的 contacts 数据
-@property(nonatomic,strong) NSMutableArray *dataSource;
+@property (nonatomic,strong ) NSMutableArray *dataSource;
 
 @property (nonatomic, strong) NSMutableArray *indexTitles;
 
-@property (nonatomic, strong) NSMutableArray *allArray;  // 包含空数据的contactsArray
+// 包含空数据的contactsArray
+@property (nonatomic, strong) NSMutableArray *allArray;
 
 @end
 
@@ -36,6 +37,8 @@ static NSString* const cellId = @"CellWithImgAndLabel";
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [Config getTableViewFooter];
+    
+    self.searchDisplayController.searchResultsTableView.tableFooterView = [Config getTableViewFooter];
     
     [self setUpInitialData];
     
@@ -129,13 +132,17 @@ titleForHeaderInSection:(NSInteger)section
     }
     else
     {
-        NSMutableArray *titlesArray = [NSMutableArray array];
-        for (int i = 0; i < self.allArray.count; i++) {
-            if ([[self.allArray objectAtIndex:i] count]) {
-                [titlesArray addObject:[[theCollation sectionTitles] objectAtIndex:i]];
+        if (section == 0) {
+            return nil;
+        } else {
+            NSMutableArray *titlesArray = [NSMutableArray array];
+            for (int i = 0; i < self.allArray.count; i++) {
+                if ([[self.allArray objectAtIndex:i] count]) {
+                    [titlesArray addObject:[[theCollation sectionTitles] objectAtIndex:i]];
+                }
             }
+            return [titlesArray objectAtIndex:section-1];
         }
-        return [titlesArray objectAtIndex:section];
     }
     
 }
@@ -147,7 +154,7 @@ titleForHeaderInSection:(NSInteger)section
         return 1;
     }
     else{
-        return self.dataSource.count;
+        return self.dataSource.count+1;
     }
 }
 
@@ -158,7 +165,11 @@ titleForHeaderInSection:(NSInteger)section
         return searchResults.count;
     }
     else{
-        return [[self.dataSource objectAtIndex:section] count];
+        if (section == 0) {
+            return 2;
+        } else {
+            return [[self.dataSource objectAtIndex:section-1] count];
+        }
     }
 }
 
@@ -175,12 +186,43 @@ titleForHeaderInSection:(NSInteger)section
     }
     else
     {
-        Contact *contact = (Contact *)[[self.dataSource objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-        cell.label.text = contact.name;
+        if (indexPath.section == 0) {
+            if (indexPath.row == 0) {
+                [cell.image setImage:[UIImage imageNamed:@"新的好友"]];
+                cell.label.text = @"新的好友";
+            } else {
+                [cell.image setImage:[UIImage imageNamed:@"校友大咖"]];
+                cell.label.text = @"校友大咖";
+            }
+        } else {
+            Contact *contact = (Contact *)[[self.dataSource objectAtIndex:indexPath.section-1] objectAtIndex:indexPath.row];
+            cell.label.text = contact.name;
+            [cell.image setImage:[UIImage imageNamed:@"手机联系人"]];
+        }
+
     }
     
     return cell;
 }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 8;
+    } else {
+        return 22;
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 60;
+    } else {
+        return 55;
+    }
+}
+
 
 // 联系人搜索，可实现汉字搜索，汉语拼音搜索和拼音首字母搜索，
 // 输入联系人名称，进行搜索， 返回搜索结果searchResults
@@ -237,31 +279,5 @@ titleForHeaderInSection:(NSInteger)section
     }
     
 }
-
-// searchbar 点击上浮，完毕复原
--(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
-{
-    //准备搜索前，把上面调整的TableView调整回全屏幕的状态
-    [UIView animateWithDuration:1.0 animations:^{
-        self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-        
-    }];
-    return YES;
-}
-
--(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
-{
-    //搜索结束后，恢复原状
-    [UIView animateWithDuration:1.0 animations:^{
-        self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
-    }];
-    return YES;
-}
-
-- (IBAction)addNew:(id)sender {
-    
-}
-
-
 
 @end
