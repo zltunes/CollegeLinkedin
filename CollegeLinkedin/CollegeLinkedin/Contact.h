@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MJExtension.h"
 
 @interface Contact : NSObject
 
-@property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) UIImage  *photo;
-
-@property NSInteger sectionNumber;  // Index
+@property (nonatomic,assign) NSInteger contact_id;
+@property (nonatomic,copy  ) NSString  *name;
+@property (nonatomic,copy  ) NSString  *photo;
+@property (nonatomic,copy  ) NSString  *job;
+@property (nonatomic,copy  ) NSString  *school;
 
 @end

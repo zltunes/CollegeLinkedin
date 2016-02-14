@@ -223,6 +223,22 @@ titleForHeaderInSection:(NSInteger)section
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger section = indexPath.section;
+    NSInteger row     = indexPath.row;
+
+    if (section == 0) {
+        if (row == 0) {
+            [self performSegueWithIdentifier:@"toNewFriendVC" sender:nil];
+        } else {
+            [self performSegueWithIdentifier:@"toCelebrityVC" sender:nil];
+        }
+    } else {
+        
+    }
+}
+
 
 // 联系人搜索，可实现汉字搜索，汉语拼音搜索和拼音首字母搜索，
 // 输入联系人名称，进行搜索， 返回搜索结果searchResults

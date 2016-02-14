@@ -56,6 +56,9 @@
 		35C5A56B1C6DE4E9003FFE89 /* CelebrityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A56A1C6DE4E9003FFE89 /* CelebrityCell.m */; };
 		35C5A56F1C6DE542003FFE89 /* NewFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A56E1C6DE542003FFE89 /* NewFriendVC.m */; };
 		35C5A5721C6DE54D003FFE89 /* CelebrityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5711C6DE54D003FFE89 /* CelebrityVC.m */; };
+		35C5A5751C6E528A003FFE89 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5741C6E528A003FFE89 /* Contacts.m */; };
+		35C5A5781C6E5BA4003FFE89 /* RequestedContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5771C6E5BA4003FFE89 /* RequestedContact.m */; };
+		35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A57A1C6F4EA1003FFE89 /* RequestedContacts.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
@@ -186,6 +189,12 @@
 		35C5A56E1C6DE542003FFE89 /* NewFriendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFriendVC.m; sourceTree = "<group>"; };
 		35C5A5701C6DE54D003FFE89 /* CelebrityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CelebrityVC.h; sourceTree = "<group>"; };
 		35C5A5711C6DE54D003FFE89 /* CelebrityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CelebrityVC.m; sourceTree = "<group>"; };
+		35C5A5731C6E528A003FFE89 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
+		35C5A5741C6E528A003FFE89 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
+		35C5A5761C6E5BA4003FFE89 /* RequestedContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestedContact.h; sourceTree = "<group>"; };
+		35C5A5771C6E5BA4003FFE89 /* RequestedContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestedContact.m; sourceTree = "<group>"; };
+		35C5A5791C6F4EA1003FFE89 /* RequestedContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestedContacts.h; sourceTree = "<group>"; };
+		35C5A57A1C6F4EA1003FFE89 /* RequestedContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestedContacts.m; sourceTree = "<group>"; };
 		35CD61A11C2E8B9100B315AA /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
@@ -460,6 +469,12 @@
 			children = (
 				3547B6201C6C82E900DF4055 /* Contact.h */,
 				3547B6211C6C82E900DF4055 /* Contact.m */,
+				35C5A5731C6E528A003FFE89 /* Contacts.h */,
+				35C5A5741C6E528A003FFE89 /* Contacts.m */,
+				35C5A5761C6E5BA4003FFE89 /* RequestedContact.h */,
+				35C5A5771C6E5BA4003FFE89 /* RequestedContact.m */,
+				35C5A5791C6F4EA1003FFE89 /* RequestedContacts.h */,
+				35C5A57A1C6F4EA1003FFE89 /* RequestedContacts.m */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -914,6 +929,7 @@
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
 				35122D591C6129EA0093CD82 /* Industry.m in Sources */,
+				35C5A5781C6E5BA4003FFE89 /* RequestedContact.m in Sources */,
 				3547B6191C6C7A9900DF4055 /* ChineseToPinyinResource.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
@@ -933,11 +949,13 @@
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
+				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,
 				351DF71C1C6A290200AAED4D /* QRCodeView.m in Sources */,
 				3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */,
+				35C5A5751C6E528A003FFE89 /* Contacts.m in Sources */,
 				3547B61D1C6C7A9900DF4055 /* PinYinForObjc.m in Sources */,
 				35C5A56F1C6DE542003FFE89 /* NewFriendVC.m in Sources */,
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,

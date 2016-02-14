@@ -10,4 +10,15 @@
 
 @implementation Contact
 
++(NSDictionary*) mj_replacedKeyFromPropertyName
+{
+    return @{
+             @"contact_id":@"user_id",
+             @"name":@"user_name",
+             @"photo":@"image",
+             @"job":@"user_job",
+             @"school":@"user_school"
+             };
+}
+
 @end
