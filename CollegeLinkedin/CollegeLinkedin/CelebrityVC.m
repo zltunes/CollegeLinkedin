@@ -19,8 +19,6 @@
 
 @end
 
-
-
 @implementation CelebrityVC
 
 - (void)viewDidLoad {
