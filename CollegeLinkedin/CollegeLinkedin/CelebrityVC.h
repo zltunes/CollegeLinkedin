@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CelebrityCell.h"
+#import "TableViewSection.h"
+#import "TableViewDataSourceDelegate.h"
+#import "Config.h"
+#import "UITableViewCell+Extension.h"
+#import "Contact.h"
 
 @interface CelebrityVC : UITableViewController
 
