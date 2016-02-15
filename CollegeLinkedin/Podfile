@@ -18,3 +18,5 @@ pod 'IQKeyboardManager'
 pod 'FXBlurView'
 
 pod 'CustomIOSAlertView'
+
+pod 'UITableView+FDTemplateLayoutCell'

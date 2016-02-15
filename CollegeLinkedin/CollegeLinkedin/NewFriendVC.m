@@ -25,13 +25,15 @@
     
     testDict = @{
                  @"user_request_in":@[
-                         @{@"user_id":@0,
+                         @{
+                           @"user_id":@0,
                            @"user_name":@"赵磊1",
                            @"image":@"http://ww4.sinaimg.cn/large/005tGCqhjw1f0xy036w60j3030030t8l.jpg",
                            @"user_job":@"东南大学学生",
                            @"user_school":@"东南大学",
                            @"add_friend_text":@"你好我想加你为好友"},
-                         @{@"user_id":@1,
+                         @{
+                           @"user_id":@1,
                            @"user_name":@"赵磊2",
                            @"image":@"http://ww4.sinaimg.cn/large/005tGCqhjw1f0xy036w60j3030030t8l.jpg",
                            @"user_job":@"南京大学学生",
