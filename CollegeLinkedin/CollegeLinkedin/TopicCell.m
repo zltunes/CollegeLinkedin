@@ -31,7 +31,7 @@ static NSString* const cellId = @"TopicCell";
     [topicCell.imgView sd_setImageWithURL:[NSURL URLWithString:topic.topic_image] placeholderImage:[UIImage imageNamed:@"我的二维码"]];
     topicCell.label_title.text = [NSString stringWithFormat:@"#%@#",topic.title];
     topicCell.label_time.text = topic.topic_date;
-    topicCell.label_count.text = [NSString stringWithFormat:@"%d人参加",topic.join_count];
+    topicCell.label_count.text = [NSString stringWithFormat:@"%ld人参加",(long)topic.join_count];
 
 }
 

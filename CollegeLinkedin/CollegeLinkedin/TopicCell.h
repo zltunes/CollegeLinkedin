@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Topic.h"
 #import "UIImageView+WebCache.h"
-#import "UITableView+FDTemplateLayoutCell.h"
 
 @interface TopicCell : UITableViewCell
 

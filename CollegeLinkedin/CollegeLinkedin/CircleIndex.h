@@ -14,6 +14,9 @@
 #import "TableViewSection.h"
 #import "TableViewDataSourceDelegate.h"
 #import "UITableViewCell+Extension.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "News.h"
+#import "NewsCell.h"
 
 @interface CircleIndex : UITableViewController
 

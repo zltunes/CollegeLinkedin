@@ -35,6 +35,9 @@
 		3522697D1C5F1CDF0009130E /* ToAddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697C1C5F1CDF0009130E /* ToAddJobExpVC.m */; };
 		352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522697F1C5F1CFA0009130E /* AddJobExpVC.m */; };
 		352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 352269831C5F1EFF0009130E /* CellWithOneLabel.m */; };
+		3522FAB71C7A09930046CDBA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522FAB61C7A09930046CDBA /* News.m */; };
+		3522FABA1C7A10090046CDBA /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522FAB91C7A10090046CDBA /* NewsCell.m */; };
+		353D9BFD1C7C466C0050B05E /* NewsImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D9BFC1C7C466C0050B05E /* NewsImageCell.m */; };
 		353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F1A801C5DCD17005E8F4D /* ZHPickView.m */; };
 		353F1A831C5DCD40005E8F4D /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353F1A821C5DCD40005E8F4D /* city.plist */; };
 		3547B6071C6C7A6000DF4055 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3547B6061C6C7A6000DF4055 /* contacts.json */; };
@@ -156,6 +159,12 @@
 		3522697F1C5F1CFA0009130E /* AddJobExpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddJobExpVC.m; sourceTree = "<group>"; };
 		352269821C5F1EFF0009130E /* CellWithOneLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithOneLabel.h; sourceTree = "<group>"; };
 		352269831C5F1EFF0009130E /* CellWithOneLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithOneLabel.m; sourceTree = "<group>"; };
+		3522FAB51C7A09930046CDBA /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		3522FAB61C7A09930046CDBA /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		3522FAB81C7A10090046CDBA /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		3522FAB91C7A10090046CDBA /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		353D9BFB1C7C466C0050B05E /* NewsImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImageCell.h; sourceTree = "<group>"; };
+		353D9BFC1C7C466C0050B05E /* NewsImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageCell.m; sourceTree = "<group>"; };
 		353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
 		353F1A801C5DCD17005E8F4D /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
 		353F1A821C5DCD40005E8F4D /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
@@ -278,6 +287,10 @@
 			children = (
 				3501C7091C71C622002A9D97 /* TopicCell.h */,
 				3501C70A1C71C622002A9D97 /* TopicCell.m */,
+				3522FAB81C7A10090046CDBA /* NewsCell.h */,
+				3522FAB91C7A10090046CDBA /* NewsCell.m */,
+				353D9BFB1C7C466C0050B05E /* NewsImageCell.h */,
+				353D9BFC1C7C466C0050B05E /* NewsImageCell.m */,
 			);
 			name = Circle;
 			sourceTree = "<group>";
@@ -296,6 +309,8 @@
 			children = (
 				3501C7101C71C6C4002A9D97 /* Topic.h */,
 				3501C7111C71C6C4002A9D97 /* Topic.m */,
+				3522FAB51C7A09930046CDBA /* News.h */,
+				3522FAB61C7A09930046CDBA /* News.m */,
 			);
 			name = Circle;
 			sourceTree = "<group>";
@@ -984,14 +999,17 @@
 				35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */,
 				351DF7261C6B499400AAED4D /* ContactsIndex.m in Sources */,
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
+				3522FAB71C7A09930046CDBA /* News.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				3501C7121C71C6C4002A9D97 /* Topic.m in Sources */,
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				3547B6221C6C82E900DF4055 /* Contact.m in Sources */,
+				3522FABA1C7A10090046CDBA /* NewsCell.m in Sources */,
 				35C5A56B1C6DE4E9003FFE89 /* CelebrityCell.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
+				353D9BFD1C7C466C0050B05E /* NewsImageCell.m in Sources */,
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
