@@ -168,33 +168,28 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waq-8G-Cs5">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="waq-8G-Cs5">
                                             <rect key="frame" x="11" y="227" width="353" height="1"/>
                                             <color key="backgroundColor" red="0.75686274509803919" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="vbA-GZ-oIW"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-Fa-RNC">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVd-Fa-RNC">
                                             <rect key="frame" x="125" y="234" width="1" height="33"/>
                                             <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="e48-mv-rwG"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQs-40-9xU">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQs-40-9xU">
                                             <rect key="frame" x="250" y="234" width="1" height="33"/>
                                             <color key="backgroundColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="vgx-bY-e1G"/>
                                             </constraints>
                                         </view>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRy-H9-ajp">
-                                            <rect key="frame" x="11" y="105.5" width="342" height="28"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                            <state key="normal" title="查看详情"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osJ-VH-vzS">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osJ-VH-vzS">
                                             <rect key="frame" x="0.0" y="228" width="125" height="52.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -203,7 +198,7 @@
                                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-cp-fHM">
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz6-cp-fHM">
                                             <rect key="frame" x="126" y="228" width="124" height="52.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -213,17 +208,12 @@
                                             </state>
                                             <state key="selected" image="赞选中"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-LV-CBo">
-                                            <rect key="frame" x="251" y="228" width="124" height="52.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            <state key="normal" title="count" image="分享">
-                                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-Aq-1yg">
-                                            <rect key="frame" x="11" y="133" width="352.5" height="86"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-Aq-1yg" userLabel="collectionView">
+                                            <rect key="frame" x="11" y="105" width="352.5" height="113.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="220" id="Vax-Cn-bMb"/>
+                                            </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xbc-q9-Seq">
                                                 <size key="itemSize" width="80" height="80"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -238,7 +228,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-bn-Rze">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ywg-bn-Rze">
                                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                             </imageView>
                                                         </subviews>
@@ -260,23 +250,30 @@
                                                 <outlet property="delegate" destination="sna-gm-kMt" id="Y4A-U2-sgm"/>
                                             </connections>
                                         </collectionView>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD8-LV-CBo">
+                                            <rect key="frame" x="251" y="228" width="124" height="52.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="count" image="分享">
+                                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="bRy-H9-ajp" firstAttribute="trailing" secondItem="BZh-AP-qUX" secondAttribute="trailing" id="3sh-eh-wua"/>
                                         <constraint firstItem="vQs-40-9xU" firstAttribute="bottom" secondItem="IVd-Fa-RNC" secondAttribute="bottom" id="4Ae-bc-j4z"/>
                                         <constraint firstItem="vQs-40-9xU" firstAttribute="top" secondItem="IVd-Fa-RNC" secondAttribute="top" id="5AG-eq-Hd0"/>
                                         <constraint firstAttribute="bottom" secondItem="osJ-VH-vzS" secondAttribute="bottom" id="7JY-Xk-rlL"/>
                                         <constraint firstItem="vQs-40-9xU" firstAttribute="leading" secondItem="MRc-ZJ-u5H" secondAttribute="centerX" multiplier="4:3" id="BNN-1C-rAf"/>
+                                        <constraint firstItem="lD9-Aq-1yg" firstAttribute="top" secondItem="BZh-AP-qUX" secondAttribute="bottom" constant="8" id="DX6-rY-Uz6"/>
                                         <constraint firstItem="waq-8G-Cs5" firstAttribute="leading" secondItem="MRc-ZJ-u5H" secondAttribute="leading" constant="11" id="Dmu-Uk-Jjx"/>
-                                        <constraint firstItem="bRy-H9-ajp" firstAttribute="leading" secondItem="BZh-AP-qUX" secondAttribute="leading" id="Fz2-TC-Wn9"/>
                                         <constraint firstItem="b58-fq-qGa" firstAttribute="bottom" secondItem="nM7-4t-gkx" secondAttribute="bottom" id="Hgi-D0-LEo"/>
-                                        <constraint firstItem="lD9-Aq-1yg" firstAttribute="top" secondItem="BZh-AP-qUX" secondAttribute="bottom" constant="35.5" id="Hhi-Je-dWt"/>
                                         <constraint firstItem="IVd-Fa-RNC" firstAttribute="leading" secondItem="osJ-VH-vzS" secondAttribute="trailing" id="Hjw-od-Lfl"/>
+                                        <constraint firstItem="waq-8G-Cs5" firstAttribute="top" secondItem="lD9-Aq-1yg" secondAttribute="bottom" constant="8" id="ICJ-WJ-CDo"/>
                                         <constraint firstItem="vQs-40-9xU" firstAttribute="width" secondItem="IVd-Fa-RNC" secondAttribute="width" id="IPp-ae-eVs"/>
                                         <constraint firstItem="IVd-Fa-RNC" firstAttribute="top" secondItem="waq-8G-Cs5" secondAttribute="bottom" constant="6" id="JsN-Cw-rMw"/>
                                         <constraint firstItem="osJ-VH-vzS" firstAttribute="leading" secondItem="MRc-ZJ-u5H" secondAttribute="leading" id="Koj-vU-W6e"/>
                                         <constraint firstAttribute="bottom" secondItem="OD8-LV-CBo" secondAttribute="bottom" id="Lft-Yq-n5z"/>
-                                        <constraint firstItem="bRy-H9-ajp" firstAttribute="top" secondItem="BZh-AP-qUX" secondAttribute="bottom" constant="8" id="OV4-WT-yTQ"/>
                                         <constraint firstItem="OD8-LV-CBo" firstAttribute="top" secondItem="waq-8G-Cs5" secondAttribute="bottom" id="QoN-w5-qFQ"/>
                                         <constraint firstItem="Uvu-1a-bSM" firstAttribute="leading" secondItem="MRc-ZJ-u5H" secondAttribute="leading" constant="11" id="RLh-mI-YqR"/>
                                         <constraint firstItem="vQs-40-9xU" firstAttribute="leading" secondItem="oz6-cp-fHM" secondAttribute="trailing" id="RS3-HJ-Tdk"/>
@@ -293,7 +290,6 @@
                                         <constraint firstAttribute="bottom" secondItem="IVd-Fa-RNC" secondAttribute="bottom" constant="13.5" id="fAc-3H-8SD"/>
                                         <constraint firstItem="nM7-4t-gkx" firstAttribute="leading" secondItem="Uvu-1a-bSM" secondAttribute="trailing" constant="25" id="hD2-gj-hdh"/>
                                         <constraint firstItem="Uvu-1a-bSM" firstAttribute="top" secondItem="MRc-ZJ-u5H" secondAttribute="top" constant="11" id="hSH-Ft-cKr"/>
-                                        <constraint firstItem="waq-8G-Cs5" firstAttribute="top" secondItem="lD9-Aq-1yg" secondAttribute="bottom" constant="8" id="hva-Xp-gu3"/>
                                         <constraint firstItem="MIs-j1-Dpo" firstAttribute="top" secondItem="hwK-fg-w5Z" secondAttribute="bottom" constant="8" id="mmV-4a-Xuo"/>
                                         <constraint firstAttribute="trailing" secondItem="waq-8G-Cs5" secondAttribute="trailing" constant="11" id="nvx-tw-HGc"/>
                                         <constraint firstItem="nM7-4t-gkx" firstAttribute="top" secondItem="MRc-ZJ-u5H" secondAttribute="top" constant="17" id="oEX-mi-CRl"/>
@@ -317,7 +313,6 @@
                                     <outlet property="label_name" destination="nM7-4t-gkx" id="iZf-sT-9aA"/>
                                     <outlet property="label_newsText" destination="BZh-AP-qUX" id="9dQ-ST-V3s"/>
                                     <outlet property="label_time" destination="hwK-fg-w5Z" id="Omv-Nb-4xz"/>
-                                    <outlet property="moreButton" destination="bRy-H9-ajp" id="XA5-Wb-9nY"/>
                                     <outlet property="photo" destination="Uvu-1a-bSM" id="QCY-sg-QTu"/>
                                 </connections>
                             </tableViewCell>

@@ -14,13 +14,11 @@ static NSString* const imgCellId = @"NewsImageCell";
 @implementation NewsCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-    
-    // Configure the view for the selected state
 }
 
 -(void)configure:(UITableViewCell*)cell
@@ -65,21 +63,27 @@ static NSString* const imgCellId = @"NewsImageCell";
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cellfor");
     NewsImageCell* cell = (NewsImageCell*)[self.collectionView dequeueReusableCellWithReuseIdentifier:imgCellId forIndexPath:indexPath];
-//    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:[self.images objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"Login_logo"]];
-    [cell.imgView setImage:[UIImage imageNamed:@"Login_logo"]];
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:[self.images objectAtIndex:indexPath.row]] placeholderImage:[UIImage imageNamed:@"Login_logo"]];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImageView:)];
+    cell.imgView.userInteractionEnabled = YES;
+    cell.imgView.tag = indexPath.row;
+    [cell.imgView addGestureRecognizer:tap];
+    
     return cell;
 }
 
 #pragma mark -- UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"sizefor");
+    
     CGFloat itemW = [self itemWidthForImgArray:self.images];
     CGFloat itemH = 0;
     
     if(self.images.count == 1){
-        UIImage *image = [UIImage imageNamed:self.images.firstObject];
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.images.firstObject]]];
         if (image.size.width) {
             itemH = image.size.height / image.size.width * itemW;
         }
@@ -87,41 +91,75 @@ static NSString* const imgCellId = @"NewsImageCell";
         itemH = itemW;
     }
     
+    if (indexPath.row == self.images.count-1) {
+//        改写collectionView高度约束
+        if (self.images.count == 0) {
+            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%d)]",0 ]
+                                                                                        options:0
+                                                                                        metrics:nil
+                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
+        } else if(self.images.count>0 && self.images.count<4){
+            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH ]
+                                                                options:0
+                                                                metrics:nil
+                                                                  views:NSDictionaryOfVariableBindings(collectionView)]];
+        } else if(self.images.count>3 && self.images.count<7){
+            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH *2]
+                                                                                        options:0
+                                                                                        metrics:nil
+                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
+        } else{
+            [self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH *3]
+                                                                                        options:0
+                                                                                        metrics:nil
+                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
+        }
+    }
+    
+    
+    
+    
+
     return CGSizeMake(itemW, itemH);
 }
 
 - (CGFloat)itemWidthForImgArray:(NSArray *)array
 {
     if (array.count == 1) {
-        return 120;
+        return 170;
     } else {
-        CGFloat w = [UIScreen mainScreen].bounds.size.width > 320 ? 80 : 70;
+        CGFloat w = [UIScreen mainScreen].bounds.size.width > 320 ? 100 : 90;
         return w;
     }
 }
 
-//- (NSInteger)perRowItemCountForImgArray:(NSArray *)array
-//{
-//    if (array.count < 3) {
-//        return array.count;
-//    } else if (array.count <= 4) {
-//        return 2;
-//    } else {
-//        return 3;
-//    }
-//}
-
-// 设置每个 Cell 的上下边距 LineSpacing
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+- (void)tapImageView:(UITapGestureRecognizer *)tap
 {
-    return 10.0f;
+    UIView *imageView = tap.view;
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    browser.currentImageIndex = imageView.tag;
+    browser.sourceImagesContainerView = self.collectionView;
+    browser.imageCount = self.images.count;
+    browser.delegate = self;
+    [browser show];
 }
 
-//   设置每个 Cell 的左右边距,Interitem
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+#pragma mark - SDPhotoBrowserDelegate
+
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
 {
-    return 10.0f;
+    NSString *imageName = self.images[index];
+    NSURL *url = [NSURL URLWithString:imageName];
+    return url;
 }
+
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    NewsImageCell* cell = (NewsImageCell*)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
+    UIImageView *imageView = cell.imgView;
+    return imageView.image;
+}
+
 
 
 

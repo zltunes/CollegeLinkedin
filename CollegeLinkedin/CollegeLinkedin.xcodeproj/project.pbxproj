@@ -38,6 +38,9 @@
 		3522FAB71C7A09930046CDBA /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522FAB61C7A09930046CDBA /* News.m */; };
 		3522FABA1C7A10090046CDBA /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3522FAB91C7A10090046CDBA /* NewsCell.m */; };
 		353D9BFD1C7C466C0050B05E /* NewsImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D9BFC1C7C466C0050B05E /* NewsImageCell.m */; };
+		353D9C061C7C84140050B05E /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D9C001C7C84140050B05E /* SDBrowserImageView.m */; };
+		353D9C071C7C84140050B05E /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D9C021C7C84140050B05E /* SDPhotoBrowser.m */; };
+		353D9C081C7C84140050B05E /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353D9C051C7C84140050B05E /* SDWaitingView.m */; };
 		353F1A811C5DCD17005E8F4D /* ZHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F1A801C5DCD17005E8F4D /* ZHPickView.m */; };
 		353F1A831C5DCD40005E8F4D /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 353F1A821C5DCD40005E8F4D /* city.plist */; };
 		3547B6071C6C7A6000DF4055 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 3547B6061C6C7A6000DF4055 /* contacts.json */; };
@@ -165,6 +168,13 @@
 		3522FAB91C7A10090046CDBA /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		353D9BFB1C7C466C0050B05E /* NewsImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImageCell.h; sourceTree = "<group>"; };
 		353D9BFC1C7C466C0050B05E /* NewsImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageCell.m; sourceTree = "<group>"; };
+		353D9BFF1C7C84140050B05E /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		353D9C001C7C84140050B05E /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		353D9C011C7C84140050B05E /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		353D9C021C7C84140050B05E /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		353D9C031C7C84140050B05E /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		353D9C041C7C84140050B05E /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		353D9C051C7C84140050B05E /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		353F1A7F1C5DCD17005E8F4D /* ZHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHPickView.h; sourceTree = "<group>"; };
 		353F1A801C5DCD17005E8F4D /* ZHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHPickView.m; sourceTree = "<group>"; };
 		353F1A821C5DCD40005E8F4D /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
@@ -497,6 +507,20 @@
 			name = JobExperienceCell;
 			sourceTree = "<group>";
 		};
+		353D9BFE1C7C84140050B05E /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				353D9BFF1C7C84140050B05E /* SDBrowserImageView.h */,
+				353D9C001C7C84140050B05E /* SDBrowserImageView.m */,
+				353D9C011C7C84140050B05E /* SDPhotoBrowser.h */,
+				353D9C021C7C84140050B05E /* SDPhotoBrowser.m */,
+				353D9C031C7C84140050B05E /* SDPhotoBrowserConfig.h */,
+				353D9C041C7C84140050B05E /* SDWaitingView.h */,
+				353D9C051C7C84140050B05E /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		353F1A7E1C5DCD05005E8F4D /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +625,7 @@
 		358077EA1C2C097100D0A4A9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				353D9BFE1C7C84140050B05E /* SDPhotoBrowser */,
 				351DF7121C6A276B00AAED4D /* CustomViewFromXib */,
 				353F1A7E1C5DCD05005E8F4D /* PickerView */,
 				35CD61A01C2E8B8800B315AA /* TextFieldValidator */,
@@ -978,6 +1003,7 @@
 				3547B6181C6C7A9900DF4055 /* ChineseInclude.m in Sources */,
 				3501C7201C7211E1002A9D97 /* CALayer+BorderUIColor.m in Sources */,
 				351968B41C2BD8280033AE2B /* AppDelegate.m in Sources */,
+				353D9C081C7C84140050B05E /* SDWaitingView.m in Sources */,
 				352269841C5F1EFF0009130E /* CellWithOneLabel.m in Sources */,
 				3501C70B1C71C622002A9D97 /* TopicCell.m in Sources */,
 				35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */,
@@ -1006,6 +1032,7 @@
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
 				3547B6221C6C82E900DF4055 /* Contact.m in Sources */,
 				3522FABA1C7A10090046CDBA /* NewsCell.m in Sources */,
+				353D9C061C7C84140050B05E /* SDBrowserImageView.m in Sources */,
 				35C5A56B1C6DE4E9003FFE89 /* CelebrityCell.m in Sources */,
 				358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */,
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
@@ -1014,6 +1041,7 @@
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
 				3501C70E1C71C64D002A9D97 /* CircleIndex.m in Sources */,
+				353D9C071C7C84140050B05E /* SDPhotoBrowser.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
 				358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */,
 				357DB61C1C2C20620087090B /* MeIndexVC.m in Sources */,

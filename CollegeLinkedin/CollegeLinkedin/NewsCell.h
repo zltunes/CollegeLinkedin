@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "News.h"
 #import "NewsImageCell.h"
+#import "SDPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
 
-@interface NewsCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface NewsCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,SDPhotoBrowserDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView      *photo;
 
