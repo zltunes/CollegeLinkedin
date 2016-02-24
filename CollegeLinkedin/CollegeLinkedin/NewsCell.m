@@ -8,13 +8,14 @@
 
 #import "NewsCell.h"
 
-static NSString* const cellId = @"NewsCell";
+static NSString* const cellId    = @"NewsCell";
 static NSString* const imgCellId = @"NewsImageCell";
+static const float CellMargin    = 10.0f;
 
 @implementation NewsCell
 
 - (void)awakeFromNib {
-    
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -36,6 +37,7 @@ static NSString* const imgCellId = @"NewsImageCell";
     newsCell.label_newsText.text = news.news_text;
     
     newsCell.images = news.image;
+    [self updateCollectionHeighrConstraint];
     [self.collectionView reloadData];
     
     [newsCell.btn_comment setTitle:[NSString stringWithFormat:@"%d",news.comment_amount] forState:UIControlStateNormal];
@@ -49,6 +51,40 @@ static NSString* const imgCellId = @"NewsImageCell";
     return cellId;
 }
 
+-(void)updateCollectionHeighrConstraint
+{
+    NSUInteger count = self.images.count;
+    CGSize itemSize = [self sizeForItems];
+    CGFloat itemH = itemSize.height;
+    
+    if (count==0) {
+        self.collectionHeightConstraint.constant = 0;
+    } else if(count>0 && count<4){
+        self.collectionHeightConstraint.constant = itemH+CellMargin;
+    } else if(count>3 && count<7){
+        self.collectionHeightConstraint.constant = (itemH+CellMargin)*2;
+    } else {
+        self.collectionHeightConstraint.constant = (itemH+CellMargin)*3;
+    }
+}
+
+-(CGSize)sizeForItems
+{
+    CGFloat itemW = [self itemWidthForImgArray:self.images];
+    CGFloat itemH = 0;
+    
+    if(self.images.count == 1){
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.images.firstObject]]];
+        if (image.size.width) {
+            itemH = image.size.height / image.size.width * itemW;
+        }
+    } else{
+        itemH = itemW;
+    }
+    
+    return CGSizeMake(itemW, itemH);
+}
+
 #pragma mark -- UICollectionDataSource
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -57,7 +93,6 @@ static NSString* const imgCellId = @"NewsImageCell";
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"照片数：%lu",(unsigned long)self.images.count);
     return self.images.count;
 }
 
@@ -77,50 +112,7 @@ static NSString* const imgCellId = @"NewsImageCell";
 #pragma mark -- UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"sizefor");
-    
-    CGFloat itemW = [self itemWidthForImgArray:self.images];
-    CGFloat itemH = 0;
-    
-    if(self.images.count == 1){
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.images.firstObject]]];
-        if (image.size.width) {
-            itemH = image.size.height / image.size.width * itemW;
-        }
-    } else{
-        itemH = itemW;
-    }
-    
-    if (indexPath.row == self.images.count-1) {
-//        改写collectionView高度约束
-        if (self.images.count == 0) {
-            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%d)]",0 ]
-                                                                                        options:0
-                                                                                        metrics:nil
-                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
-        } else if(self.images.count>0 && self.images.count<4){
-            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH ]
-                                                                options:0
-                                                                metrics:nil
-                                                                  views:NSDictionaryOfVariableBindings(collectionView)]];
-        } else if(self.images.count>3 && self.images.count<7){
-            [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH *2]
-                                                                                        options:0
-                                                                                        metrics:nil
-                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
-        } else{
-            [self.collectionView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:[NSString stringWithFormat:@"V:[collectionView(%g)]",itemH *3]
-                                                                                        options:0
-                                                                                        metrics:nil
-                                                                                          views:NSDictionaryOfVariableBindings(collectionView)]];
-        }
-    }
-    
-    
-    
-    
-
-    return CGSizeMake(itemW, itemH);
+    return [self sizeForItems];
 }
 
 - (CGFloat)itemWidthForImgArray:(NSArray *)array
@@ -158,6 +150,39 @@ static NSString* const imgCellId = @"NewsImageCell";
     NewsImageCell* cell = (NewsImageCell*)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]];
     UIImageView *imageView = cell.imgView;
     return imageView.image;
+}
+
+
+//分享
+- (IBAction)shareBtnClicked:(id)sender
+{
+
+    AppDelegate* delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    _activityView = [[HYActivityView alloc]initWithTitle:@"分享到" referView:delegate.window.rootViewController.view];
+    _activityView.numberOfButtonPerLine = 4;
+    
+    ButtonView *bv = [[ButtonView alloc]initWithText:@"校友圈动态" image:[UIImage imageNamed:@"校友圈"] handler:^(ButtonView *buttonView){
+
+        
+    }];
+    [_activityView addButtonView:bv];
+    
+    bv = [[ButtonView alloc]initWithText:@"微信好友" image:[UIImage imageNamed:@"微信-1"] handler:^(ButtonView *buttonView){
+        
+    }];
+    [_activityView addButtonView:bv];
+    
+    bv = [[ButtonView alloc]initWithText:@"微信朋友圈" image:[UIImage imageNamed:@"微信朋友圈"] handler:^(ButtonView *buttonView){
+
+    }];
+    [_activityView addButtonView:bv];
+    
+    bv = [[ButtonView alloc]initWithText:@"QQ空间" image:[UIImage imageNamed:@"qq空间"] handler:^(ButtonView *buttonView){
+
+    }];
+    [_activityView addButtonView:bv];
+    
+    [_activityView show];
 }
 
 

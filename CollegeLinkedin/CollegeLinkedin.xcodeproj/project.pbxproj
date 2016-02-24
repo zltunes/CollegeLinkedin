@@ -59,6 +59,7 @@
 		358077F51C2C145F00D0A4A9 /* MeCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F41C2C145F00D0A4A9 /* MeCellWithPhoto.m */; };
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
 		35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A19AC91C69FAB1004E75D7 /* SettingVC.m */; };
+		35B780121C7DD75B0008B973 /* HYActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B780111C7DD75B0008B973 /* HYActivityView.m */; };
 		35C5A5601C6DD5C8003FFE89 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */; };
 		35C5A5611C6DD5C8003FFE89 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */; };
 		35C5A5651C6DD8AE003FFE89 /* AddressBookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5641C6DD8AE003FFE89 /* AddressBookVC.m */; };
@@ -200,6 +201,7 @@
 		3547B6241C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithImgAndTwoLabels.m; sourceTree = "<group>"; };
 		3547B6261C6CEFA000DF4055 /* AddContactsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsVC.h; sourceTree = "<group>"; };
 		3547B6271C6CEFA000DF4055 /* AddContactsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsVC.m; sourceTree = "<group>"; };
+		3579A14B1C7DB151001C5E07 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		357DB61A1C2C20620087090B /* MeIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeIndexVC.h; sourceTree = "<group>"; };
 		357DB61B1C2C20620087090B /* MeIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeIndexVC.m; sourceTree = "<group>"; };
 		358077F31C2C145F00D0A4A9 /* MeCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithPhoto.h; sourceTree = "<group>"; };
@@ -208,6 +210,8 @@
 		358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeCellWithIcon.m; sourceTree = "<group>"; };
 		35A19AC81C69FAB1004E75D7 /* SettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingVC.h; sourceTree = "<group>"; };
 		35A19AC91C69FAB1004E75D7 /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
+		35B780101C7DD75B0008B973 /* HYActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYActivityView.h; sourceTree = "<group>"; };
+		35B780111C7DD75B0008B973 /* HYActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYActivityView.m; sourceTree = "<group>"; };
 		35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		35C5A5631C6DD8AE003FFE89 /* AddressBookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookVC.h; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 				351968BB1C2BD8280033AE2B /* Assets.xcassets */,
 				351968B81C2BD8280033AE2B /* Main.storyboard */,
 				351968BD1C2BD8280033AE2B /* LaunchScreen.storyboard */,
+				3579A14B1C7DB151001C5E07 /* Reveal.framework */,
 				351968C01C2BD8280033AE2B /* Info.plist */,
 				351968AF1C2BD8280033AE2B /* Supporting Files */,
 			);
@@ -625,6 +630,7 @@
 		358077EA1C2C097100D0A4A9 /* Vender */ = {
 			isa = PBXGroup;
 			children = (
+				35B7800F1C7DD7420008B973 /* HYActivityView */,
 				353D9BFE1C7C84140050B05E /* SDPhotoBrowser */,
 				351DF7121C6A276B00AAED4D /* CustomViewFromXib */,
 				353F1A7E1C5DCD05005E8F4D /* PickerView */,
@@ -700,6 +706,15 @@
 				35A19AC91C69FAB1004E75D7 /* SettingVC.m */,
 			);
 			name = Setting;
+			sourceTree = "<group>";
+		};
+		35B7800F1C7DD7420008B973 /* HYActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				35B780101C7DD75B0008B973 /* HYActivityView.h */,
+				35B780111C7DD75B0008B973 /* HYActivityView.m */,
+			);
+			name = HYActivityView;
 			sourceTree = "<group>";
 		};
 		35C5A5621C6DD88E003FFE89 /* AddContact */ = {
@@ -1040,6 +1055,7 @@
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
+				35B780121C7DD75B0008B973 /* HYActivityView.m in Sources */,
 				3501C70E1C71C64D002A9D97 /* CircleIndex.m in Sources */,
 				353D9C071C7C84140050B05E /* SDPhotoBrowser.m in Sources */,
 				35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */,
@@ -1201,9 +1217,51 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CollegeLinkedin",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = CollegeLinkedin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CollegeLinkedin",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CustomIOSAlertView\"",
+					"-l\"FXBlurView\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1218,8 +1276,47 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CollegeLinkedin",
+				);
 				INFOPLIST_FILE = CollegeLinkedin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CollegeLinkedin",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"CustomIOSAlertView\"",
+					"-l\"FXBlurView\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"UITableView+FDTemplateLayoutCell\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -17,6 +17,7 @@ PODS:
   - CustomIOSAlertView (0.9.3)
   - FXBlurView (1.6.4)
   - IQKeyboardManager (3.3.6)
+  - Masonry (0.6.4)
   - MJExtension (3.0.7)
   - MJRefresh (3.0.7)
   - Reachability (3.2)
@@ -31,6 +32,7 @@ DEPENDENCIES:
   - CustomIOSAlertView
   - FXBlurView
   - IQKeyboardManager
+  - Masonry
   - MJExtension
   - MJRefresh
   - Reachability
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   CustomIOSAlertView: 94d2401e34fcfb0ac0134679d6947f5e251b0446
   FXBlurView: db786c2561cb49a09ae98407f52460096ab8a44f
   IQKeyboardManager: 037cf3aec1d0a045108859a47818714eb1bfc149
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
   MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96

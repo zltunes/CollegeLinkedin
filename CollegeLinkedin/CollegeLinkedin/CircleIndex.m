@@ -1,4 +1,3 @@
-
 //
 //  CircleIndex.m
 //  CollegeLinkedin
@@ -41,7 +40,7 @@
                     @"user_major":@"艺术学院",
                     @"post_time":@"18分钟前",
                     @"news_text":@"万能的朋友圈，我是2013级播音主持系毕业的！如果大家喜欢我，加我好友哦！附图一张!",
-                    @"image":[NSArray arrayWithObjects:@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",nil],
+                    @"image":[NSArray arrayWithObjects:@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",@"http://ww2.sinaimg.cn/large/005tGCqhjw1f104ny4fl1j302o02f0sn.jpg",nil],
                     @"comment_amount":@999,
                     @"like_amount":@228,
                     @"share_amount":@12
@@ -95,13 +94,6 @@
     };
     
     CellHeightBlock heightBlock                   = ^CGFloat(NSIndexPath* indexPath,id item){
-//        if (indexPath.section == 0) {
-//            return [self.tableView fd_heightForCellWithIdentifier:cellIdentifier(indexPath,item) cacheByIndexPath:indexPath configuration:^(id cell) {
-//                configureCell(indexPath,item,cell);
-//            }];
-//        } else {
-//            return 450.0f;
-//        }
         return [self.tableView fd_heightForCellWithIdentifier:cellIdentifier(indexPath,item) cacheByIndexPath:indexPath configuration:^(id cell) {
             configureCell(indexPath,item,cell);
         }];
@@ -122,5 +114,12 @@
     
     
 }
+
+- (IBAction)toPostNews:(id)sender
+{
+    
+    
+}
+
 
 @end

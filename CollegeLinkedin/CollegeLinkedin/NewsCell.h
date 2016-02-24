@@ -11,8 +11,12 @@
 #import "NewsImageCell.h"
 #import "SDPhotoBrowser.h"
 #import "UIImageView+WebCache.h"
+#import "HYActivityView.h"
+#import "CircleIndex.h"
+#import "Config.h"
+#import "AppDelegate.h"
 
-@interface NewsCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,SDPhotoBrowserDelegate>
+@interface NewsCell : UITableViewCell<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UIImageView      *photo;
 
@@ -36,9 +40,21 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *btn_share;
 
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *collectionHeightConstraint;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *collection_left;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *collection_top;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *collection_right;
+
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *collection_bottom;
 
 @property (nonatomic,assign ) BOOL             shouldOpenContentLabel;
 
 @property (nonatomic,strong) NSArray *images;
+
+@property(nonatomic,strong) HYActivityView *activityView;
+
 
 @end

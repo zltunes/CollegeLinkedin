@@ -20,4 +20,6 @@
 
 @interface CircleIndex : UITableViewController
 
+-(void)setUpTableView;
+
 @end

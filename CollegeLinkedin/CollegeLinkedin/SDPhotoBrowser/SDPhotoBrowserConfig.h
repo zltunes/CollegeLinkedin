@@ -28,7 +28,7 @@ typedef enum {
 #define SDPhotoBrowserShowImageAnimationDuration 0.8f
 
 // browser中显示图片动画时长
-#define SDPhotoBrowserHideImageAnimationDuration 0.8f
+#define SDPhotoBrowserHideImageAnimationDuration 0.5f
 
 // 图片下载进度指示进度显示样式（SDWaitingViewModeLoopDiagram 环形，SDWaitingViewModePieDiagram 饼型）
 #define SDWaitingViewProgressMode SDWaitingViewModeLoopDiagram
