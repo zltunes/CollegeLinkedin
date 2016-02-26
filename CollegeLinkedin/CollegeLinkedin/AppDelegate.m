@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IQKeyboardManager.h"
+#import "Config.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,6 @@
     manager.shouldResignOnTouchOutside = YES;
     manager.enableAutoToolbar = YES;
     
-    // Override point for customization after application launch.
     return YES;
     
 }

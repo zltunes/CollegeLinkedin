@@ -22,3 +22,5 @@ pod 'CustomIOSAlertView'
 pod 'UITableView+FDTemplateLayoutCell'
 
 pod 'Masonry'
+
+pod 'ReactiveCocoa', '~>2.3.1'

@@ -20,6 +20,7 @@
 +(void)popAlertControllerWhenGobackWithRootVC:(UIViewController*)superVC;
 +(UIViewController*)getVCFromSb:(NSString*)storyboardID;
 +(NSArray*)getJsonArray:(NSString*)JsonFileName;
++(BOOL)validateString:(NSString*)string withRex:(NSString*)rex;
 
 +(void)showProgressHUDwithStatus:(NSString*) status;
 +(void)dismissHUD;

@@ -70,6 +70,11 @@
 		35C5A5751C6E528A003FFE89 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5741C6E528A003FFE89 /* Contacts.m */; };
 		35C5A5781C6E5BA4003FFE89 /* RequestedContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5771C6E5BA4003FFE89 /* RequestedContact.m */; };
 		35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A57A1C6F4EA1003FFE89 /* RequestedContacts.m */; };
+		35C8B1321C809E0F0066A9FA /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B1311C809E0F0066A9FA /* User.m */; };
+		35C8B1361C809E210066A9FA /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B1351C809E210066A9FA /* LoginViewModel.m */; };
+		35C8B13A1C809E2F0066A9FA /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B1391C809E2F0066A9FA /* LoginVC.m */; };
+		35C8B13D1C809E360066A9FA /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B13C1C809E360066A9FA /* RegisterVC.m */; };
+		35C8B1401C809E7C0066A9FA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B13F1C809E7C0066A9FA /* Config.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
@@ -83,11 +88,10 @@
 		35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3C91C5E519700D918FE /* EditCompanyNameVC.m */; };
 		35F1D3CD1C5E51B900D918FE /* EditPositionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */; };
 		35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */; };
-		35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B4B1C2C32BF00B2E66E /* Config.m */; };
 		35FA5B511C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B501C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m */; };
 		35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B531C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m */; };
 		35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FA5B5A1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m */; };
-		C2F95A8994D3C22226B2BF97 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D92D9644510F402B5131EA93 /* libPods.a */; };
+		829AAB3FAEBC5338EF920887 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6758B3D56BD90B0B00FCDD2A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,7 +205,6 @@
 		3547B6241C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithImgAndTwoLabels.m; sourceTree = "<group>"; };
 		3547B6261C6CEFA000DF4055 /* AddContactsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddContactsVC.h; sourceTree = "<group>"; };
 		3547B6271C6CEFA000DF4055 /* AddContactsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsVC.m; sourceTree = "<group>"; };
-		3579A14B1C7DB151001C5E07 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		357DB61A1C2C20620087090B /* MeIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeIndexVC.h; sourceTree = "<group>"; };
 		357DB61B1C2C20620087090B /* MeIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeIndexVC.m; sourceTree = "<group>"; };
 		358077F31C2C145F00D0A4A9 /* MeCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeCellWithPhoto.h; sourceTree = "<group>"; };
@@ -230,6 +233,16 @@
 		35C5A5771C6E5BA4003FFE89 /* RequestedContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestedContact.m; sourceTree = "<group>"; };
 		35C5A5791C6F4EA1003FFE89 /* RequestedContacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestedContacts.h; sourceTree = "<group>"; };
 		35C5A57A1C6F4EA1003FFE89 /* RequestedContacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestedContacts.m; sourceTree = "<group>"; };
+		35C8B1301C809E0F0066A9FA /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		35C8B1311C809E0F0066A9FA /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		35C8B1341C809E210066A9FA /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		35C8B1351C809E210066A9FA /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		35C8B1381C809E2F0066A9FA /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		35C8B1391C809E2F0066A9FA /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		35C8B13B1C809E360066A9FA /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		35C8B13C1C809E360066A9FA /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		35C8B13E1C809E7C0066A9FA /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		35C8B13F1C809E7C0066A9FA /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		35CD61A11C2E8B9100B315AA /* TextFieldValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldValidator.h; sourceTree = "<group>"; };
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
@@ -255,17 +268,15 @@
 		35F1D3CC1C5E51B800D918FE /* EditPositionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPositionVC.m; sourceTree = "<group>"; };
 		35F1D3CE1C5E51DD00D918FE /* EditSelfIntroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSelfIntroVC.h; sourceTree = "<group>"; };
 		35F1D3CF1C5E51DD00D918FE /* EditSelfIntroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSelfIntroVC.m; sourceTree = "<group>"; };
-		35FA5B4A1C2C32BF00B2E66E /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		35FA5B4B1C2C32BF00B2E66E /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		35FA5B4F1C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBaseInfoCellWithPhoto.h; sourceTree = "<group>"; };
 		35FA5B501C2D0CAD00B2E66E /* MeBaseInfoCellWithPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBaseInfoCellWithPhoto.m; sourceTree = "<group>"; };
 		35FA5B521C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBaseInfoCellWithTwoLabels.h; sourceTree = "<group>"; };
 		35FA5B531C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBaseInfoCellWithTwoLabels.m; sourceTree = "<group>"; };
 		35FA5B591C2D0DE300B2E66E /* MeBaseInfoIndexVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeBaseInfoIndexVC.h; sourceTree = "<group>"; };
 		35FA5B5A1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeBaseInfoIndexVC.m; sourceTree = "<group>"; };
+		6758B3D56BD90B0B00FCDD2A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC4F8D3F306CDA96B4E0BB8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B83BE860C718AC7FE245BC2A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D92D9644510F402B5131EA93 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,7 +286,7 @@
 			files = (
 				35C5A5601C6DD5C8003FFE89 /* AddressBook.framework in Frameworks */,
 				35C5A5611C6DD5C8003FFE89 /* AddressBookUI.framework in Frameworks */,
-				C2F95A8994D3C22226B2BF97 /* libPods.a in Frameworks */,
+				829AAB3FAEBC5338EF920887 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +407,7 @@
 		351968AE1C2BD8280033AE2B /* CollegeLinkedin */ = {
 			isa = PBXGroup;
 			children = (
+				35C8B12E1C809DD80066A9FA /* LoginAndRegister */,
 				358077E61C2C08A600D0A4A9 /* Delegate */,
 				358077F11C2C099800D0A4A9 /* Model */,
 				358077F01C2C099600D0A4A9 /* View */,
@@ -408,7 +420,6 @@
 				351968BB1C2BD8280033AE2B /* Assets.xcassets */,
 				351968B81C2BD8280033AE2B /* Main.storyboard */,
 				351968BD1C2BD8280033AE2B /* LaunchScreen.storyboard */,
-				3579A14B1C7DB151001C5E07 /* Reveal.framework */,
 				351968C01C2BD8280033AE2B /* Info.plist */,
 				351968AF1C2BD8280033AE2B /* Supporting Files */,
 			);
@@ -611,8 +622,8 @@
 				3547B6081C6C7A8700DF4055 /* PinYin */,
 				35009EDA1C42492D004BF94B /* TableViewSection.h */,
 				35009EDB1C42492D004BF94B /* TableViewSection.m */,
-				35FA5B4A1C2C32BF00B2E66E /* Config.h */,
-				35FA5B4B1C2C32BF00B2E66E /* Config.m */,
+				35C8B13E1C809E7C0066A9FA /* Config.h */,
+				35C8B13F1C809E7C0066A9FA /* Config.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -739,6 +750,45 @@
 			name = NewFriendAndCelebrity;
 			sourceTree = "<group>";
 		};
+		35C8B12E1C809DD80066A9FA /* LoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				35C8B1371C809E250066A9FA /* Controller */,
+				35C8B1331C809E150066A9FA /* ViewModel */,
+				35C8B12F1C809DF20066A9FA /* Model */,
+			);
+			name = LoginAndRegister;
+			sourceTree = "<group>";
+		};
+		35C8B12F1C809DF20066A9FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35C8B1301C809E0F0066A9FA /* User.h */,
+				35C8B1311C809E0F0066A9FA /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		35C8B1331C809E150066A9FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				35C8B1341C809E210066A9FA /* LoginViewModel.h */,
+				35C8B1351C809E210066A9FA /* LoginViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		35C8B1371C809E250066A9FA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35C8B1381C809E2F0066A9FA /* LoginVC.h */,
+				35C8B1391C809E2F0066A9FA /* LoginVC.m */,
+				35C8B13B1C809E360066A9FA /* RegisterVC.h */,
+				35C8B13C1C809E360066A9FA /* RegisterVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		35CD61A01C2E8B8800B315AA /* TextFieldValidator */ = {
 			isa = PBXGroup;
 			children = (
@@ -806,7 +856,7 @@
 			children = (
 				35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */,
 				35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */,
-				D92D9644510F402B5131EA93 /* libPods.a */,
+				6758B3D56BD90B0B00FCDD2A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1024,7 +1074,7 @@
 				35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */,
 				3547B6281C6CEFA000DF4055 /* AddContactsVC.m in Sources */,
 				35FA5B541C2D0D0900B2E66E /* MeBaseInfoCellWithTwoLabels.m in Sources */,
-				35FA5B4C1C2C32BF00B2E66E /* Config.m in Sources */,
+				35C8B1361C809E210066A9FA /* LoginViewModel.m in Sources */,
 				35C5A5681C6DE4A0003FFE89 /* NewFriendCell.m in Sources */,
 				35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */,
 				35F1D3D01C5E51DD00D918FE /* EditSelfIntroVC.m in Sources */,
@@ -1032,6 +1082,7 @@
 				35C5A5781C6E5BA4003FFE89 /* RequestedContact.m in Sources */,
 				3547B6191C6C7A9900DF4055 /* ChineseToPinyinResource.m in Sources */,
 				35FA5B5B1C2D0DE300B2E66E /* MeBaseInfoIndexVC.m in Sources */,
+				35C8B1401C809E7C0066A9FA /* Config.m in Sources */,
 				351C4AAA1C3E890E0027A69A /* TableViewDataSourceDelegate.m in Sources */,
 				352269801C5F1CFA0009130E /* AddJobExpVC.m in Sources */,
 				35C5A5651C6DD8AE003FFE89 /* AddressBookVC.m in Sources */,
@@ -1042,6 +1093,7 @@
 				351968B11C2BD8280033AE2B /* main.m in Sources */,
 				3522FAB71C7A09930046CDBA /* News.m in Sources */,
 				351C4AB61C3E956B0027A69A /* UITableViewCell+Extension.m in Sources */,
+				35C8B1321C809E0F0066A9FA /* User.m in Sources */,
 				35F1D3CA1C5E519700D918FE /* EditCompanyNameVC.m in Sources */,
 				3501C7121C71C6C4002A9D97 /* Topic.m in Sources */,
 				35122D561C6129CA0093CD82 /* Career.m in Sources */,
@@ -1068,11 +1120,13 @@
 				35C5A56F1C6DE542003FFE89 /* NewFriendVC.m in Sources */,
 				35E696411C611AFF000D4274 /* rightCell.m in Sources */,
 				351DF7151C6A278E00AAED4D /* PSCustomViewFromXib.m in Sources */,
+				35C8B13A1C809E2F0066A9FA /* LoginVC.m in Sources */,
 				351DF72A1C6B4AC400AAED4D /* CellWithImgAndLabel.m in Sources */,
 				35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */,
 				3547B61C1C6C7A9900DF4055 /* PinyinFormatter.m in Sources */,
 				35C5A5721C6DE54D003FFE89 /* CelebrityVC.m in Sources */,
 				3547B6251C6CEF7E00DF4055 /* CellWithImgAndTwoLabels.m in Sources */,
+				35C8B13D1C809E360066A9FA /* RegisterVC.m in Sources */,
 				35122D611C61F16E0093CD82 /* IndustryTable.m in Sources */,
 				35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */,
 			);
@@ -1258,9 +1312,6 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
-					"-lz",
-					"-framework",
-					Reveal,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhaolei.CollegeLinkedin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

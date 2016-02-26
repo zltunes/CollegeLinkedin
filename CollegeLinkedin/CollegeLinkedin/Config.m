@@ -156,4 +156,21 @@ static UIViewController* VCFromSb = nil;
     }
 }
 
+
+//判断字符串是否符合正则表达式
++(BOOL)validateString:(NSString*)string withRex:(NSString*)rex
+{
+    NSDictionary *rexDict = [[Config getInfoPlistDict] objectForKey:@"RegularExpressions"];
+    NSPredicate *prdicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",[rexDict objectForKey:rex]];
+    NSLog(string);
+    if ([prdicate evaluateWithObject:string]) {
+        NSLog(@"yes");
+        return YES;
+    } else {
+        NSLog(@"no");
+        return NO;
+    }
+    
+}
+
 @end

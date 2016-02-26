@@ -110,7 +110,7 @@
 		<key>positionNameRex</key>
 		<string>^.{0,20}$</string>
 		<key>pwdRex</key>
-		<string>^.{6,12}$</string>
+		<string>^.{6,}$</string>
 	</dict>
 </dict>
 </plist>
