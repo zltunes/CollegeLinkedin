@@ -36,7 +36,7 @@
     _enableLoginSignal = [RACSignal combineLatest:@[RACObserve(self.user, phone_num),RACObserve(self.user, password)] reduce:^id(NSString *phone_num,NSString *password){
 
         NSPredicate *phoneNum_prdicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^1[3|4|5|7|8][0-9]\\d{8}$"];
-        NSPredicate *pwd_predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^.{6,}$"];
+        NSPredicate *pwd_predicate     = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^.{6,}$"];
         return @([phoneNum_prdicate evaluateWithObject:phone_num] && [pwd_predicate evaluateWithObject:password]);
         
     }];
@@ -59,13 +59,7 @@
         }];
     }];
     
-//    监听登录产生的数据
-    [_loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
-        
-        if ([x isEqualToString:@"success!"]) {
-            NSLog(@"监听到登录成功！");
-        }
-    }];
+
     
 //    监听登录状态
     [[_loginCommand.executing skip:1]subscribeNext:^(id x) {

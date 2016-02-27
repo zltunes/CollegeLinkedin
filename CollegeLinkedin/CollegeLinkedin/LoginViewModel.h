@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
 #import "Config.h"
+#import "AppDelegate.h"
+#import "CircleIndex.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LoginViewModel : NSObject
 

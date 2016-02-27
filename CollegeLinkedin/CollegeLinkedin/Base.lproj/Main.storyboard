@@ -11,6 +11,7 @@
         <scene sceneID="Lcd-Gu-8Ih">
             <objects>
                 <tabBarController id="f8g-ba-Su2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="icA-1U-7bQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xZ6-8J-UWK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -33,7 +34,7 @@
         <scene sceneID="lvS-6v-64n">
             <objects>
                 <tableViewController storyboardIdentifier="CircleIndex" id="Lcs-v0-Qru" customClass="CircleIndex" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="tXj-35-Nav">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="tXj-35-Nav">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
@@ -1885,7 +1886,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrz-iY-0wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.5" y="7616.5"/>
+            <point key="canvasLocation" x="-736.5" y="839.5"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="ep7-ZU-TUw">
@@ -2062,11 +2063,12 @@
                         <outlet property="loginBtn" destination="HnB-bg-iGX" id="5nY-YO-awk"/>
                         <outlet property="pwdTextField" destination="SCD-ab-CpT" id="Xz8-GR-P8N"/>
                         <outlet property="weixinLoginBtn" destination="nOB-5C-RYe" id="peL-Ga-B3U"/>
+                        <segue destination="f8g-ba-Su2" kind="push" identifier="toTabBarController" id="WEE-gY-7uu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2S1-lc-Wbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1529.5" y="7616.5"/>
+            <point key="canvasLocation" x="-238.5" y="839.5"/>
         </scene>
         <!--RegisterVC-->
         <scene sceneID="ziC-Aj-SVo">
@@ -2160,11 +2162,17 @@
                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="入学年份" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RS0-sB-gxp">
+                                        <rect key="frame" x="66" y="13" width="285" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="NAF-XD-Bj4" firstAttribute="centerY" secondItem="8ny-xY-SSd" secondAttribute="centerY" id="HLp-ZA-RXt"/>
                                     <constraint firstAttribute="height" constant="45" id="aVQ-mp-uho"/>
+                                    <constraint firstItem="RS0-sB-gxp" firstAttribute="centerY" secondItem="NAF-XD-Bj4" secondAttribute="centerY" id="tmX-Ss-0Jn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6o-c6-kGE">
@@ -2176,12 +2184,18 @@
                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择你的学院" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bq7-O6-wPV">
+                                        <rect key="frame" x="66" y="13" width="285" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="igd-31-KHR" firstAttribute="centerY" secondItem="R6o-c6-kGE" secondAttribute="centerY" id="1gk-5V-yZm"/>
                                     <constraint firstAttribute="height" constant="45" id="eID-ep-d5n"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="hmj-p7-PaR"/>
+                                    <constraint firstItem="Bq7-O6-wPV" firstAttribute="centerY" secondItem="igd-31-KHR" secondAttribute="centerY" id="rDI-2Q-ixV"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-PO-s5R">
@@ -2193,11 +2207,17 @@
                                         <color key="textColor" red="0.41568627450000001" green="0.41568627450000001" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择你的专业" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQx-Dl-7fV">
+                                        <rect key="frame" x="66" y="13" width="285" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TR0-3U-dlf"/>
                                     <constraint firstItem="0nB-xX-QuQ" firstAttribute="centerY" secondItem="7Et-PO-s5R" secondAttribute="centerY" id="ZJK-cE-VcW"/>
+                                    <constraint firstItem="fQx-Dl-7fV" firstAttribute="centerY" secondItem="0nB-xX-QuQ" secondAttribute="centerY" id="fnX-dX-gsf"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="wY5-JB-5Hr"/>
                                 </constraints>
                             </view>
@@ -2224,17 +2244,22 @@
                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8ny-xY-SSd" firstAttribute="top" secondItem="Ckq-Ii-e2D" secondAttribute="bottom" constant="11" id="0sy-tM-tJR"/>
+                            <constraint firstItem="Bq7-O6-wPV" firstAttribute="leading" secondItem="RS0-sB-gxp" secondAttribute="leading" id="26N-ph-bKk"/>
                             <constraint firstItem="8ny-xY-SSd" firstAttribute="trailing" secondItem="Ckq-Ii-e2D" secondAttribute="trailing" id="7MG-nj-Jxx"/>
                             <constraint firstItem="NAF-XD-Bj4" firstAttribute="leading" secondItem="MRB-up-A3B" secondAttribute="leading" id="94v-GF-3TA"/>
                             <constraint firstItem="Ckq-Ii-e2D" firstAttribute="top" secondItem="C6x-dX-XCv" secondAttribute="bottom" constant="11" id="9yf-YC-qFZ"/>
+                            <constraint firstItem="fQx-Dl-7fV" firstAttribute="leading" secondItem="Bq7-O6-wPV" secondAttribute="leading" id="BKk-n0-tKm"/>
                             <constraint firstItem="C6x-dX-XCv" firstAttribute="top" secondItem="azd-ZH-NIr" secondAttribute="top" id="CXf-Kl-2p0"/>
                             <constraint firstAttribute="trailing" secondItem="C6x-dX-XCv" secondAttribute="trailing" id="Dou-yH-VQ8"/>
                             <constraint firstAttribute="trailing" secondItem="Ckq-Ii-e2D" secondAttribute="trailing" constant="8" id="Jaw-uJ-aUg"/>
+                            <constraint firstItem="Bq7-O6-wPV" firstAttribute="trailing" secondItem="RS0-sB-gxp" secondAttribute="trailing" id="NKS-d5-dWn"/>
                             <constraint firstItem="C6x-dX-XCv" firstAttribute="leading" secondItem="azd-ZH-NIr" secondAttribute="leading" id="O6Z-E5-Co7"/>
                             <constraint firstItem="CGT-zk-rNt" firstAttribute="top" secondItem="7Et-PO-s5R" secondAttribute="bottom" constant="20" id="SAI-nB-8qs"/>
                             <constraint firstItem="igd-31-KHR" firstAttribute="leading" secondItem="MRB-up-A3B" secondAttribute="leading" id="VM6-hQ-J7N"/>
                             <constraint firstItem="7Et-PO-s5R" firstAttribute="top" secondItem="R6o-c6-kGE" secondAttribute="bottom" constant="11" id="Vld-yu-y6d"/>
                             <constraint firstItem="CGT-zk-rNt" firstAttribute="leading" secondItem="7Et-PO-s5R" secondAttribute="leading" id="X28-mC-UMg"/>
+                            <constraint firstItem="RS0-sB-gxp" firstAttribute="trailing" secondItem="C06-L1-M1z" secondAttribute="trailing" id="aQR-Rm-HJI"/>
+                            <constraint firstItem="fQx-Dl-7fV" firstAttribute="trailing" secondItem="Bq7-O6-wPV" secondAttribute="trailing" id="aUg-dG-kSz"/>
                             <constraint firstItem="R6o-c6-kGE" firstAttribute="leading" secondItem="8ny-xY-SSd" secondAttribute="leading" id="ais-gR-BFR"/>
                             <constraint firstItem="8ny-xY-SSd" firstAttribute="leading" secondItem="Ckq-Ii-e2D" secondAttribute="leading" id="b8T-qa-o9q"/>
                             <constraint firstItem="7Et-PO-s5R" firstAttribute="trailing" secondItem="R6o-c6-kGE" secondAttribute="trailing" id="dfp-sm-rUA"/>
@@ -2242,19 +2267,27 @@
                             <constraint firstItem="Ckq-Ii-e2D" firstAttribute="leading" secondItem="azd-ZH-NIr" secondAttribute="leading" constant="8" id="lgE-up-27x"/>
                             <constraint firstItem="0nB-xX-QuQ" firstAttribute="leading" secondItem="MRB-up-A3B" secondAttribute="leading" id="lyw-Bl-aJp"/>
                             <constraint firstItem="R6o-c6-kGE" firstAttribute="top" secondItem="8ny-xY-SSd" secondAttribute="bottom" constant="11" id="on0-Fx-uF5"/>
+                            <constraint firstItem="RS0-sB-gxp" firstAttribute="leading" secondItem="C06-L1-M1z" secondAttribute="leading" id="qVg-a3-If4"/>
                             <constraint firstItem="7Et-PO-s5R" firstAttribute="leading" secondItem="R6o-c6-kGE" secondAttribute="leading" id="sWO-ee-vEn"/>
                             <constraint firstItem="CGT-zk-rNt" firstAttribute="trailing" secondItem="7Et-PO-s5R" secondAttribute="trailing" id="td5-gK-7gZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="B7C-4K-bIU"/>
                     <connections>
+                        <outlet property="RegisterBtn" destination="CGT-zk-rNt" id="Sr0-XI-QIr"/>
+                        <outlet property="enroll_yearTextField" destination="RS0-sB-gxp" id="XL9-Pb-aIX"/>
+                        <outlet property="enroll_yearView" destination="8ny-xY-SSd" id="2ND-6S-Z4r"/>
+                        <outlet property="majorTextField" destination="fQx-Dl-7fV" id="c40-Nq-KMQ"/>
+                        <outlet property="majorView" destination="7Et-PO-s5R" id="pKv-38-nbX"/>
                         <outlet property="phoneTextFiled" destination="isP-qa-Is7" id="tZx-ed-fhq"/>
                         <outlet property="pwdTextField" destination="C06-L1-M1z" id="cfy-2X-dUP"/>
+                        <outlet property="schoolTextField" destination="Bq7-O6-wPV" id="ahQ-Ee-ptR"/>
+                        <outlet property="schoolView" destination="R6o-c6-kGE" id="xap-xl-13U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ai7-Tq-Rpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="7616"/>
+            <point key="canvasLocation" x="254.5" y="838.5"/>
         </scene>
     </scenes>
     <resources>

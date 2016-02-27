@@ -77,6 +77,7 @@
 		35C8B1401C809E7C0066A9FA /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C8B13F1C809E7C0066A9FA /* Config.m */; };
 		35CD61A31C2E8B9100B315AA /* TextFieldValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */; };
 		35CD61A61C2E910000B315AA /* EditNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD61A51C2E910000B315AA /* EditNameVC.m */; };
+		35DB7A8C1C812DEF00865DA5 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35DB7A8B1C812DEF00865DA5 /* RegisterViewModel.m */; };
 		35E696241C5F4ED2000D4274 /* CellWithLabelAndTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */; };
 		35E696271C5F4EFA000D4274 /* ChooseTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696261C5F4EFA000D4274 /* ChooseTimeCell.m */; };
 		35E6962A1C5F4F0E000D4274 /* CellWithTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E696291C5F4F0E000D4274 /* CellWithTextView.m */; };
@@ -247,6 +248,8 @@
 		35CD61A21C2E8B9100B315AA /* TextFieldValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldValidator.m; sourceTree = "<group>"; };
 		35CD61A41C2E910000B315AA /* EditNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNameVC.h; sourceTree = "<group>"; };
 		35CD61A51C2E910000B315AA /* EditNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNameVC.m; sourceTree = "<group>"; };
+		35DB7A8A1C812DEF00865DA5 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		35DB7A8B1C812DEF00865DA5 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
 		35E696221C5F4ED2000D4274 /* CellWithLabelAndTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellWithLabelAndTextField.h; sourceTree = "<group>"; };
 		35E696231C5F4ED2000D4274 /* CellWithLabelAndTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellWithLabelAndTextField.m; sourceTree = "<group>"; };
 		35E696251C5F4EFA000D4274 /* ChooseTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTimeCell.h; sourceTree = "<group>"; };
@@ -774,6 +777,8 @@
 			children = (
 				35C8B1341C809E210066A9FA /* LoginViewModel.h */,
 				35C8B1351C809E210066A9FA /* LoginViewModel.m */,
+				35DB7A8A1C812DEF00865DA5 /* RegisterViewModel.h */,
+				35DB7A8B1C812DEF00865DA5 /* RegisterViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -1105,6 +1110,7 @@
 				35E696311C5FCC5A000D4274 /* toAddEduExpVC.m in Sources */,
 				353D9BFD1C7C466C0050B05E /* NewsImageCell.m in Sources */,
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
+				35DB7A8C1C812DEF00865DA5 /* RegisterViewModel.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
 				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
 				35B780121C7DD75B0008B973 /* HYActivityView.m in Sources */,

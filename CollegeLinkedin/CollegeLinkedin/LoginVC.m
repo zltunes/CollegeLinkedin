@@ -31,9 +31,9 @@
 //    给模型的属性绑定信号
 //    账号文本框一改变，就给 User属性赋值
     
-    NSLog(@"bind");
     RAC(self.loginViewModel.user,phone_num) = _accountTextField.rac_textSignal;
     RAC(self.loginViewModel.user,password)  = _pwdTextField.rac_textSignal;
+    
 //    为登录按钮的"enable"属性绑定信号
     RAC(self.loginBtn,enabled)              = self.loginViewModel.enableLoginSignal;
     
@@ -43,6 +43,15 @@
 //        执行登录
         [self.loginViewModel.loginCommand execute:nil];
         
+    }];
+    
+    //    监听登录产生的数据
+    [self.loginViewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+        
+        if ([x isEqualToString:@"success!"]) {
+            NSLog(@"监听到登录成功！");
+            [self performSegueWithIdentifier:@"toTabBarController" sender:nil];
+        }
     }];
 
 }

@@ -7,14 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RegisterViewModel.h"
+#import "ZHPickView.h"
 
-@interface RegisterVC : UIViewController
+@interface RegisterVC : UIViewController<ZHPickViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *phoneTextFiled;
+@property (strong, nonatomic) IBOutlet UITextField       *phoneTextFiled;
 
-@property (strong, nonatomic) IBOutlet UITextField *pwdTextField;
+@property (strong, nonatomic) IBOutlet UITextField       *pwdTextField;
 
-@property (strong, nonatomic) IBOutlet UIButton    *RegisterBtn;
+@property (strong, nonatomic) IBOutlet UITextField       *enroll_yearTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField       *schoolTextField;
+
+@property (strong, nonatomic) IBOutlet UITextField       *majorTextField;
+
+@property (strong, nonatomic) IBOutlet UIView            *enroll_yearView;
+
+@property (strong, nonatomic) IBOutlet UIView            *schoolView;
+
+@property (strong, nonatomic) IBOutlet UIView            *majorView;
+
+@property (strong, nonatomic) IBOutlet UIButton          *RegisterBtn;
+
+@property (nonatomic,strong ) RegisterViewModel *registerViewModel;
 
 
 @end

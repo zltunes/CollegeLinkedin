@@ -695,7 +695,7 @@
     if ([self.delegate respondsToSelector:@selector(toobarDonBtnHaveClick:resultString:)]) {
         [self.delegate toobarDonBtnHaveClick:self resultString:_resultString];
     }
-//    [self removeFromSuperview];
+    
     [_backView removeFromSuperview];
 }
 
