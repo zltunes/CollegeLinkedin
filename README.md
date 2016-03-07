@@ -27,7 +27,7 @@
 	iPhone 6S
 	iPhone 6S Plus
 
-# 文件目录：
+# 文件目录
     .
     ├── CollegeLinkedin
     |   ├── LoginAndRegister：登录注册(RAC+MVVM)
