@@ -51,13 +51,13 @@
     │   ├── Resource：资源文件
     │   ├── Util：常用工具类
     │   ├── Vendor：用到的一些第三方类库，部分有改动
-    │       ├── HYActivityView
-    │       ├── SDPhotoBrowser
-    │       ├── CustomViewFromXib
-    │       ├── PickerView
-    │       └── TextFieldValidator
+    │   |   ├── HYActivityView
+    │   |   ├── SDPhotoBrowser
+    │   |   ├── CustomViewFromXib
+    │   |   ├── PickerView
+    │   |   └── TextFieldValidator
     │   └── Main.storyboard：全部VC及跳转关系
-    └── Pods：项目使用了[CocoaPods](http://code4app.com/article/cocoapods-install-usage)
+    └── Pods：项目使用了 CocoaPods
 
 #CocoaPods库
  - [SDWebImage](https://github.com/rs/SDWebImage)：图片加载
