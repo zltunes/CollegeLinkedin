@@ -46,16 +46,25 @@
     }];
     
     //    监听登录产生的数据
-    [self.loginViewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(id x) {
+    [self.loginViewModel.loginCommand.executionSignals.switchToLatest subscribeNext:^(NSString* x) {
         
-        if ([x isEqualToString:@"success!"]) {
-            NSLog(@"监听到登录成功！");
+        if ([x isEqualToString:@"success"]) {
+            
+//            存储用户信息及登录状态，此处不能使用realm,realm 不允许在observer中addObject
+            
+            NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+            
+            [defaults setValue:_loginViewModel.user.phone_num forKey:@"phone_num"];
+            [defaults setValue:_loginViewModel.user.access_token forKey:@"access_token"];
+            [defaults setValue:[NSNumber numberWithInteger:_loginViewModel.user.user_id] forKey:@"user_id"];
+            [defaults setValue:[NSNumber numberWithBool:_loginViewModel.user.isLogin] forUndefinedKey:@"isLogin"];
+            [defaults synchronize];
+            
             [self performSegueWithIdentifier:@"toTabBarController" sender:nil];
+            
         }
     }];
 
 }
-
-
 
 @end

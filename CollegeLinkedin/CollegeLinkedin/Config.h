@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <Realm/Realm.h>
+
+typedef void(^SuccessBlock)(id returnValue);
+typedef void(^FailureBlock)(NSError *error);
 
 @interface Config : NSObject
 
++(NSString *)getMainURL;
 +(UIColor *)getBackgroundColor;
 +(UIView *)getTableViewFooter;
 +(CGFloat)getSectionHeaderHeight;

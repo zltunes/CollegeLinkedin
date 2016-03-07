@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "IQKeyboardManager.h"
-#import "Config.h"
+
 
 @interface AppDelegate ()
 
@@ -19,10 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+//    键盘管理相关
     IQKeyboardManager* manager = [IQKeyboardManager sharedManager];
     manager.enable = YES;
     manager.shouldResignOnTouchOutside = YES;
     manager.enableAutoToolbar = YES;
+    
+//    判断登录状态,数据库中永远只存储当前login的用户，用户一旦logout，清空数据库
+//    RLMResults *users = [User allObjects];
+//    NSLog(@"%d",users.count);
+//    if (users.count > 0) {
+////        直接进入首页
+//        self.window.rootViewController = [[CircleIndex alloc]init];
+//    }
     
     return YES;
     

@@ -32,5 +32,4 @@
 
 @property (nonatomic,strong ) RegisterViewModel *registerViewModel;
 
-
 @end

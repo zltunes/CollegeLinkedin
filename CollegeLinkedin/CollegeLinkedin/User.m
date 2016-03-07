@@ -10,4 +10,9 @@
 
 @implementation User
 
++(NSArray*)mj_ignoredPropertyNames
+{
+    return @[@"objectSchema"];
+}
+
 @end

@@ -27,6 +27,11 @@ static UIViewController* VCFromSb = nil;
 
 @implementation Config
 
++(NSString*)getMainURL
+{
+    return @"http://api2.hloli.me:4096/v1.0";
+}
+
 ///背景色
 +(UIColor *)getBackgroundColor{
     backgroundColor                 = [UIColor colorWithRed:0.886 green:0.886 blue:0.886 alpha:1];
@@ -84,7 +89,7 @@ static UIViewController* VCFromSb = nil;
 
 ///indicator
 +(void)showProgressHUDwithStatus:(NSString*) status{
-    [SVProgressHUD showWithStatus:status];
+    [SVProgressHUD showWithStatus:status maskType:SVProgressHUDMaskTypeBlack];
 }
 
 +(void)dismissHUD{

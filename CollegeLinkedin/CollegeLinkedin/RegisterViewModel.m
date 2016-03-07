@@ -34,21 +34,7 @@
         NSPredicate *phoneNum_prdicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^1[3|4|5|7|8][0-9]\\d{8}$"];
         NSPredicate *pwd_predicate     = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^.{6,}$"];
         
-//        &&
-//
-        if ([phoneNum_prdicate evaluateWithObject:phone_num] && [pwd_predicate evaluateWithObject:password] &&enroll_year.length>0 && school.length>0 && major.length>0) {
-            
-            NSLog(@"yes");
-            return @(YES);
-            
-        }else{
-            
-            NSLog(@"no");
-            return @(NO);
-            
-        }
-        
-//        return @(enroll_year.length && school.length && major.length && [phoneNum_prdicate evaluateWithObject:phone_num] && [pwd_predicate evaluateWithObject:password]);
+        return @(enroll_year.length && school.length && major.length && [phoneNum_prdicate evaluateWithObject:phone_num] && [pwd_predicate evaluateWithObject:password]);
     }];
     
     
@@ -57,22 +43,23 @@
         
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             
-            NSLog(@"如果注册成功,command发出:");
-            [subscriber sendNext:@"success!"];
-            
-//            ⚠️⚠️⚠️注意事件执行结束之后必须调用，否则永远在执行:
-            [subscriber sendCompleted];
-            
+            [User registerWithParameters:_user.mj_keyValues
+                            SuccessBlock:^(id returnValue) {
+                            
+                            [subscriber sendNext:@"success"];
+//                            ⚠️⚠️⚠️注意事件执行结束之后必须调用，否则永远在执行:
+//                            ⚠️⚠️⚠️必需在块内调用,因为AFNetworking异步
+                            [subscriber sendCompleted];
+                            
+                            } FailureBlock:^(NSError *error) {
+
+                            [subscriber sendNext:error];
+                            [subscriber sendCompleted];
+                                
+                            }];
+        
             return nil;
         }];
-    }];
-    
-//    监听注册结果：
-    [_registerCommand.executionSignals.switchToLatest subscribeNext:^(NSString *result) {
-        
-        if ([result isEqualToString:@"success!"]) {
-            NSLog(@"监听到注册成功!");
-        }
     }];
     
 //    监听注册事件执行,默认执行一次，跳过:
@@ -84,6 +71,8 @@
             [Config dismissHUD];
         }
     }];
+    
+    
 }
 
 

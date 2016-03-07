@@ -44,15 +44,24 @@
 //    处理登录的业务逻辑
     _loginCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
         
-        NSLog(@"点击登录按钮!");
-        
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-            NSLog(@"command signalBlock返回的信号发送success。");
             
-            [subscriber sendNext:@"success!"];
-            
-//            数据传送完毕必须调用，否则永远处于执行状态。
-            [subscriber sendCompleted];
+            [User loginWithParameters:_user.mj_keyValues SuccessBlock:^(id returnValue) {
+                
+                User* newUser = [User mj_objectWithKeyValues:returnValue];
+                _user.user_id      = newUser.user_id;
+                _user.access_token = newUser.access_token;
+                _user.isLogin      = YES;
+                
+                [subscriber sendNext:@"success"];
+                [subscriber sendCompleted];
+                
+            } FailureBlock:^(NSError *error) {
+                
+                [subscriber sendNext:[NSString stringWithFormat:@"登录失败!%@",error]];
+                [subscriber sendCompleted];
+                
+            }];
             
             return nil;
             

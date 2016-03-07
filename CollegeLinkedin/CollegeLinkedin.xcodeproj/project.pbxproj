@@ -60,6 +60,7 @@
 		358077F81C2C147600D0A4A9 /* MeCellWithIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 358077F71C2C147600D0A4A9 /* MeCellWithIcon.m */; };
 		35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A19AC91C69FAB1004E75D7 /* SettingVC.m */; };
 		35B780121C7DD75B0008B973 /* HYActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B780111C7DD75B0008B973 /* HYActivityView.m */; };
+		35BE127B1C85E622005471AB /* User+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BE127A1C85E622005471AB /* User+Request.m */; };
 		35C5A5601C6DD5C8003FFE89 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */; };
 		35C5A5611C6DD5C8003FFE89 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */; };
 		35C5A5651C6DD8AE003FFE89 /* AddressBookVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C5A5641C6DD8AE003FFE89 /* AddressBookVC.m */; };
@@ -216,6 +217,8 @@
 		35A19AC91C69FAB1004E75D7 /* SettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVC.m; sourceTree = "<group>"; };
 		35B780101C7DD75B0008B973 /* HYActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYActivityView.h; sourceTree = "<group>"; };
 		35B780111C7DD75B0008B973 /* HYActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYActivityView.m; sourceTree = "<group>"; };
+		35BE12791C85E622005471AB /* User+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+Request.h"; sourceTree = "<group>"; };
+		35BE127A1C85E622005471AB /* User+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+Request.m"; sourceTree = "<group>"; };
 		35C5A55E1C6DD5C8003FFE89 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		35C5A55F1C6DD5C8003FFE89 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		35C5A5631C6DD8AE003FFE89 /* AddressBookVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookVC.h; sourceTree = "<group>"; };
@@ -731,6 +734,15 @@
 			name = HYActivityView;
 			sourceTree = "<group>";
 		};
+		35BE127C1C85FD2D005471AB /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				35BE12791C85E622005471AB /* User+Request.h */,
+				35BE127A1C85E622005471AB /* User+Request.m */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
 		35C5A5621C6DD88E003FFE89 /* AddContact */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,6 +768,7 @@
 		35C8B12E1C809DD80066A9FA /* LoginAndRegister */ = {
 			isa = PBXGroup;
 			children = (
+				35BE127C1C85FD2D005471AB /* Request */,
 				35C8B1371C809E250066A9FA /* Controller */,
 				35C8B1331C809E150066A9FA /* ViewModel */,
 				35C8B12F1C809DF20066A9FA /* Model */,
@@ -1112,6 +1125,7 @@
 				35A19ACA1C69FAB1004E75D7 /* SettingVC.m in Sources */,
 				35DB7A8C1C812DEF00865DA5 /* RegisterViewModel.m in Sources */,
 				35122D641C61F17A0093CD82 /* CareerTable.m in Sources */,
+				35BE127B1C85E622005471AB /* User+Request.m in Sources */,
 				35C5A57B1C6F4EA1003FFE89 /* RequestedContacts.m in Sources */,
 				35B780121C7DD75B0008B973 /* HYActivityView.m in Sources */,
 				3501C70E1C71C64D002A9D97 /* CircleIndex.m in Sources */,

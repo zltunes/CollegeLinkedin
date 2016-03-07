@@ -44,6 +44,18 @@
     [[self.RegisterBtn rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(id x){
         [self.registerViewModel.registerCommand execute:nil];
     }];
+    
+    //    监听注册结果：
+    [_registerViewModel.registerCommand.executionSignals.switchToLatest subscribeNext:^(NSString *result) {
+        
+        if ([result isEqualToString:@"success"]) {
+            [Config showSuccessHUDwithStatus:@"注册成功!"];
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            [Config showErrorHUDwithStatus:[NSString stringWithFormat:@"注册失败!%@",result]];
+        }
+    }];
+    
 
 }
 
@@ -108,5 +120,6 @@
     [self.majorView addGestureRecognizer:tap_major];
 
 }
+
 
 @end

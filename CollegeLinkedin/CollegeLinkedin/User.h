@@ -7,13 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
+#import "MJExtension.h"
 
-@interface User : NSObject
+@interface User : RLMObject
 
-@property(nonatomic,copy) NSString *phone_num;
-@property(nonatomic,copy) NSString *password;
-@property(nonatomic,copy) NSString *enroll_year;
-@property(nonatomic,copy) NSString *school;
-@property(nonatomic,copy) NSString *major;
+@property NSInteger user_id;
+@property NSString  * access_token;
+@property BOOL      isLogin;
+@property NSString* phone_num;
+@property NSString  *password;
+@property NSString  *enroll_year;
+@property NSString  *school;
+@property NSString  *major;
 
 @end
+
+RLM_ARRAY_TYPE(User)

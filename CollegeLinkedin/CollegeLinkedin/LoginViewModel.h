@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "User.h"
+#import "User+Request.h"
 #import "Config.h"
 #import "AppDelegate.h"
 #import "CircleIndex.h"
