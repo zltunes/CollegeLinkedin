@@ -86,5 +86,5 @@
 - [借鉴 MVVM 设计思想瘦身 ViewController](http://zltunes.com/ios-jia-gou-pian-yi/)
 - RAC + MVVM 处理注册登录模块
 - Model 层使用 Ream 做数据持久化处理
-- [View Controller 容器](child view controller)优化VC
+- [View Controller 容器](child view controller)优化VC，delegate解决通信问题
 - 重写 ```UIView initWithFrame:(CGRect)frame``` 与 ```initWithCoder:(NSCoder *)aDecoder```方法使得任意View可从xib加载（不再限于 ViewController 和 UITableViewCell）
