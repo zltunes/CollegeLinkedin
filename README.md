@@ -2,7 +2,7 @@
 
 > 大学生职场社交平台。类似[赤兔](http://www.chitu.com/)。
 
-#项目简介
+# 项目简介
 这是一款由东南大学创梦空间（DreamSpace）开发的联接大学生群体与真实职场的社交应用。可以帮助即将步入或已经步入职场的大学生展示身份、拓展人脉、高效在线沟通。它会让大学生迅速融入职场，感受到职场社交也可以温暖、鲜活而有趣。
 
 登 录|注册信息|我的圈子|人脉资源
@@ -61,7 +61,7 @@
     │   └── Main.storyboard：全部VC及跳转关系
     └── Pods：项目使用了 CocoaPods
 
-#CocoaPods库
+# CocoaPods库
  - [SDWebImage](https://github.com/rs/SDWebImage)：图片加载
  - [AFNetworking](https://github.com/AFNetworking/AFNetworking)：著名 iOS 网络框架
  - [CustomIOSAlertView](https://github.com/wimagguc/ios-custom-alertview)：自定义 UIAlertView
@@ -84,7 +84,7 @@
   [7]:http://ww2.sinaimg.cn/large/005tGCqhjw1f1o998nck2j30ku112goh.jpg
   [8]:http://ww2.sinaimg.cn/large/005tGCqhjw1f1o99j9c5jj30ku112787.jpg
 
-#项目中的技术亮点
+# 项目中的技术亮点
 
 - [借鉴 MVVM 设计思想瘦身 ViewController](http://zltunes.com/ios-jia-gou-pian-yi/)
 - RAC + MVVM 处理注册登录模块
