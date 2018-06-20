@@ -75,9 +75,9 @@
  - [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD): 优美轻量的 HUD 
  - [UITableView+FDTemplateLayoutCell](https://github.com/forkingdog/UITableView-FDTemplateLayoutCell)自动计算Cell高度，配合 AutoLayout 使用
  
-  [1]: http://ww3.sinaimg.cn/large/005tGCqhjw1f1o974fswjj30ku112q68.jpg
-  [2]: http://ww1.sinaimg.cn/large/005tGCqhjw1f1o99si15aj30ku112myv.jpg
-  [3]: http://ww2.sinaimg.cn/large/005tGCqhjw1f1o97t3gxcj30ku1120xj.jpg
+  [1]:http://ww3.sinaimg.cn/large/005tGCqhjw1f1o974fswjj30ku112q68.jpg
+  [2]:http://ww1.sinaimg.cn/large/005tGCqhjw1f1o99si15aj30ku112myv.jpg
+  [3]:http://ww2.sinaimg.cn/large/005tGCqhjw1f1o97t3gxcj30ku1120xj.jpg
   [4]:http://ww2.sinaimg.cn/large/005tGCqhjw1f1o98dejq4j30ku11241l.jpg
   [5]:http://ww3.sinaimg.cn/large/005tGCqhjw1f1o98qqlv4j30ku112wgu.jpg
   [6]:http://ww1.sinaimg.cn/large/005tGCqhjw1f1o98z3x9ij30ku11276o.jpg
