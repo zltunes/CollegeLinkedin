@@ -86,7 +86,7 @@
 
 # 项目中的技术亮点
 
-- [借鉴 MVVM 设计思想瘦身 ViewController](http://zltunes.com/ios-jia-gou-pian-yi/)
+- [借鉴 MVVM 设计思想瘦身 ViewController](https://zltunes.github.io/2018/06/14/reactivecocoa-tutorial/#%E5%AE%9E%E6%88%98%EF%BC%9A%E7%94%A8-RAC-%E5%AE%9E%E7%8E%B0%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97)
 - RAC + MVVM 处理注册登录模块
 - Model 层使用 Ream 做数据持久化处理
 - [View Controller 容器](child view controller)优化VC，delegate解决通信问题
